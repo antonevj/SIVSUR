@@ -41,7 +41,7 @@ namespace ISVSUR.UI
      
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            pictureBox2.BackColor = Color.Blue;
+           
             lblAsiento.Text = "4";
         }
     }

@@ -23,7 +23,12 @@ namespace ISVSUR.UI
             dataGridView1.DataSource = new LCliente().GetAll();
         }
 
-       
-      
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            DetallesClienteIU fmr = new DetallesClienteIU();
+            fmr.Show();
+
+
+        }
     }
 }

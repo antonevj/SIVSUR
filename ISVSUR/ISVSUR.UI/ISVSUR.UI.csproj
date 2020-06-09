@@ -70,6 +70,12 @@
     <Compile Include="ClientesIU.Designer.cs">
       <DependentUpon>ClientesIU.cs</DependentUpon>
     </Compile>
+    <Compile Include="DetallesClienteIU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetallesClienteIU.Designer.cs">
+      <DependentUpon>DetallesClienteIU.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ClientesIU.resx">
       <DependentUpon>ClientesIU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetallesClienteIU.resx">
+      <DependentUpon>DetallesClienteIU.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
