@@ -14,6 +14,8 @@ namespace ISVSUR.UI
 {
     public partial class ClientesIU : Form
     {
+
+       
         public ClientesIU()
         {
             InitializeComponent();
@@ -21,7 +23,13 @@ namespace ISVSUR.UI
        
         private void ClientesIU_Load(object sender, EventArgs e)
         {
+
+    
+
             mostrar_datos();
+
+
+
         }
 
 
@@ -29,7 +37,7 @@ namespace ISVSUR.UI
         private void mostrar_datos()
         {
 
-            dataGridView1.DataSource = new LCliente().GetAll();
+          var a =  dataGridView1.DataSource = new LCliente().GetAll();
 
             dataGridView1.MultiSelect = false;
             dataGridView1.RowsDefaultCellStyle.BackColor = MisConstantes.COLOR_CELDA_FONDO_GRID;
@@ -121,6 +129,29 @@ namespace ISVSUR.UI
             else
 
                 MessageBox.Show("debe seleccionar un elemento");
+        }
+       
+
+        private void txtBuscarCliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+         
+
+         
+        }
+
+        private void txtBuscarCliente_TextChanged(object sender, EventArgs e)
+        {
+
+            var aux = new LCliente();
+            aux.Buscar(dataGridView1, this.txtBuscarCliente.Text.Trim());
+        }
+
+        private void btnBuscarCLiente_Click(object sender, EventArgs e)
+        {
+           
+           
+
+           
         }
     }
 }
