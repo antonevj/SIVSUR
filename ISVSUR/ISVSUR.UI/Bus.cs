@@ -25,5 +25,16 @@ namespace ISVSUR.UI
             dataGridView1.DataSource = new LBus().GetAll();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            DetalleBus fmr = new DetalleBus();
+            fmr.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

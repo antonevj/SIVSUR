@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ISVSUR.Logic
 {
@@ -28,6 +29,11 @@ namespace ISVSUR.Logic
         public int Delete(int IDCliente)
         {
             return new DCliente().Delete(IDCliente);
+        }
+
+        public void Buscar(DataGridView data, string DNIClie)
+        {
+            new DCliente().Buscar( data,DNIClie);
         }
     }
 }

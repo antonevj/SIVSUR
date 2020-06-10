@@ -22,5 +22,16 @@ namespace ISVSUR.UI
         {
             dataGridView1.DataSource = new LAdmin().GetAll();
         }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            DetallesAdministrador fmr = new DetallesAdministrador();
+            fmr.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

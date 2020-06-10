@@ -10,10 +10,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ISVSUR.Entity;
 using ISVSUR.Util;
+
 namespace ISVSUR.UI
 {
     public partial class ClientesIU : Form
     {
+
+       
         public ClientesIU()
         {
             InitializeComponent();
@@ -21,7 +24,13 @@ namespace ISVSUR.UI
        
         private void ClientesIU_Load(object sender, EventArgs e)
         {
+
+    
+
             mostrar_datos();
+
+
+
         }
 
 
@@ -29,7 +38,7 @@ namespace ISVSUR.UI
         private void mostrar_datos()
         {
 
-            dataGridView1.DataSource = new LCliente().GetAll();
+          var a =  dataGridView1.DataSource = new LCliente().GetAll();
 
             dataGridView1.MultiSelect = false;
             dataGridView1.RowsDefaultCellStyle.BackColor = MisConstantes.COLOR_CELDA_FONDO_GRID;
@@ -66,6 +75,37 @@ namespace ISVSUR.UI
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+           
+        }
+
+       
+        private void txtBuscarCliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+         
+
+         
+        }
+
+        private void txtBuscarCliente_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+     
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+            var aux = new LCliente();
+            aux.Buscar(dataGridView1, this.textBox1.Text.Trim());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnModificar_Click_1(object sender, EventArgs e)
+        {
             if (dataGridView1.SelectedRows.Count > 0)
             {
 
@@ -80,7 +120,7 @@ namespace ISVSUR.UI
                 detalle.txtDNI.Text = dataGridView1.CurrentRow.Cells["DNI"].Value.ToString();
                 detalle.txtEdad.Text = dataGridView1.CurrentRow.Cells["Edad"].Value.ToString();
                 detalle.boxSexo.Text = dataGridView1.CurrentRow.Cells["Sexo"].Value.ToString();
-             
+
 
                 DialogResult rpta = detalle.ShowDialog();
 
@@ -92,9 +132,9 @@ namespace ISVSUR.UI
             }
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private void btnEliminar_Click_1(object sender, EventArgs e)
         {
-           
+
             if (dataGridView1.SelectedRows.Count > 0)
             {
 

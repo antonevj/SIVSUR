@@ -180,10 +180,9 @@
             this.label74 = new System.Windows.Forms.Label();
             this.txtImporte = new System.Windows.Forms.TextBox();
             this.label75 = new System.Windows.Forms.Label();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -544,6 +543,7 @@
             this.button3.TabIndex = 32;
             this.button3.Text = "Buscar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // lblAsiento
             // 
@@ -1951,39 +1951,32 @@
             this.label75.TabIndex = 150;
             this.label75.Text = "Importe Total S/.";
             // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.Transparent;
-            this.btnEliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminar.BackgroundImage")));
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEliminar.Location = new System.Drawing.Point(975, 571);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(51, 52);
-            this.btnEliminar.TabIndex = 154;
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.BackColor = System.Drawing.Color.Transparent;
-            this.btnModificar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnModificar.BackgroundImage")));
-            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnModificar.Location = new System.Drawing.Point(909, 571);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(47, 52);
-            this.btnModificar.TabIndex = 153;
-            this.btnModificar.UseVisualStyleBackColor = false;
-            // 
             // btnNuevo
             // 
             this.btnNuevo.BackColor = System.Drawing.Color.Transparent;
             this.btnNuevo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNuevo.BackgroundImage")));
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnNuevo.Location = new System.Drawing.Point(840, 571);
+            this.btnNuevo.Location = new System.Drawing.Point(994, 571);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(51, 52);
             this.btnNuevo.TabIndex = 152;
             this.toolTip1.SetToolTip(this.btnNuevo, "Registrar Venta");
             this.btnNuevo.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Location = new System.Drawing.Point(1032, 1);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(28, 27);
+            this.button1.TabIndex = 155;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Formulario_de_Venta
             // 
@@ -1991,8 +1984,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1063, 636);
-            this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.txtImporte);
             this.Controls.Add(this.label75);
@@ -2005,6 +1997,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Formulario_de_Venta";
@@ -2233,9 +2226,8 @@
         private System.Windows.Forms.Label label75;
         private System.Windows.Forms.Label lblAsiento;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button button1;
     }
 }
