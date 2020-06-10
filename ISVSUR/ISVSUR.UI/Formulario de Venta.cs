@@ -313,7 +313,7 @@ namespace ISVSUR.UI
 
         private void PictureBox54_Click(object sender, EventArgs e)
         {
-            lblAsiento.Text = "55";
+            lblAsiento.Text = " 55";
         }
 
         private void PictureBox55_Click(object sender, EventArgs e)
