@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetallesClienteIU));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.boxSexo = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtEdad = new System.Windows.Forms.TextBox();
@@ -42,16 +44,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox1.BackgroundImage")));
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnCancelar);
+            this.groupBox1.Controls.Add(this.btnGuardar);
             this.groupBox1.Controls.Add(this.boxSexo);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtEdad);
@@ -73,6 +73,28 @@
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Clientes";
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnCancelar.Location = new System.Drawing.Point(190, 402);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(82, 36);
+            this.btnCancelar.TabIndex = 19;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnGuardar.Location = new System.Drawing.Point(65, 402);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(92, 36);
+            this.btnGuardar.TabIndex = 19;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // boxSexo
             // 
@@ -188,26 +210,6 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "ID";
             // 
-            // button1
-            // 
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(65, 402);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 36);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Guardar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(190, 402);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(82, 36);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // DetallesClienteIU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -227,19 +229,19 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox boxSexo;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtEdad;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtDNI;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtApellidos;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtNombres;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnGuardar;
+        public System.Windows.Forms.ComboBox boxSexo;
+        public System.Windows.Forms.TextBox txtEdad;
+        public System.Windows.Forms.TextBox txtDNI;
+        public System.Windows.Forms.TextBox txtApellidos;
+        public System.Windows.Forms.TextBox txtNombres;
+        public System.Windows.Forms.TextBox txtID;
     }
 }
