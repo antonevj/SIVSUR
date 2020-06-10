@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29905.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiApplication", "ApiApplication", "{1F433A63-0D87-4A48-AE68-C60B027C4D14}"
 EndProject
@@ -16,6 +16,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISVSUR.Logic", "ISVSUR.Logic\ISVSUR.Logic.csproj", "{61C5E74B-F588-4C31-A6CA-77BED497BECD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISVSUR.UI", "ISVSUR.UI\ISVSUR.UI.csproj", "{7EE8AC7C-D932-4C51-9915-0D1850979C5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISVSUR.Util", "ISVSUR.Util\ISVSUR.Util.csproj", "{4D058698-3279-4CDE-8C54-748E4520FBD1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +45,10 @@ Global
 		{7EE8AC7C-D932-4C51-9915-0D1850979C5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7EE8AC7C-D932-4C51-9915-0D1850979C5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7EE8AC7C-D932-4C51-9915-0D1850979C5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D058698-3279-4CDE-8C54-748E4520FBD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D058698-3279-4CDE-8C54-748E4520FBD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D058698-3279-4CDE-8C54-748E4520FBD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D058698-3279-4CDE-8C54-748E4520FBD1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,5 +59,8 @@ Global
 		{8C70967F-3F4D-453C-B5BB-FF59D26B0B01} = {F120793B-1C35-429A-8D2B-A5258238DB8F}
 		{61C5E74B-F588-4C31-A6CA-77BED497BECD} = {F120793B-1C35-429A-8D2B-A5258238DB8F}
 		{7EE8AC7C-D932-4C51-9915-0D1850979C5E} = {F120793B-1C35-429A-8D2B-A5258238DB8F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E98E4174-53A5-45E5-BA54-070E29B7D055}
 	EndGlobalSection
 EndGlobal
