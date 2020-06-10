@@ -143,8 +143,7 @@ namespace ISVSUR.UI
         private void txtBuscarCliente_TextChanged(object sender, EventArgs e)
         {
 
-            var aux = new LCliente();
-            aux.Buscar(dataGridView1, this.textBox1.Text.Trim());
+           
         }
 
         private void btnBuscarCLiente_Click(object sender, EventArgs e)
@@ -153,6 +152,12 @@ namespace ISVSUR.UI
            
 
            
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            var aux = new LCliente();
+            aux.Buscar(dataGridView1, this.textBox1.Text.Trim());
         }
     }
 }
