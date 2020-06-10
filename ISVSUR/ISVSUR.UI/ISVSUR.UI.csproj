@@ -70,6 +70,36 @@
     <Compile Include="ClientesIU.Designer.cs">
       <DependentUpon>ClientesIU.cs</DependentUpon>
     </Compile>
+    <Compile Include="DetalleBus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetalleBus.Designer.cs">
+      <DependentUpon>DetalleBus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DetalleChofer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetalleChofer.Designer.cs">
+      <DependentUpon>DetalleChofer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DetalleLlegada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetalleLlegada.Designer.cs">
+      <DependentUpon>DetalleLlegada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DetalleRuta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetalleRuta.Designer.cs">
+      <DependentUpon>DetalleRuta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DetallesAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetallesAdministrador.Designer.cs">
+      <DependentUpon>DetallesAdministrador.cs</DependentUpon>
+    </Compile>
     <Compile Include="DetallesClienteIU.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +155,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ClientesIU.resx">
       <DependentUpon>ClientesIU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetalleBus.resx">
+      <DependentUpon>DetalleBus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetalleChofer.resx">
+      <DependentUpon>DetalleChofer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetalleLlegada.resx">
+      <DependentUpon>DetalleLlegada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetalleRuta.resx">
+      <DependentUpon>DetalleRuta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetallesAdministrador.resx">
+      <DependentUpon>DetallesAdministrador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DetallesClienteIU.resx">
       <DependentUpon>DetallesClienteIU.cs</DependentUpon>

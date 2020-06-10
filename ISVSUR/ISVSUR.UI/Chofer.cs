@@ -23,5 +23,11 @@ namespace ISVSUR.UI
         {
             dataGridView1.DataSource = new LChofer().GetAll();
         }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            DetalleChofer fmr = new DetalleChofer();
+            fmr.Show();
+        }
     }
 }
