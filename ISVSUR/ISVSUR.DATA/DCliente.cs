@@ -11,15 +11,7 @@ namespace ISVSUR.DATA
 {
     public class DCliente :ICliente
     {
-        public int Create(ECliente t)
-        {
-
-            throw new NotImplementedException();
-
-
-        }
-
-
+        
 
         public ECliente Get(int IDCliente)
         {
@@ -71,6 +63,79 @@ namespace ISVSUR.DATA
 
             }
 
+        }
+
+        public int Create(ECliente t)
+        {
+
+            using (SqlConnection cnx = new SqlConnection())
+            {
+                cnx.ConnectionString = MiCadena.CadenaCnx();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "sp_agregar_clientes";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@NombresCli", t.Nombres);
+                cmd.Parameters.AddWithValue("@ApellidosClie", t.Apellidos);
+                cmd.Parameters.AddWithValue("@DNIClie", t.DNI);
+                cmd.Parameters.AddWithValue("@EdadClie", t.Edad);
+                cmd.Parameters.AddWithValue("@SexoClie", t.Sexo);
+                cmd.Connection = cnx;
+                cnx.Open();
+
+
+                int filasafectadas = cmd.ExecuteNonQuery();
+
+                return filasafectadas;
+            }
+
+
+        }
+
+        public int Update(ECliente t)
+        {
+            using (SqlConnection cnx = new SqlConnection())
+            {
+                cnx.ConnectionString = MiCadena.CadenaCnx();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "sp_modificar_clientes";
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@IDCliente", t.IDCliente);
+                cmd.Parameters.AddWithValue("@NombresClie", t.Nombres);
+                cmd.Parameters.AddWithValue("@ApellidosClie", t.Apellidos);
+                cmd.Parameters.AddWithValue("@DNIClie", t.DNI);
+                cmd.Parameters.AddWithValue("@EdadClie", t.Edad);
+                cmd.Parameters.AddWithValue("@SexoClie", t.Sexo);
+                cmd.Connection = cnx;
+                cnx.Open();
+
+
+                int filasafectadas = cmd.ExecuteNonQuery();
+
+                return filasafectadas;
+            }
+        }
+
+
+        public int Delete(int IDCliente)
+        {
+            using (SqlConnection cnx = new SqlConnection())
+            {
+                cnx.ConnectionString = MiCadena.CadenaCnx();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "sp_eliminar_clientes";
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@IDCliente", IDCliente);
+               
+                cmd.Connection = cnx;
+                cnx.Open();
+
+
+                int filasafectadas = cmd.ExecuteNonQuery();
+
+                return filasafectadas;
+            }
         }
     }
 }

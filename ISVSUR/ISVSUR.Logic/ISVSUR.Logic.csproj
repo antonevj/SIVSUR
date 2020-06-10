@@ -55,6 +55,10 @@
       <Project>{8C70967F-3F4D-453C-B5BB-FF59D26B0B01}</Project>
       <Name>ISVSUR.Entity</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ISVSUR.Util\ISVSUR.Util.csproj">
+      <Project>{4d058698-3279-4cde-8c54-748e4520fbd1}</Project>
+      <Name>ISVSUR.Util</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
