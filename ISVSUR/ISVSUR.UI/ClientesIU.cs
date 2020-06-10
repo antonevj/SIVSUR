@@ -141,15 +141,15 @@ namespace ISVSUR.UI
 
         private void txtBuscarCliente_TextChanged(object sender, EventArgs e)
         {
-            
-            
+
+            var aux = new LCliente();
+            aux.Buscar(dataGridView1, this.txtBuscarCliente.Text.Trim());
         }
 
         private void btnBuscarCLiente_Click(object sender, EventArgs e)
         {
-            dataGridView1.Columns["Apellidos"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            var aux = new LCliente();
-            aux.Buscar(dataGridView1, this.txtBuscarCliente.Text.Trim());
+           
+           
 
            
         }

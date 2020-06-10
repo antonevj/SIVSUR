@@ -40,7 +40,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtBuscarCliente = new System.Windows.Forms.TextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.btnBuscarCLiente = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -100,7 +99,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnBuscarCLiente);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtBuscarCliente);
@@ -138,20 +136,10 @@
             // 
             this.txtBuscarCliente.Location = new System.Drawing.Point(625, 21);
             this.txtBuscarCliente.Name = "txtBuscarCliente";
-            this.txtBuscarCliente.Size = new System.Drawing.Size(116, 20);
+            this.txtBuscarCliente.Size = new System.Drawing.Size(173, 20);
             this.txtBuscarCliente.TabIndex = 5;
             this.txtBuscarCliente.TextChanged += new System.EventHandler(this.txtBuscarCliente_TextChanged);
             this.txtBuscarCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscarCliente_KeyPress);
-            // 
-            // btnBuscarCLiente
-            // 
-            this.btnBuscarCLiente.Location = new System.Drawing.Point(761, 24);
-            this.btnBuscarCLiente.Name = "btnBuscarCLiente";
-            this.btnBuscarCLiente.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscarCLiente.TabIndex = 8;
-            this.btnBuscarCLiente.Text = "button2";
-            this.btnBuscarCLiente.UseVisualStyleBackColor = true;
-            this.btnBuscarCLiente.Click += new System.EventHandler(this.btnBuscarCLiente_Click);
             // 
             // ClientesIU
             // 
@@ -189,6 +177,5 @@
         private System.Windows.Forms.TextBox txtBuscarCliente;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnBuscarCLiente;
     }
 }
