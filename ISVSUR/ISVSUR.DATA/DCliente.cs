@@ -5,7 +5,7 @@ using ISVSUR.Entity;
 using System.Data;
 using System.Data.SqlClient;
 using ISVSUR.Contract;
-
+using System.Windows.Forms;
 
 namespace ISVSUR.DATA
 {
@@ -136,6 +136,38 @@ namespace ISVSUR.DATA
 
                 return filasafectadas;
             }
+        }
+
+
+        public void Buscar( DataGridView data,string DNIClie)
+        {
+
+
+            try
+            {
+                SqlConnection cnx = new SqlConnection(MiCadena.CadenaCnx());              
+                SqlCommand cmd = new SqlCommand("sp_buscarporDNI",cnx);
+                //    cmd.CommandText = "sp_buscarporDNI";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@DNIClie", DNIClie);
+                cmd.Connection = cnx;
+                cnx.Open();
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                data.DataSource = dt;
+                
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+
+
+            
         }
     }
 }
