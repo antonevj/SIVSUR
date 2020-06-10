@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientesIU));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
@@ -38,6 +39,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -46,14 +48,13 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 58);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 43);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(630, 319);
+            this.dataGridView1.Size = new System.Drawing.Size(630, 334);
             this.dataGridView1.TabIndex = 0;
             // 
             // toolStripTextBox1
             // 
-            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(100, 25);
             this.toolStripTextBox1.Text = "Detalle Venta";
@@ -67,6 +68,7 @@
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(51, 52);
             this.btnNuevo.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.btnNuevo, "Agregar");
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
@@ -79,6 +81,7 @@
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(47, 52);
             this.btnModificar.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.btnModificar, "Modificar");
             this.btnModificar.UseVisualStyleBackColor = false;
             // 
             // btnEliminar
@@ -90,6 +93,7 @@
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(51, 52);
             this.btnEliminar.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.btnEliminar, "Eliminar");
             this.btnEliminar.UseVisualStyleBackColor = false;
             // 
             // panel1
@@ -120,6 +124,7 @@
             this.button3.TabIndex = 7;
             this.button3.Text = "X";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label1
             // 
@@ -177,5 +182,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button3;
         public System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

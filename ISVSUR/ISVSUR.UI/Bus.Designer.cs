@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Bus));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
@@ -35,6 +36,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -63,6 +65,7 @@
             this.button3.TabIndex = 22;
             this.button3.Text = "X";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // panel1
             // 
@@ -87,6 +90,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(51, 52);
             this.button1.TabIndex = 19;
+            this.toolTip1.SetToolTip(this.button1, "Agregar");
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -99,6 +103,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(50, 52);
             this.button2.TabIndex = 21;
+            this.toolTip1.SetToolTip(this.button2, "Eliminar");
             this.button2.UseVisualStyleBackColor = false;
             // 
             // button4
@@ -110,6 +115,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(47, 52);
             this.button4.TabIndex = 20;
+            this.toolTip1.SetToolTip(this.button4, "Modificar");
             this.button4.UseVisualStyleBackColor = false;
             // 
             // Bus
@@ -139,5 +145,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

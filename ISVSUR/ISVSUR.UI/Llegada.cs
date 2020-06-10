@@ -21,5 +21,16 @@ namespace ISVSUR.UI
         {
 
         }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            DetalleLlegada fmr = new DetalleLlegada();
+            fmr.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

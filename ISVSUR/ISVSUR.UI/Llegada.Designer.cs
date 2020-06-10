@@ -76,6 +76,7 @@
             this.btnNuevo.TabIndex = 50;
             this.toolTip1.SetToolTip(this.btnNuevo, "Agregar");
             this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // dataGridView1
             // 
@@ -113,6 +114,7 @@
             this.button3.TabIndex = 54;
             this.button3.Text = "X";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Llegada
             // 

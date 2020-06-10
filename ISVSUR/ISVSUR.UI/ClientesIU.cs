@@ -158,5 +158,10 @@ namespace ISVSUR.UI
             var aux = new LCliente();
             aux.Buscar(dataGridView1, this.textBox1.Text.Trim());
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
