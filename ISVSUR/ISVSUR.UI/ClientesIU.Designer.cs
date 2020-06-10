@@ -174,7 +174,7 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button3;
+        public System.Windows.Forms.TextBox textBox1;
     }
 }

@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ISVSUR.Entity;
 using ISVSUR.Util;
+
 namespace ISVSUR.UI
 {
     public partial class ClientesIU : Form
@@ -143,7 +144,7 @@ namespace ISVSUR.UI
         {
 
             var aux = new LCliente();
-            aux.Buscar(dataGridView1, this.txtBuscarCliente.Text.Trim());
+            aux.Buscar(dataGridView1, this.textBox1.Text.Trim());
         }
 
         private void btnBuscarCLiente_Click(object sender, EventArgs e)

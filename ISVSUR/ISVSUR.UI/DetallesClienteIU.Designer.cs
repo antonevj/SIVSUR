@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetallesClienteIU));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.boxSexo = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtEdad = new System.Windows.Forms.TextBox();
@@ -44,8 +46,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -75,6 +75,30 @@
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Clientes";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Black;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Transparent;
+            this.button2.Location = new System.Drawing.Point(167, 347);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(88, 33);
+            this.button2.TabIndex = 64;
+            this.button2.Text = "Cancelar";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Transparent;
+            this.button1.Location = new System.Drawing.Point(52, 347);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(91, 33);
+            this.button1.TabIndex = 63;
+            this.button1.Text = "Guardar";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // boxSexo
             // 
@@ -213,30 +237,6 @@
             this.button3.Text = "X";
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Transparent;
-            this.button2.Location = new System.Drawing.Point(167, 347);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(88, 33);
-            this.button2.TabIndex = 64;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(52, 347);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 33);
-            this.button1.TabIndex = 63;
-            this.button1.Text = "Guardar";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // DetallesClienteIU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -261,21 +261,21 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox boxSexo;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtEdad;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtDNI;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtApellidos;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtNombres;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.ComboBox boxSexo;
+        public System.Windows.Forms.TextBox txtEdad;
+        public System.Windows.Forms.TextBox txtDNI;
+        public System.Windows.Forms.TextBox txtApellidos;
+        public System.Windows.Forms.TextBox txtNombres;
+        public System.Windows.Forms.TextBox txtID;
     }
 }
