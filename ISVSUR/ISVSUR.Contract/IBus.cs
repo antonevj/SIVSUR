@@ -10,5 +10,6 @@ namespace ISVSUR.Contract
 {
     public interface IBus : IRead<EBus>
     {
+
     }
 }

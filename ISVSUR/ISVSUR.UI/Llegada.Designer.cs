@@ -46,7 +46,7 @@
             this.btnEliminar.BackColor = System.Drawing.Color.Transparent;
             this.btnEliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminar.BackgroundImage")));
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEliminar.Location = new System.Drawing.Point(90, 0);
+            this.btnEliminar.Location = new System.Drawing.Point(100, 0);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(51, 52);
             this.btnEliminar.TabIndex = 52;
@@ -58,7 +58,7 @@
             this.btnModificar.BackColor = System.Drawing.Color.Transparent;
             this.btnModificar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnModificar.BackgroundImage")));
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnModificar.Location = new System.Drawing.Point(46, 0);
+            this.btnModificar.Location = new System.Drawing.Point(51, 0);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(47, 52);
             this.btnModificar.TabIndex = 51;
@@ -82,11 +82,11 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 58);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(716, 408);
+            this.dataGridView1.Size = new System.Drawing.Size(716, 350);
             this.dataGridView1.TabIndex = 49;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // panel1
             // 

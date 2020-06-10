@@ -55,6 +55,7 @@
             // 
             // toolStripTextBox1
             // 
+            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(100, 25);
             this.toolStripTextBox1.Text = "Detalle Venta";
@@ -83,6 +84,7 @@
             this.btnModificar.TabIndex = 3;
             this.toolTip1.SetToolTip(this.btnModificar, "Modificar");
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click_1);
             // 
             // btnEliminar
             // 
@@ -95,6 +97,7 @@
             this.btnEliminar.TabIndex = 4;
             this.toolTip1.SetToolTip(this.btnEliminar, "Eliminar");
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
             // 
             // panel1
             // 

@@ -45,6 +45,7 @@
     <Compile Include="LBus.cs" />
     <Compile Include="LChofer.cs" />
     <Compile Include="LCliente.cs" />
+    <Compile Include="LRutas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

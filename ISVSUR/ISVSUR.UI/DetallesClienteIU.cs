@@ -38,6 +38,23 @@ namespace ISVSUR.UI
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+           
+            
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+            this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
             ECliente obj = new ECliente
             {
 
@@ -45,7 +62,7 @@ namespace ISVSUR.UI
                 Nombres = txtNombres.Text.Trim().ToUpper(),
                 Apellidos = txtApellidos.Text.Trim().ToUpper(),
                 DNI = txtDNI.Text,
-                Edad =int.Parse (txtEdad.Text),
+                Edad = int.Parse(txtEdad.Text),
                 Sexo = boxSexo.Text
 
 
@@ -71,18 +88,6 @@ namespace ISVSUR.UI
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
-            
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            this.DialogResult = DialogResult.Cancel;
-            this.Close();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

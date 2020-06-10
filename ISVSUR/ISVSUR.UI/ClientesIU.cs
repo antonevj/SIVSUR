@@ -75,6 +75,37 @@ namespace ISVSUR.UI
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+           
+        }
+
+       
+        private void txtBuscarCliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+         
+
+         
+        }
+
+        private void txtBuscarCliente_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+     
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+            var aux = new LCliente();
+            aux.Buscar(dataGridView1, this.textBox1.Text.Trim());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnModificar_Click_1(object sender, EventArgs e)
+        {
             if (dataGridView1.SelectedRows.Count > 0)
             {
 
@@ -89,7 +120,7 @@ namespace ISVSUR.UI
                 detalle.txtDNI.Text = dataGridView1.CurrentRow.Cells["DNI"].Value.ToString();
                 detalle.txtEdad.Text = dataGridView1.CurrentRow.Cells["Edad"].Value.ToString();
                 detalle.boxSexo.Text = dataGridView1.CurrentRow.Cells["Sexo"].Value.ToString();
-             
+
 
                 DialogResult rpta = detalle.ShowDialog();
 
@@ -101,9 +132,9 @@ namespace ISVSUR.UI
             }
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private void btnEliminar_Click_1(object sender, EventArgs e)
         {
-           
+
             if (dataGridView1.SelectedRows.Count > 0)
             {
 
@@ -130,38 +161,6 @@ namespace ISVSUR.UI
             else
 
                 MessageBox.Show("debe seleccionar un elemento");
-        }
-       
-
-        private void txtBuscarCliente_KeyPress(object sender, KeyPressEventArgs e)
-        {
-         
-
-         
-        }
-
-        private void txtBuscarCliente_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void btnBuscarCLiente_Click(object sender, EventArgs e)
-        {
-           
-           
-
-           
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-            var aux = new LCliente();
-            aux.Buscar(dataGridView1, this.textBox1.Text.Trim());
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

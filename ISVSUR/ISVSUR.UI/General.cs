@@ -89,5 +89,13 @@ namespace ISVSUR.UI
             this.Hide();
             administrador.ShowDialog();
         }
+
+        private void choferToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Chofer cho = new Chofer();
+            cho.ShowDialog();
+
+          
+        }
     }
 }

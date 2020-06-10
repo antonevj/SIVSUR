@@ -48,6 +48,7 @@
     <Compile Include="IBus.cs" />
     <Compile Include="IChofer.cs" />
     <Compile Include="ICliente.cs" />
+    <Compile Include="IRutas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -108,7 +108,7 @@
             this.button3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.Control;
-            this.button3.Location = new System.Drawing.Point(578, 0);
+            this.button3.Location = new System.Drawing.Point(577, 1);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(27, 27);
             this.button3.TabIndex = 55;
@@ -124,6 +124,7 @@
             this.ClientSize = new System.Drawing.Size(605, 389);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Ruta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ruta";
