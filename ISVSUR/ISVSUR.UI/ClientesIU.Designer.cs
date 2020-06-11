@@ -52,10 +52,10 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(630, 334);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
             // toolStripTextBox1
             // 
-            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(100, 25);
             this.toolStripTextBox1.Text = "Detalle Venta";
@@ -139,7 +139,6 @@
             this.label1.Size = new System.Drawing.Size(77, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "Buscar cliente:";
-          
             // 
             // textBox1
             // 

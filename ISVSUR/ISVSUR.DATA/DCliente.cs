@@ -49,10 +49,6 @@ namespace ISVSUR.DATA
                         DNI = (reader["DNIClie"].ToString()),
                         Edad = Convert.ToInt32(reader["EdadClie"]),
                         Sexo = (reader["SexoClie"].ToString()),
-
-
-
-
                     });
 
                 }

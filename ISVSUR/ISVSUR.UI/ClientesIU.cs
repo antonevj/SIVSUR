@@ -161,5 +161,15 @@ namespace ISVSUR.UI
 
                 MessageBox.Show("debe seleccionar un elemento");
         }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

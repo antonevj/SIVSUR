@@ -8,7 +8,7 @@ using ISVSUR.Entity;
 
 namespace ISVSUR.Contract
 {
-    public interface IBus : IRead<EBus>
+    public interface IBus : IRead<EBus> ,TCreate<EBus>,IUpdate<EBus>,IDelete<EBus>
     {
 
     }
