@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetalleChofer));
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblIDBus = new System.Windows.Forms.Label();
             this.boxBus = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -46,6 +45,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblIDBus = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,18 +94,6 @@
             this.groupBox1.Text = "Chofer";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // lblIDBus
-            // 
-            this.lblIDBus.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblIDBus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblIDBus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblIDBus.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblIDBus.Location = new System.Drawing.Point(251, 309);
-            this.lblIDBus.Name = "lblIDBus";
-            this.lblIDBus.Size = new System.Drawing.Size(29, 21);
-            this.lblIDBus.TabIndex = 66;
-            this.lblIDBus.Visible = false;
-            // 
             // boxBus
             // 
             this.boxBus.FormattingEnabled = true;
@@ -122,7 +110,7 @@
             this.button2.ForeColor = System.Drawing.Color.Transparent;
             this.button2.Location = new System.Drawing.Point(155, 352);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(88, 33);
+            this.button2.Size = new System.Drawing.Size(93, 33);
             this.button2.TabIndex = 64;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = false;
@@ -248,6 +236,18 @@
             this.label1.Size = new System.Drawing.Size(22, 18);
             this.label1.TabIndex = 23;
             this.label1.Text = "ID";
+            // 
+            // lblIDBus
+            // 
+            this.lblIDBus.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblIDBus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblIDBus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblIDBus.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblIDBus.Location = new System.Drawing.Point(251, 309);
+            this.lblIDBus.Name = "lblIDBus";
+            this.lblIDBus.Size = new System.Drawing.Size(29, 21);
+            this.lblIDBus.TabIndex = 66;
+            this.lblIDBus.Visible = false;
             // 
             // DetalleChofer
             // 
