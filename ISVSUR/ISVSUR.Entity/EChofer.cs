@@ -10,11 +10,14 @@ namespace ISVSUR.Entity
     {
 
         public int ID { get; set; }
-        public string Nombre_completo { get; set; }
-     
+        public string Nombre_completo { get; set; }    
         public string DNI { get; set; }
         public int Edad { get; set; }
         public string Sexo { get; set; }
-        public string Placa { get; set; }
+        public string placa { get; set; }
     }
+
+
+
+
 }

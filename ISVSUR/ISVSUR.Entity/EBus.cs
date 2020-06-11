@@ -15,4 +15,9 @@ namespace ISVSUR.Entity
         public string Capacidad { get; set; }
      
     }
+
+   
+
+
+
 }

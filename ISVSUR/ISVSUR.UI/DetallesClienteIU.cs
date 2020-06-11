@@ -88,6 +88,7 @@ namespace ISVSUR.UI
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
+            this.Close();
         }
     }
 }

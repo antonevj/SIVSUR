@@ -31,10 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetalleChofer));
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblIDBus = new System.Windows.Forms.Label();
+            this.boxBus = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.boxSexo = new System.Windows.Forms.ComboBox();
-            this.txtIDBus = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtEdad = new System.Windows.Forms.TextBox();
@@ -66,11 +67,11 @@
             // groupBox1
             // 
             this.groupBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox1.BackgroundImage")));
+            this.groupBox1.Controls.Add(this.boxBus);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.boxSexo);
-            this.groupBox1.Controls.Add(this.txtIDBus);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtEdad);
@@ -81,6 +82,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtID);
             this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.lblIDBus);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -90,6 +92,28 @@
             this.groupBox1.TabIndex = 40;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chofer";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // lblIDBus
+            // 
+            this.lblIDBus.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblIDBus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblIDBus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblIDBus.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblIDBus.Location = new System.Drawing.Point(251, 309);
+            this.lblIDBus.Name = "lblIDBus";
+            this.lblIDBus.Size = new System.Drawing.Size(29, 21);
+            this.lblIDBus.TabIndex = 66;
+            this.lblIDBus.Visible = false;
+            // 
+            // boxBus
+            // 
+            this.boxBus.FormattingEnabled = true;
+            this.boxBus.Location = new System.Drawing.Point(30, 307);
+            this.boxBus.Name = "boxBus";
+            this.boxBus.Size = new System.Drawing.Size(200, 24);
+            this.boxBus.TabIndex = 65;
+            this.boxBus.SelectedIndexChanged += new System.EventHandler(this.boxBus_SelectedIndexChanged);
             // 
             // button2
             // 
@@ -102,6 +126,7 @@
             this.button2.TabIndex = 64;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -114,6 +139,7 @@
             this.button1.TabIndex = 63;
             this.button1.Text = "Guardar";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // boxSexo
             // 
@@ -127,13 +153,6 @@
             this.boxSexo.TabIndex = 38;
             this.boxSexo.Text = "Seleccionar:";
             // 
-            // txtIDBus
-            // 
-            this.txtIDBus.Location = new System.Drawing.Point(27, 307);
-            this.txtIDBus.Name = "txtIDBus";
-            this.txtIDBus.Size = new System.Drawing.Size(141, 22);
-            this.txtIDBus.TabIndex = 37;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -141,9 +160,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(27, 286);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 18);
+            this.label3.Size = new System.Drawing.Size(115, 18);
             this.label3.TabIndex = 36;
-            this.label3.Text = "Bus:";
+            this.label3.Text = "Bus A Conducir:";
             // 
             // label4
             // 
@@ -177,6 +196,7 @@
             // txtDNI
             // 
             this.txtDNI.Location = new System.Drawing.Point(27, 151);
+            this.txtDNI.MaxLength = 8;
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(105, 22);
             this.txtDNI.TabIndex = 30;
@@ -240,6 +260,7 @@
             this.Name = "DetalleChofer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DetalleChofer";
+            this.Load += new System.EventHandler(this.DetalleChofer_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -249,19 +270,20 @@
         #endregion
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox boxSexo;
-        private System.Windows.Forms.TextBox txtIDBus;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtEdad;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtDNI;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtNombres;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.ComboBox boxSexo;
+        public System.Windows.Forms.TextBox txtEdad;
+        public System.Windows.Forms.TextBox txtDNI;
+        public System.Windows.Forms.TextBox txtNombres;
+        public System.Windows.Forms.TextBox txtID;
+        public System.Windows.Forms.ComboBox boxBus;
+        public System.Windows.Forms.Label lblIDBus;
     }
 }

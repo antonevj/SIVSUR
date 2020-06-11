@@ -8,7 +8,7 @@ using ISVSUR.Entity;
 
 namespace ISVSUR.Contract
 {
-  public  interface IChofer :  IRead<EChofer>
+  public  interface IChofer :  IRead<EChofer>, TCreate<EChofer>, IUpdate<EChofer>, IDelete<EChofer>
     {
     }
 }

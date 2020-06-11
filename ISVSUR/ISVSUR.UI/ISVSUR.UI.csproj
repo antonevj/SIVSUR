@@ -215,6 +215,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ISVSUR.DATA\ISVSUR.DATA.csproj">
+      <Project>{098c2e2e-dc15-4363-b420-4a073e76bc10}</Project>
+      <Name>ISVSUR.DATA</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ISVSUR.Entity\ISVSUR.Entity.csproj">
       <Project>{8c70967f-3f4d-453c-b5bb-ff59d26b0b01}</Project>
       <Name>ISVSUR.Entity</Name>
