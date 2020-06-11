@@ -81,6 +81,7 @@
             this.groupBox1.TabIndex = 48;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bus";
+            this.groupBox1.Enter += new System.EventHandler(this.GroupBox1_Enter);
             // 
             // button2
             // 
@@ -93,6 +94,7 @@
             this.button2.TabIndex = 62;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // button1
             // 
@@ -105,6 +107,7 @@
             this.button1.TabIndex = 61;
             this.button1.Text = "Guardar";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // txtCapacidad
             // 
@@ -167,6 +170,7 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(58, 20);
             this.txtID.TabIndex = 40;
+            this.txtID.TextChanged += new System.EventHandler(this.TxtID_TextChanged);
             // 
             // label1
             // 
@@ -198,15 +202,15 @@
         #endregion
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtCapacidad;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtPlaca;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtModelo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.TextBox txtCapacidad;
+        public System.Windows.Forms.TextBox txtPlaca;
+        public System.Windows.Forms.TextBox txtModelo;
+        public System.Windows.Forms.TextBox txtID;
     }
 }

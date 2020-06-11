@@ -51,7 +51,6 @@ namespace ISVSUR.UI
         private void btnNuevo_Click(object sender, EventArgs e)
         {
 
-
             DetallesClienteIU detalle = new DetallesClienteIU();
             detalle.StartPosition = FormStartPosition.CenterScreen;
             detalle.operacion = (byte)MisConstantes.OPERACION.Insercion;
@@ -161,6 +160,16 @@ namespace ISVSUR.UI
             else
 
                 MessageBox.Show("debe seleccionar un elemento");
+        }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
