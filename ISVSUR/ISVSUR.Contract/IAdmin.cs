@@ -9,7 +9,7 @@ using ISVSUR.Entity;
 
 namespace ISVSUR.Contract
 {
-   public interface IAdmin : IRead<EAdmin>
+   public interface IAdmin : IRead<EAdmin>,TCreate<EAdmin>, IUpdate<EAdmin>, IDelete<EAdmin>
     {
 
     }

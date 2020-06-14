@@ -30,7 +30,7 @@ namespace ISVSUR.UI
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
         }
 
         private void DetalleChofer_Load(object sender, EventArgs e)
@@ -127,6 +127,7 @@ namespace ISVSUR.UI
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
+            this.DialogResult = DialogResult.OK;
             this.Close();
         }
 

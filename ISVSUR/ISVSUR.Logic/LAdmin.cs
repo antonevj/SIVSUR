@@ -15,5 +15,19 @@ namespace ISVSUR.Logic
         {
             return new DAdmin().GetAll();
         }
+        public int Create(EAdmin t)
+        {
+            return new DAdmin().Create(t);
+        }
+
+        public int Update(EAdmin t)
+        {
+            return new DAdmin().Update(t);
+        }
+
+        public int Delete(int IDBus)
+        {
+            return new DAdmin().Delete(IDBus);
+        }
     }
 }

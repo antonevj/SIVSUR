@@ -50,12 +50,13 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(0, 43);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(630, 334);
+            this.dataGridView1.Size = new System.Drawing.Size(692, 334);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
             // toolStripTextBox1
             // 
+            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(100, 25);
             this.toolStripTextBox1.Text = "Detalle Venta";
@@ -111,7 +112,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(630, 49);
+            this.panel1.Size = new System.Drawing.Size(692, 49);
             this.panel1.TabIndex = 5;
             // 
             // button3
@@ -121,9 +122,9 @@
             this.button3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.Control;
-            this.button3.Location = new System.Drawing.Point(603, 0);
+            this.button3.Location = new System.Drawing.Point(664, 0);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(27, 27);
+            this.button3.Size = new System.Drawing.Size(28, 27);
             this.button3.TabIndex = 7;
             this.button3.Text = "X";
             this.button3.UseVisualStyleBackColor = false;
@@ -146,7 +147,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Location = new System.Drawing.Point(451, 17);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(116, 20);
+            this.textBox1.Size = new System.Drawing.Size(178, 20);
             this.textBox1.TabIndex = 5;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -156,7 +157,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(630, 377);
+            this.ClientSize = new System.Drawing.Size(692, 377);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;

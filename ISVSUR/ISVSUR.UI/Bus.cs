@@ -23,7 +23,8 @@ namespace ISVSUR.UI
 
         private void Bus_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = new LBus().GetAll();
+
+            mostrar_datos();
         }
         private void mostrar_datos()
         {

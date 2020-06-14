@@ -108,9 +108,9 @@
             this.button2.BackColor = System.Drawing.Color.Black;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Transparent;
-            this.button2.Location = new System.Drawing.Point(155, 352);
+            this.button2.Location = new System.Drawing.Point(150, 352);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 33);
+            this.button2.Size = new System.Drawing.Size(98, 33);
             this.button2.TabIndex = 64;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = false;

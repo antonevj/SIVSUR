@@ -33,7 +33,7 @@ namespace ISVSUR.UI
         private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Formulario_de_Venta CLi = new Formulario_de_Venta();
-            CLi.Show();
+            CLi.ShowDialog();
         }
 
         private void btnVenta_ButtonClick(object sender, EventArgs e)
@@ -45,26 +45,26 @@ namespace ISVSUR.UI
         {
 
             ClientesIU CLi = new ClientesIU();
-            CLi.Show();
+            CLi.ShowDialog();
 
         }
 
         private void busToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Bus b = new Bus();
-            b.Show();
+            b.ShowDialog();
         }
 
         private void rutasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Ruta b = new Ruta();
-            b.Show();
+            b.ShowDialog();
         }
 
         private void programacionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Llegada b = new Llegada();
-            b.Show();
+            b.ShowDialog();
         }
 
         private void btnClientes_ButtonClick(object sender, EventArgs e)
@@ -76,16 +76,12 @@ namespace ISVSUR.UI
         {
             Administrador administrador = new Administrador();
             administrador.ShowDialog();
-            if (administrador.DialogResult == DialogResult.Yes)
-            {
-
-            }
+           
         }
 
         private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form1 administrador = new Form1();
-           
+            Form1 administrador = new Form1();          
             this.Hide();
             administrador.ShowDialog();
         }

@@ -88,7 +88,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(0, 58);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(637, 333);
+            this.dataGridView1.Size = new System.Drawing.Size(702, 333);
             this.dataGridView1.TabIndex = 18;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -105,7 +105,7 @@
             this.panel1.Controls.Add(this.btnEliminar);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(637, 52);
+            this.panel1.Size = new System.Drawing.Size(702, 52);
             this.panel1.TabIndex = 23;
             // 
             // label1
@@ -125,7 +125,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Location = new System.Drawing.Point(466, 17);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(134, 20);
+            this.textBox1.Size = new System.Drawing.Size(118, 20);
             this.textBox1.TabIndex = 25;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -136,7 +136,7 @@
             this.button3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.Control;
-            this.button3.Location = new System.Drawing.Point(606, 0);
+            this.button3.Location = new System.Drawing.Point(671, 0);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(31, 27);
             this.button3.TabIndex = 24;
@@ -149,7 +149,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(637, 391);
+            this.ClientSize = new System.Drawing.Size(702, 391);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

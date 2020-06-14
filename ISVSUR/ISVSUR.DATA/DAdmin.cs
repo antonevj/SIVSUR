@@ -11,6 +11,7 @@ namespace ISVSUR.DATA
 {
     public class DAdmin : IAdmin
     {
+      
         public EAdmin Get(int IDCliente)
         {
             throw new NotImplementedException();
@@ -18,9 +19,6 @@ namespace ISVSUR.DATA
 
         public IEnumerable<EAdmin> GetAll()
         {
-
-
-
 
             using (SqlConnection cnx = new SqlConnection())
             {
@@ -49,10 +47,6 @@ namespace ISVSUR.DATA
                         Usuario = (reader["UsuarioAdmin"].ToString()),
                         Contraseña = (reader["ContraseniaAdmin"].ToString()),
 
-
-
-
-
                     });
 
                 }
@@ -66,5 +60,74 @@ namespace ISVSUR.DATA
 
 
         }
+
+        public int Create(EAdmin t)
+        {
+            using (SqlConnection cnx = new SqlConnection())
+            {
+                cnx.ConnectionString = MiCadena.CadenaCnx();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "sp_agregar_administrador";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@NombreAdmin", t.Nombres);
+                cmd.Parameters.AddWithValue("@ApellidoAdmin", t.Apellidos);
+                cmd.Parameters.AddWithValue("@UsuarioAdmin", t.Usuario);
+                cmd.Parameters.AddWithValue("@ContraseniaAdmin", t.Contraseña);
+                cmd.Connection = cnx;
+                cnx.Open();
+
+
+                int filasafectadas = cmd.ExecuteNonQuery();
+
+                return filasafectadas;
+            }
+        }
+
+
+        public int Update(EAdmin t)
+        {
+            using (SqlConnection cnx = new SqlConnection())
+            {
+                cnx.ConnectionString = MiCadena.CadenaCnx();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "sp_modificar_administrador";
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@IDAdmin", t.ID);
+                cmd.Parameters.AddWithValue("@NombreAdmin", t.Nombres);
+                cmd.Parameters.AddWithValue("@ApellidoAdmin", t.Apellidos);
+                cmd.Parameters.AddWithValue("@UsuarioAdmin", t.Usuario);
+                cmd.Parameters.AddWithValue("@ContraseniaAdmin", t.Contraseña);
+                cmd.Connection = cnx;
+                cnx.Open();
+
+
+                int filasafectadas = cmd.ExecuteNonQuery();
+
+                return filasafectadas;
+            }
+        }
+
+
+        public int Delete(int IDAdmin)
+        {
+            using (SqlConnection cnx = new SqlConnection())
+            {
+                cnx.ConnectionString = MiCadena.CadenaCnx();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "sp_eliminar_Administrador";
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@IDAdmin", IDAdmin);
+                cmd.Connection = cnx;
+                cnx.Open();
+
+
+                int filasafectadas = cmd.ExecuteNonQuery();
+
+                return filasafectadas;
+            }
+        }
+
     }
 }
