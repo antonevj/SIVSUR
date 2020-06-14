@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ISVSUR.Logic;
+using ISVSUR.Util;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +21,7 @@ namespace ISVSUR.UI
 
         private void Llegada_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -32,6 +34,8 @@ namespace ISVSUR.UI
         {
             this.Close();
         }
+
+     
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

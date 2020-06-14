@@ -34,7 +34,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.txtDuracion = new System.Windows.Forms.TextBox();
-            this.txtChofer = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtPrecio = new System.Windows.Forms.TextBox();
@@ -45,17 +44,20 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.boxChofer = new System.Windows.Forms.ComboBox();
+            this.lblIDChofer = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox1.BackgroundImage")));
+            this.groupBox1.Controls.Add(this.lblIDChofer);
+            this.groupBox1.Controls.Add(this.boxChofer);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.txtDuracion);
-            this.groupBox1.Controls.Add(this.txtChofer);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtPrecio);
@@ -122,13 +124,6 @@
             this.txtDuracion.Name = "txtDuracion";
             this.txtDuracion.Size = new System.Drawing.Size(68, 20);
             this.txtDuracion.TabIndex = 42;
-            // 
-            // txtChofer
-            // 
-            this.txtChofer.Location = new System.Drawing.Point(39, 295);
-            this.txtChofer.Name = "txtChofer";
-            this.txtChofer.Size = new System.Drawing.Size(116, 20);
-            this.txtChofer.TabIndex = 39;
             // 
             // label7
             // 
@@ -225,6 +220,26 @@
             this.label1.TabIndex = 23;
             this.label1.Text = "ID";
             // 
+            // boxChofer
+            // 
+            this.boxChofer.FormattingEnabled = true;
+            this.boxChofer.Location = new System.Drawing.Point(45, 305);
+            this.boxChofer.Name = "boxChofer";
+            this.boxChofer.Size = new System.Drawing.Size(134, 21);
+            this.boxChofer.TabIndex = 67;
+            // 
+            // lblIDChofer
+            // 
+            this.lblIDChofer.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblIDChofer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblIDChofer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblIDChofer.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblIDChofer.Location = new System.Drawing.Point(249, 305);
+            this.lblIDChofer.Name = "lblIDChofer";
+            this.lblIDChofer.Size = new System.Drawing.Size(29, 21);
+            this.lblIDChofer.TabIndex = 68;
+            this.lblIDChofer.Visible = false;
+            // 
             // DetalleRuta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -245,7 +260,6 @@
         #endregion
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtDuracion;
-        private System.Windows.Forms.TextBox txtChofer;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtPrecio;
@@ -259,5 +273,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ComboBox boxChofer;
+        public System.Windows.Forms.Label lblIDChofer;
     }
 }
