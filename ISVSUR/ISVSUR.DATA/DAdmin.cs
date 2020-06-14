@@ -12,7 +12,7 @@ namespace ISVSUR.DATA
     public class DAdmin : IAdmin
     {
       
-        public EAdmin Get(int IDCliente)
+        public EAdmin Get(int IDAdmin)
         {
             throw new NotImplementedException();
         }
