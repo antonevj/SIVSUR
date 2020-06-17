@@ -44,6 +44,36 @@ namespace ISVSUR.UI
 
 
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            var aux = new LChofer();
+            aux.Buscar(dataGridView1, this.textBox1.Text.Trim());
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+
             DetalleChofer detalle = new DetalleChofer();
             detalle.StartPosition = FormStartPosition.CenterScreen;
             detalle.operacion = (byte)MisConstantes.OPERACION.Insercion;
@@ -60,18 +90,9 @@ namespace ISVSUR.UI
             fmr.Show();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnModifica_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
             if (dataGridView1.SelectedRows.Count > 0)
             {
 
@@ -81,7 +102,7 @@ namespace ISVSUR.UI
                 detalle.operacion = (byte)MisConstantes.OPERACION.Modificacion;
 
                 detalle.txtID.Text = dataGridView1.CurrentRow.Cells["ID"].Value.ToString();
-                detalle.txtNombres.Text = dataGridView1.CurrentRow.Cells["Nombre_completo"].Value.ToString();             
+                detalle.txtNombres.Text = dataGridView1.CurrentRow.Cells["Nombre_completo"].Value.ToString();
                 detalle.txtDNI.Text = dataGridView1.CurrentRow.Cells["DNI"].Value.ToString();
                 detalle.txtEdad.Text = dataGridView1.CurrentRow.Cells["Edad"].Value.ToString();
                 detalle.boxSexo.Text = dataGridView1.CurrentRow.Cells["Sexo"].Value.ToString();
@@ -98,7 +119,7 @@ namespace ISVSUR.UI
             }
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private void btnElimina(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
@@ -126,12 +147,6 @@ namespace ISVSUR.UI
             else
 
                 MessageBox.Show("debe seleccionar un elemento");
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            var aux = new LChofer();
-            aux.Buscar(dataGridView1, this.textBox1.Text.Trim());
         }
     }
 }
