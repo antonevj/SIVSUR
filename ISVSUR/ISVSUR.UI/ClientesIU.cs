@@ -51,17 +51,6 @@ namespace ISVSUR.UI
         private void btnNuevo_Click(object sender, EventArgs e)
         {
 
-            DetallesClienteIU detalle = new DetallesClienteIU();
-            detalle.StartPosition = FormStartPosition.CenterScreen;
-            detalle.operacion = (byte)MisConstantes.OPERACION.Insercion;
-
-            DialogResult rpta = detalle.ShowDialog();
-
-            if (rpta == DialogResult.OK)
-            {
-                mostrar_datos();
-            }
-
             
 
 
@@ -96,6 +85,7 @@ namespace ISVSUR.UI
 
             var aux = new LCliente();
             aux.Buscar(dataGridView1, this.textBox1.Text.Trim());
+            //mostrar_datos();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -104,6 +94,44 @@ namespace ISVSUR.UI
         }
 
         private void btnModificar_Click_1(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnEliminar_Click_1(object sender, EventArgs e)
+        {
+
+           
+        }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnInsertar_Click(object sender, EventArgs e)
+        {
+
+            DetallesClienteIU detalle = new DetallesClienteIU();
+            detalle.StartPosition = FormStartPosition.CenterScreen;
+            detalle.operacion = (byte)MisConstantes.OPERACION.Insercion;
+
+            DialogResult rpta = detalle.ShowDialog();
+
+            if (rpta == DialogResult.OK)
+            {
+                mostrar_datos();
+            }
+
+
+        }
+
+        private void btnModificar1_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
@@ -131,9 +159,8 @@ namespace ISVSUR.UI
             }
         }
 
-        private void btnEliminar_Click_1(object sender, EventArgs e)
+        private void btnEliminar1_Click(object sender, EventArgs e)
         {
-
             if (dataGridView1.SelectedRows.Count > 0)
             {
 
@@ -160,16 +187,6 @@ namespace ISVSUR.UI
             else
 
                 MessageBox.Show("debe seleccionar un elemento");
-        }
-
-        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void Label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -64,6 +64,7 @@
             this.btnModificar.TabIndex = 21;
             this.toolTip1.SetToolTip(this.btnModificar, "Modificar");
             this.btnModificar.UseVisualStyleBackColor = false;
+           
             // 
             // btnNuevo
             // 

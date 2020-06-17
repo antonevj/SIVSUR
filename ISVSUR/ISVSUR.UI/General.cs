@@ -12,6 +12,8 @@ namespace ISVSUR.UI
 {
     public partial class General : Form
     {
+
+        private ClientesIU _fromCliente;
         public General()
         {
             InitializeComponent();
@@ -27,71 +29,78 @@ namespace ISVSUR.UI
 
         private void General_Load(object sender, EventArgs e)
         {
-
+           
         }
 
-        private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
+       
+
+        private void clientesToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Formulario_de_Venta CLi = new Formulario_de_Venta();
-            CLi.ShowDialog();
+            btnCliente_Click(sender, e);
         }
 
-        private void btnVenta_ButtonClick(object sender, EventArgs e)
+        private void registrarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Administrador administrador = new Administrador();
+            administrador.ShowDialog();
+        }
+
+        private void cerrarSesionToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form1 administrador = new Form1();
+            this.Hide();
+            administrador.ShowDialog();
+        }
+
+        private void choferesToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+            Chofer cho = new Chofer();
+            cho.ShowDialog();
         }
 
-        private void cLientesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-            ClientesIU CLi = new ClientesIU();
-            CLi.ShowDialog();
-
-        }
-
-        private void busToolStripMenuItem_Click(object sender, EventArgs e)
+        private void busToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Bus b = new Bus();
             b.ShowDialog();
         }
 
-        private void rutasToolStripMenuItem_Click(object sender, EventArgs e)
+        private void rutaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Ruta b = new Ruta();
             b.ShowDialog();
         }
 
-        private void programacionToolStripMenuItem_Click(object sender, EventArgs e)
+        private void programacionToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Llegada b = new Llegada();
             b.ShowDialog();
         }
 
-        private void btnClientes_ButtonClick(object sender, EventArgs e)
+        private void ventasToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            Formulario_de_Venta CLi = new Formulario_de_Venta();
+            CLi.ShowDialog();
+        }
+
+        private void ventasToolStripMenuItem1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void registrarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnCliente_Click(object sender, EventArgs e)
         {
-            Administrador administrador = new Administrador();
-            administrador.ShowDialog();
-           
-        }
-
-        private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form1 administrador = new Form1();          
-            this.Hide();
-            administrador.ShowDialog();
-        }
-
-        private void choferToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Chofer cho = new Chofer();
-            cho.ShowDialog();
-
-          
+            if (_fromCliente == null || _fromCliente.IsDisposed == true)
+            {
+                _fromCliente = new ClientesIU();
+                _fromCliente.WindowState = FormWindowState.Maximized;
+                _fromCliente.MdiParent = this;
+                _fromCliente.Show();
+            }
+            else
+            {
+                _fromCliente.BringToFront();
+            }
         }
     }
 }
