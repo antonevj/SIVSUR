@@ -14,6 +14,8 @@ namespace ISVSUR.UI
     {
 
         private ClientesIU _fromCliente;
+        private Bus _fromBus;
+        private Chofer _fromChofer;
         public General()
         {
             InitializeComponent();
@@ -22,17 +24,17 @@ namespace ISVSUR.UI
         private void btnAdmin_Click(object sender, EventArgs e)
         {
 
-            
+
 
         }
 
 
         private void General_Load(object sender, EventArgs e)
         {
-           
+
         }
 
-       
+
 
         private void clientesToolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -54,15 +56,12 @@ namespace ISVSUR.UI
 
         private void choferesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-            Chofer cho = new Chofer();
-            cho.ShowDialog();
+            btnChofer_Click(sender, e);
         }
 
         private void busToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Bus b = new Bus();
-            b.ShowDialog();
+            btnBuses_Click(sender, e);
         }
 
         private void rutaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -90,6 +89,7 @@ namespace ISVSUR.UI
 
         private void btnCliente_Click(object sender, EventArgs e)
         {
+
             if (_fromCliente == null || _fromCliente.IsDisposed == true)
             {
                 _fromCliente = new ClientesIU();
@@ -101,6 +101,49 @@ namespace ISVSUR.UI
             {
                 _fromCliente.BringToFront();
             }
+            pictureBox1.Visible = false;
         }
+
+        private void btnChofer_Click(object sender, EventArgs e)
+        {
+            if (_fromChofer == null || _fromChofer.IsDisposed == true)
+            {
+                _fromChofer = new Chofer();
+                _fromChofer.WindowState = FormWindowState.Maximized;
+                _fromChofer.MdiParent = this;
+                _fromChofer.Show();
+            }
+            else
+            {
+                _fromChofer.BringToFront();
+            }
+            pictureBox1.Visible = false;
+        }
+
+        private void btnBuses_Click(object sender, EventArgs e)
+        {
+            if (_fromBus == null || _fromBus.IsDisposed == true)
+            {
+                _fromBus = new Bus();
+                _fromBus.WindowState = FormWindowState.Maximized;
+                _fromBus.MdiParent = this;
+                _fromBus.Show();
+            }
+            else
+            {
+                _fromBus.BringToFront();
+            }
+            pictureBox1.Visible = false;
+        }
+
+        private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+
+            pictureBox1.Visible = true;
+        }
+
     }
+
+    
 }

@@ -18,7 +18,7 @@ namespace ISVSUR.DATA
             throw new NotImplementedException();
         }
 
-        public IEnumerable<ERutas> GetAll()
+        public IEnumerable<ERutas> GetAll(bool status)
         {
             using (SqlConnection cnx = new SqlConnection())
             {

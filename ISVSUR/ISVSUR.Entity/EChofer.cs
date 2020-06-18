@@ -15,6 +15,7 @@ namespace ISVSUR.Entity
         public int Edad { get; set; }
         public string Sexo { get; set; }
         public string placa { get; set; }
+        public bool Estado { get; set; }
     }
 
 

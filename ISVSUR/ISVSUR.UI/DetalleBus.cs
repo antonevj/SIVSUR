@@ -44,8 +44,68 @@ namespace ISVSUR.UI
             this.Close();
         }
 
+        private bool MyValidation()
+        {
+            bool rpta = false;
+
+            //arrary que almacena la coleccion de errores
+            bool[] error = new bool[3];
+
+
+            ///validamos el campo nombre 
+            if (String.IsNullOrWhiteSpace(txtModelo.Text))
+            {
+                errorProvider1.SetError(txtModelo, "El modelo es obligatorio");
+                error[0] = true;
+
+            }
+
+
+            //colocar las demas validaciones
+            if (error[0] == true || error[1] == true)
+            {
+                MessageBox.Show("Error de validación.\n" + "Ingrese los datos en los campos obligatorios o verifique que estos sean válidos",
+                    "Aviso",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                rpta = false;
+            }
+            else
+            {
+                rpta = true;
+            }
+
+
+
+
+            return rpta;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         private void Button1_Click(object sender, EventArgs e)
         {
+
+
+            if (!MyValidation())
+            {
+
+
+                return;
+
+            }
             EBus obj = new EBus
             {
 
@@ -53,6 +113,7 @@ namespace ISVSUR.UI
                 Modelo = txtModelo.Text.Trim().ToUpper(),
                 Placa = txtPlaca.Text.Trim().ToUpper(),
                 Capacidad = txtCapacidad.Text,
+                Estado = chkEstado.Checked,
 
             };
 

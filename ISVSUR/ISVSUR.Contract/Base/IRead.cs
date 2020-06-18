@@ -9,7 +9,7 @@ namespace ISVSUR.Contract.Base
     public interface IRead<T>where T:class
     {
         //Obtener todos los registros de la BD
-        IEnumerable<T> GetAll();
+        IEnumerable<T> GetAll(bool status);
 
         //Obtener un registro especifico 
         T Get(int IDCliente);

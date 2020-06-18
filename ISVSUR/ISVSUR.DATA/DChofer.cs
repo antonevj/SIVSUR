@@ -19,7 +19,7 @@ namespace ISVSUR.DATA
             throw new NotImplementedException();
         }
 
-        public IEnumerable<EChofer> GetAll()
+        public IEnumerable<EChofer> GetAll(bool status)
         {
             using (SqlConnection cnx = new SqlConnection())
             {
@@ -29,7 +29,7 @@ namespace ISVSUR.DATA
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandText = "sp_Chofer_getAll";
                 cmd.CommandType = CommandType.StoredProcedure;
-                //  cmd.Parameters.AddWithValue();
+                cmd.Parameters.AddWithValue("@Estado", status);
                 cmd.Connection = cnx;
                 cnx.Open();
 
@@ -77,6 +77,7 @@ namespace ISVSUR.DATA
                 cmd.Parameters.AddWithValue("@EdadCho", t.Edad);
                 cmd.Parameters.AddWithValue("@SexoChof", t.Sexo);
                 cmd.Parameters.AddWithValue("@IDBus", t.placa);
+                cmd.Parameters.AddWithValue("@Estado", t.Estado);
                 cmd.Connection = cnx;
                 cnx.Open();
 
@@ -103,6 +104,7 @@ namespace ISVSUR.DATA
                 cmd.Parameters.AddWithValue("@EdadCho", t.Edad);
                 cmd.Parameters.AddWithValue("@SexoChof", t.Sexo);
                 cmd.Parameters.AddWithValue ("@IDBus", t.placa).ToString();
+                cmd.Parameters.AddWithValue("@Estado",t.Estado);
                 cmd.Connection = cnx;
                 cnx.Open();
 

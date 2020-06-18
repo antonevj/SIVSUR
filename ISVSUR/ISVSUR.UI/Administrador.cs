@@ -27,7 +27,7 @@ namespace ISVSUR.UI
         private void mostrar_datos()
         {
 
-            var a = dataGridView1.DataSource = new LAdmin().GetAll();
+            var a = dataGridView1.DataSource = new LAdmin().GetAll(checkBox1.Checked);
 
             dataGridView1.MultiSelect = false;
             dataGridView1.RowsDefaultCellStyle.BackColor = MisConstantes.COLOR_CELDA_FONDO_GRID;
@@ -110,6 +110,11 @@ namespace ISVSUR.UI
             else
 
                 MessageBox.Show("debe seleccionar un elemento");
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

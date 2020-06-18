@@ -91,8 +91,67 @@ namespace ISVSUR.UI
             this.Close();
         }
 
+        private bool MyValidation()
+        {
+            bool rpta = false;
+
+            //arrary que almacena la coleccion de errores
+            bool[] error = new bool[3];
+
+
+            ///validamos el campo nombre 
+            if (String.IsNullOrWhiteSpace(txtNombres.Text))
+            {
+                errorProvider1.SetError(txtNombres, "El nombre es obligatorio");
+                error[0] = true;
+
+            }
+
+
+            //colocar las demas validaciones
+            if (error[0] == true || error[1] == true)
+            {
+                MessageBox.Show("Error de validación.\n" + "Ingrese los datos en los campos obligatorios o verifique que estos sean válidos",
+                    "Aviso",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                rpta = false;
+            }
+            else
+            {
+                rpta = true;
+            }
+
+
+
+
+            return rpta;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
         private void button1_Click(object sender, EventArgs e)
         {
+
+
+
+            if (!MyValidation())
+            {
+
+
+                return;
+
+            }
             EChofer obj = new EChofer
             {
 
@@ -101,8 +160,8 @@ namespace ISVSUR.UI
                 DNI = txtDNI.Text,
                 Edad = int.Parse(txtEdad.Text),
                 Sexo = boxSexo.Text,
-                placa= ( lblIDBus.Text)
-
+                placa= ( lblIDBus.Text),
+                Estado=chkEstado.Checked
 
 
             };

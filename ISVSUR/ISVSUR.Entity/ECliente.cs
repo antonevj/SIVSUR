@@ -15,7 +15,7 @@ namespace ISVSUR.Entity
         public string DNI { get; set; }
         public int Edad { get; set; }
         public string Sexo { get; set; }
-
+        public bool Estado { get; set; }
     }
 
    

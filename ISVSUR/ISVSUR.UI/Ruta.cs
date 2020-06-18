@@ -29,7 +29,7 @@ namespace ISVSUR.UI
         private void mostrar_datos()
         {
 
-            dataGridView1.DataSource = new LRutas().GetAll();
+            dataGridView1.DataSource = new LRutas().GetAll(checkBox1.Checked);
 
             dataGridView1.MultiSelect = false;
             dataGridView1.RowsDefaultCellStyle.BackColor = MisConstantes.COLOR_CELDA_FONDO_GRID;
@@ -49,6 +49,11 @@ namespace ISVSUR.UI
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

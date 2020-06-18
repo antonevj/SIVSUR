@@ -29,13 +29,14 @@ namespace ISVSUR.UI
         private void mostrar_datos()
         {
 
-            var a = dataGridView1.DataSource = new LBus().GetAll();
+            var a = dataGridView1.DataSource = new LBus().GetAll(checkBox1.Checked);
 
             dataGridView1.MultiSelect = false;
             dataGridView1.RowsDefaultCellStyle.BackColor = MisConstantes.COLOR_CELDA_FONDO_GRID;
             dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = MisConstantes.COLOR_CELDA_FONDO_GRID_ALTER;
 
             dataGridView1.Columns["Modelo"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridView1.Columns["Estado"].Visible = false;
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -59,8 +60,7 @@ namespace ISVSUR.UI
 
         private void TextBox1_TextChanged(object sender, EventArgs e)
         {
-            var aux = new LBus();
-            aux.Buscar(dataGridView1, this.txtPlaca.Text.Trim());
+            
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -93,7 +93,7 @@ namespace ISVSUR.UI
                 detalle.txtModelo.Text = dataGridView1.CurrentRow.Cells["Modelo"].Value.ToString();
                 detalle.txtPlaca.Text = dataGridView1.CurrentRow.Cells["Placa"].Value.ToString();
                 detalle.txtCapacidad.Text = dataGridView1.CurrentRow.Cells["Capacidad"].Value.ToString();
-
+                detalle.chkEstado.Checked = checkBox1.Checked;
 
                 DialogResult rpta = detalle.ShowDialog();
 
@@ -133,6 +133,17 @@ namespace ISVSUR.UI
             else
 
                 MessageBox.Show("debe seleccionar un elemento");
+        }
+
+        private void txtPlaca_TextChanged(object sender, EventArgs e)
+        {
+            var aux = new LBus();
+            aux.Buscar(dataGridView1, this.txtPlaca.Text.Trim());
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            mostrar_datos();
         }
     }
 }

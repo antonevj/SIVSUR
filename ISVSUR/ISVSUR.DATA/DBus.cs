@@ -18,7 +18,7 @@ namespace ISVSUR.DATA
             throw new NotImplementedException();
         }
 
-        public IEnumerable<EBus> GetAll()
+        public IEnumerable<EBus> GetAll(bool status)
         {
 
             using (SqlConnection cnx = new SqlConnection())
@@ -29,6 +29,7 @@ namespace ISVSUR.DATA
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandText = "sp_Bus_getAll";
                 cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Estado", status);
                 //  cmd.Parameters.AddWithValue();
                 cmd.Connection = cnx;
                 cnx.Open();
@@ -71,6 +72,7 @@ namespace ISVSUR.DATA
                 cmd.Parameters.AddWithValue("@ModeloBus", t.Modelo);
                 cmd.Parameters.AddWithValue("@PlacaBus", t.Placa);
                 cmd.Parameters.AddWithValue("@CapacidadBus", t.Capacidad);
+                cmd.Parameters.AddWithValue("@Estado", t.Estado);
                 cmd.Connection = cnx;
                 cnx.Open();
 
@@ -94,6 +96,7 @@ namespace ISVSUR.DATA
                 cmd.Parameters.AddWithValue("@ModeloBus", t.Modelo);
                 cmd.Parameters.AddWithValue("@PlacaBus", t.Placa);
                 cmd.Parameters.AddWithValue("@CapacidadBus", t.Capacidad);
+                cmd.Parameters.AddWithValue("@Estado", t.Estado);
                 cmd.Connection = cnx;
                 cnx.Open();
 

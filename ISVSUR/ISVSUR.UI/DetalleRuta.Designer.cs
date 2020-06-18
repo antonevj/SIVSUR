@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetalleRuta));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblIDChofer = new System.Windows.Forms.Label();
+            this.boxChofer = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -44,8 +46,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.boxChofer = new System.Windows.Forms.ComboBox();
-            this.lblIDChofer = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,6 +76,26 @@
             this.groupBox1.TabIndex = 44;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ruta";
+            // 
+            // lblIDChofer
+            // 
+            this.lblIDChofer.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblIDChofer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblIDChofer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblIDChofer.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblIDChofer.Location = new System.Drawing.Point(209, 305);
+            this.lblIDChofer.Name = "lblIDChofer";
+            this.lblIDChofer.Size = new System.Drawing.Size(29, 21);
+            this.lblIDChofer.TabIndex = 68;
+            this.lblIDChofer.Visible = false;
+            // 
+            // boxChofer
+            // 
+            this.boxChofer.FormattingEnabled = true;
+            this.boxChofer.Location = new System.Drawing.Point(45, 305);
+            this.boxChofer.Name = "boxChofer";
+            this.boxChofer.Size = new System.Drawing.Size(134, 21);
+            this.boxChofer.TabIndex = 67;
             // 
             // button3
             // 
@@ -219,26 +239,6 @@
             this.label1.Size = new System.Drawing.Size(22, 18);
             this.label1.TabIndex = 23;
             this.label1.Text = "ID";
-            // 
-            // boxChofer
-            // 
-            this.boxChofer.FormattingEnabled = true;
-            this.boxChofer.Location = new System.Drawing.Point(45, 305);
-            this.boxChofer.Name = "boxChofer";
-            this.boxChofer.Size = new System.Drawing.Size(134, 21);
-            this.boxChofer.TabIndex = 67;
-            // 
-            // lblIDChofer
-            // 
-            this.lblIDChofer.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblIDChofer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblIDChofer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblIDChofer.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblIDChofer.Location = new System.Drawing.Point(249, 305);
-            this.lblIDChofer.Name = "lblIDChofer";
-            this.lblIDChofer.Size = new System.Drawing.Size(29, 21);
-            this.lblIDChofer.TabIndex = 68;
-            this.lblIDChofer.Visible = false;
             // 
             // DetalleRuta
             // 

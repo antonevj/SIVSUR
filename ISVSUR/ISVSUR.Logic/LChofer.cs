@@ -11,9 +11,9 @@ namespace ISVSUR.Logic
 {
     public class LChofer
     {
-        public IEnumerable<EChofer> GetAll()
+        public IEnumerable<EChofer> GetAll(bool status)
         {
-            return new DChofer().GetAll();
+            return new DChofer().GetAll(status);
         }
 
         public int Create(EChofer t)
@@ -33,7 +33,7 @@ namespace ISVSUR.Logic
 
         public void Buscar(DataGridView data, string DNICh)
         {
-            new DCliente().Buscar(data, DNICh);
+            new DChofer().Buscar(data, DNICh);
         }
 
        

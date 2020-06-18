@@ -12,9 +12,9 @@ namespace ISVSUR.Logic
 {
     public class LBus
     {
-        public IEnumerable<EBus> GetAll()
+        public IEnumerable<EBus> GetAll(bool status)
         {
-            return new DBus().GetAll();
+            return new DBus().GetAll(status);
         }
 
         public int Create(EBus t)

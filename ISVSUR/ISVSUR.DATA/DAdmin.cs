@@ -17,7 +17,7 @@ namespace ISVSUR.DATA
             throw new NotImplementedException();
         }
 
-        public IEnumerable<EAdmin> GetAll()
+        public IEnumerable<EAdmin> GetAll(bool status)
         {
 
             using (SqlConnection cnx = new SqlConnection())

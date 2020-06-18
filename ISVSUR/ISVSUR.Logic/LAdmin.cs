@@ -11,9 +11,9 @@ namespace ISVSUR.Logic
    public class LAdmin
     {
 
-        public IEnumerable<EAdmin> GetAll()
+        public IEnumerable<EAdmin> GetAll(bool status)
         {
-            return new DAdmin().GetAll();
+            return new DAdmin().GetAll(status);
         }
         public int Create(EAdmin t)
         {

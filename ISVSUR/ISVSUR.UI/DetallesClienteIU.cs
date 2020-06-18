@@ -50,11 +50,55 @@ namespace ISVSUR.UI
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private bool MyValidation()
         {
+            bool rpta = false;
+
+            //arrary que almacena la coleccion de errores
+            bool[] error = new bool[3];
+
+
+            ///validamos el campo nombre 
+            if (String.IsNullOrWhiteSpace(txtNombres.Text))
+            {
+                errorProvider1.SetError(txtNombres, "El nombre es obligatorio");
+                error[0] = true;
+
+            }
+
+
+            //colocar las demas validaciones
+            if (error[0] == true || error[1] == true)
+            {
+                MessageBox.Show("Error de validación.\n" + "Ingrese los datos en los campos obligatorios o verifique que estos sean válidos",
+                    "Aviso",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                rpta = false;
+            }
+            else
+            {
+                rpta = true;
+            }
+
+
+
+
+            return rpta;
+        }
+            private void button1_Click(object sender, EventArgs e)
+        {
+
+
+            if (!MyValidation())
+            {
+
+
+                return;
+
+            }
             ECliente obj = new ECliente
             {
 
@@ -63,8 +107,8 @@ namespace ISVSUR.UI
                 Apellidos = txtApellidos.Text.Trim().ToUpper(),
                 DNI = txtDNI.Text,
                 Edad = int.Parse(txtEdad.Text),
-                Sexo = boxSexo.Text
-
+                Sexo = boxSexo.Text,
+                Estado=chkEstado.Checked
 
 
             };
@@ -88,12 +132,21 @@ namespace ISVSUR.UI
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
-            this.Close();
+            else
+            {
+                MessageBox.Show("llene los datos");
+            }
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

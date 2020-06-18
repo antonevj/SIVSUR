@@ -11,9 +11,9 @@ namespace ISVSUR.Logic
   public  class LRutas
     {
 
-        public IEnumerable<ERutas> GetAll()
+        public IEnumerable<ERutas> GetAll(bool status)
         {
-            return new DRutas().GetAll();
+            return new DRutas().GetAll(status);
         }
 
         public int Create(ERutas t)

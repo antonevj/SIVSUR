@@ -11,9 +11,9 @@ namespace ISVSUR.Logic
 {
     public class LCliente
     {
-        public IEnumerable<ECliente> GetAll()
+        public IEnumerable<ECliente> GetAll(bool status)
         {
-            return new DCliente().GetAll();
+            return new DCliente().GetAll(status);
         }
 
         public int Create(ECliente t)

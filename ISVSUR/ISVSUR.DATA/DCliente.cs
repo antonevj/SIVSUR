@@ -19,7 +19,7 @@ namespace ISVSUR.DATA
         }
 
 
-        public IEnumerable<ECliente> GetAll()
+        public IEnumerable<ECliente> GetAll(bool status)
         {
 
             using (SqlConnection cnx = new SqlConnection())
@@ -30,7 +30,7 @@ namespace ISVSUR.DATA
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandText = "sp_Clientes_getAll";
                 cmd.CommandType = CommandType.StoredProcedure;
-                //  cmd.Parameters.AddWithValue();
+                cmd.Parameters.AddWithValue("@Estado", status);
                 cmd.Connection = cnx;
                 cnx.Open();
 
@@ -75,6 +75,7 @@ namespace ISVSUR.DATA
                 cmd.Parameters.AddWithValue("@DNIClie", t.DNI);
                 cmd.Parameters.AddWithValue("@EdadClie", t.Edad);
                 cmd.Parameters.AddWithValue("@SexoClie", t.Sexo);
+                cmd.Parameters.AddWithValue("@Estado", t.Estado);
                 cmd.Connection = cnx;
                 cnx.Open();
 
@@ -102,6 +103,7 @@ namespace ISVSUR.DATA
                 cmd.Parameters.AddWithValue("@DNIClie", t.DNI);
                 cmd.Parameters.AddWithValue("@EdadClie", t.Edad);
                 cmd.Parameters.AddWithValue("@SexoClie", t.Sexo);
+                cmd.Parameters.AddWithValue("@Estado", t.Estado);
                 cmd.Connection = cnx;
                 cnx.Open();
 

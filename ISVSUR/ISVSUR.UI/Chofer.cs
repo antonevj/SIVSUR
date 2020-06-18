@@ -29,13 +29,14 @@ namespace ISVSUR.UI
         private void mostrar_datos()
         {
 
-            dataGridView1.DataSource = new LChofer().GetAll();
+            dataGridView1.DataSource = new LChofer().GetAll(checkBox1.Checked);
 
             dataGridView1.MultiSelect = false;
             dataGridView1.RowsDefaultCellStyle.BackColor = MisConstantes.COLOR_CELDA_FONDO_GRID;
             dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = MisConstantes.COLOR_CELDA_FONDO_GRID_ALTER;
 
             dataGridView1.Columns["Nombre_completo"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridView1.Columns["Estado"].Visible = false;
 
 
         }
@@ -67,8 +68,7 @@ namespace ISVSUR.UI
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            var aux = new LChofer();
-            aux.Buscar(dataGridView1, this.textBox1.Text.Trim());
+            
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -107,7 +107,7 @@ namespace ISVSUR.UI
                 detalle.txtEdad.Text = dataGridView1.CurrentRow.Cells["Edad"].Value.ToString();
                 detalle.boxSexo.Text = dataGridView1.CurrentRow.Cells["Sexo"].Value.ToString();
                 detalle.boxBus.Text = dataGridView1.CurrentRow.Cells["Placa"].Value.ToString();
-
+                detalle.chkEstado.Checked = checkBox1.Checked;
 
                 DialogResult rpta = detalle.ShowDialog();
 
@@ -147,6 +147,17 @@ namespace ISVSUR.UI
             else
 
                 MessageBox.Show("debe seleccionar un elemento");
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+            var aux = new LChofer();
+            aux.Buscar(dataGridView1, this.textBox1.Text.Trim());
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            mostrar_datos();
         }
     }
 }
