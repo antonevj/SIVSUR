@@ -28,6 +28,7 @@ namespace ISVSUR.DATA
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandText = "sp_Administrador_getAll";
                 cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Estado", status);
                 //  cmd.Parameters.AddWithValue();
                 cmd.Connection = cnx;
                 cnx.Open();
@@ -46,7 +47,7 @@ namespace ISVSUR.DATA
                         Apellidos = (reader["ApellidoAdmin"].ToString()),
                         Usuario = (reader["UsuarioAdmin"].ToString()),
                         Contraseña = (reader["ContraseniaAdmin"].ToString()),
-
+                       
                     });
 
                 }
@@ -73,6 +74,7 @@ namespace ISVSUR.DATA
                 cmd.Parameters.AddWithValue("@ApellidoAdmin", t.Apellidos);
                 cmd.Parameters.AddWithValue("@UsuarioAdmin", t.Usuario);
                 cmd.Parameters.AddWithValue("@ContraseniaAdmin", t.Contraseña);
+                cmd.Parameters.AddWithValue("@Estado", t.Estado);
                 cmd.Connection = cnx;
                 cnx.Open();
 
@@ -98,6 +100,7 @@ namespace ISVSUR.DATA
                 cmd.Parameters.AddWithValue("@ApellidoAdmin", t.Apellidos);
                 cmd.Parameters.AddWithValue("@UsuarioAdmin", t.Usuario);
                 cmd.Parameters.AddWithValue("@ContraseniaAdmin", t.Contraseña);
+                cmd.Parameters.AddWithValue("@Estado", t.Contraseña);
                 cmd.Connection = cnx;
                 cnx.Open();
 
@@ -129,5 +132,6 @@ namespace ISVSUR.DATA
             }
         }
 
+       
     }
 }

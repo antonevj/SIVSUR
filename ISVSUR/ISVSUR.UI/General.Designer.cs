@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(General));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.administradorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cerrarSesionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.choferesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,6 +44,7 @@
             this.ventasTelefonixasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reposterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.seguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -61,12 +62,14 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel5 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel7 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel8 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tpID = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tpNombre = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tpCargo = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tpFecha = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tpReloj = new System.Windows.Forms.ToolStripStatusLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip2.SuspendLayout();
@@ -84,8 +87,7 @@
             // administradorToolStripMenuItem
             // 
             this.administradorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registrarUsuarioToolStripMenuItem,
-            this.cerrarSesionToolStripMenuItem1});
+            this.registrarUsuarioToolStripMenuItem});
             this.administradorToolStripMenuItem.Name = "administradorToolStripMenuItem";
             this.administradorToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
             this.administradorToolStripMenuItem.Text = "Administrador";
@@ -93,16 +95,9 @@
             // registrarUsuarioToolStripMenuItem
             // 
             this.registrarUsuarioToolStripMenuItem.Name = "registrarUsuarioToolStripMenuItem";
-            this.registrarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.registrarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.registrarUsuarioToolStripMenuItem.Text = "Registrar Usuario";
             this.registrarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.registrarUsuarioToolStripMenuItem_Click);
-            // 
-            // cerrarSesionToolStripMenuItem1
-            // 
-            this.cerrarSesionToolStripMenuItem1.Name = "cerrarSesionToolStripMenuItem1";
-            this.cerrarSesionToolStripMenuItem1.Size = new System.Drawing.Size(163, 22);
-            this.cerrarSesionToolStripMenuItem1.Text = "Cerrar Sesion";
-            this.cerrarSesionToolStripMenuItem1.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem1_Click);
             // 
             // mantenimientoToolStripMenuItem
             // 
@@ -182,6 +177,7 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cerrarSesionToolStripMenuItem,
             this.inicioToolStripMenuItem,
             this.administradorToolStripMenuItem,
             this.mantenimientoToolStripMenuItem,
@@ -194,6 +190,13 @@
             this.menuStrip1.Size = new System.Drawing.Size(905, 24);
             this.menuStrip1.TabIndex = 69;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // inicioToolStripMenuItem
+            // 
+            this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
+            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.inicioToolStripMenuItem.Text = "Inicio";
+            this.inicioToolStripMenuItem.Click += new System.EventHandler(this.inicioToolStripMenuItem_Click);
             // 
             // seguridadToolStripMenuItem
             // 
@@ -235,6 +238,7 @@
             this.btnAdmin.Name = "btnAdmin";
             this.btnAdmin.Size = new System.Drawing.Size(36, 36);
             this.btnAdmin.Text = "Administrador";
+            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click_1);
             // 
             // toolStripSeparator1
             // 
@@ -284,6 +288,7 @@
             this.btnRuta.Name = "btnRuta";
             this.btnRuta.Size = new System.Drawing.Size(36, 36);
             this.btnRuta.Text = "Rutas";
+            this.btnRuta.Click += new System.EventHandler(this.btnRuta_Click);
             // 
             // btnProgramar
             // 
@@ -315,10 +320,11 @@
             this.toolStripStatusLabel1,
             this.toolStripStatusLabel2,
             this.toolStripStatusLabel3,
-            this.toolStripStatusLabel4,
-            this.toolStripStatusLabel5,
-            this.toolStripStatusLabel7,
-            this.toolStripStatusLabel8});
+            this.tpID,
+            this.tpNombre,
+            this.tpCargo,
+            this.tpFecha,
+            this.tpReloj});
             this.statusStrip2.Location = new System.Drawing.Point(0, 413);
             this.statusStrip2.Name = "statusStrip2";
             this.statusStrip2.Size = new System.Drawing.Size(905, 25);
@@ -336,42 +342,47 @@
             // 
             this.toolStripStatusLabel2.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right)));
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(204, 20);
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(241, 20);
             this.toolStripStatusLabel2.Spring = true;
             // 
             // toolStripStatusLabel3
             // 
-            this.toolStripStatusLabel3.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
             this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
-            this.toolStripStatusLabel3.Size = new System.Drawing.Size(68, 20);
-            this.toolStripStatusLabel3.Text = "ID: Usuario";
+            this.toolStripStatusLabel3.Size = new System.Drawing.Size(27, 20);
+            this.toolStripStatusLabel3.Text = "ID : ";
             // 
-            // toolStripStatusLabel4
+            // tpID
             // 
-            this.toolStripStatusLabel4.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
-            this.toolStripStatusLabel4.Name = "toolStripStatusLabel4";
-            this.toolStripStatusLabel4.Size = new System.Drawing.Size(101, 20);
-            this.toolStripStatusLabel4.Text = "Nombre: Usuario";
+            this.tpID.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
+            this.tpID.Name = "tpID";
+            this.tpID.Size = new System.Drawing.Size(4, 20);
             // 
-            // toolStripStatusLabel5
+            // tpNombre
             // 
-            this.toolStripStatusLabel5.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
-            this.toolStripStatusLabel5.Name = "toolStripStatusLabel5";
-            this.toolStripStatusLabel5.Size = new System.Drawing.Size(89, 20);
-            this.toolStripStatusLabel5.Text = "Cargo: Usuario";
+            this.tpNombre.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
+            this.tpNombre.Name = "tpNombre";
+            this.tpNombre.Size = new System.Drawing.Size(101, 20);
+            this.tpNombre.Text = "Nombre: Usuario";
             // 
-            // toolStripStatusLabel7
+            // tpCargo
             // 
-            this.toolStripStatusLabel7.Name = "toolStripStatusLabel7";
-            this.toolStripStatusLabel7.Size = new System.Drawing.Size(65, 20);
-            this.toolStripStatusLabel7.Text = "01/01/2020";
+            this.tpCargo.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
+            this.tpCargo.Name = "tpCargo";
+            this.tpCargo.Size = new System.Drawing.Size(89, 20);
+            this.tpCargo.Text = "Cargo: Usuario";
             // 
-            // toolStripStatusLabel8
+            // tpFecha
             // 
-            this.toolStripStatusLabel8.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
-            this.toolStripStatusLabel8.Name = "toolStripStatusLabel8";
-            this.toolStripStatusLabel8.Size = new System.Drawing.Size(53, 20);
-            this.toolStripStatusLabel8.Text = "00:00:00";
+            this.tpFecha.Name = "tpFecha";
+            this.tpFecha.Size = new System.Drawing.Size(65, 20);
+            this.tpFecha.Text = "01/01/2020";
+            // 
+            // tpReloj
+            // 
+            this.tpReloj.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
+            this.tpReloj.Name = "tpReloj";
+            this.tpReloj.Size = new System.Drawing.Size(53, 20);
+            this.tpReloj.Text = "00:00:00";
             // 
             // pictureBox1
             // 
@@ -384,12 +395,16 @@
             this.pictureBox1.TabIndex = 75;
             this.pictureBox1.TabStop = false;
             // 
-            // inicioToolStripMenuItem
+            // timer1
             // 
-            this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
-            this.inicioToolStripMenuItem.Text = "Inicio";
-            this.inicioToolStripMenuItem.Click += new System.EventHandler(this.inicioToolStripMenuItem_Click);
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // cerrarSesionToolStripMenuItem
+            // 
+            this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
+            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
+            this.cerrarSesionToolStripMenuItem.Text = "Cerrar Sesion";
+            this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
             // 
             // General
             // 
@@ -429,7 +444,6 @@
         private System.Windows.Forms.ToolStripMenuItem reposterToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem registrarUsuarioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cerrarSesionToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem choferesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem busToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem rutaToolStripMenuItem;
@@ -450,14 +464,17 @@
         private System.Windows.Forms.StatusStrip statusStrip2;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel4;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel5;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel7;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel8;
+        private System.Windows.Forms.ToolStripStatusLabel tpCargo;
+        private System.Windows.Forms.ToolStripStatusLabel tpFecha;
+        private System.Windows.Forms.ToolStripStatusLabel tpReloj;
         private System.Windows.Forms.ToolStripMenuItem seguridadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem inicioToolStripMenuItem;
+        public System.Windows.Forms.ToolStripStatusLabel tpID;
+        public System.Windows.Forms.ToolStripStatusLabel tpNombre;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ToolStripMenuItem cerrarSesionToolStripMenuItem;
     }
 }

@@ -88,9 +88,13 @@ namespace ISVSUR.UI
 
                 detalle.StartPosition = FormStartPosition.CenterParent;
                 detalle.operacion = (byte)MisConstantes.OPERACION.Modificacion;
-
                 detalle.txtID.Text = dataGridView1.CurrentRow.Cells["ID"].Value.ToString();
                 detalle.txtModelo.Text = dataGridView1.CurrentRow.Cells["Modelo"].Value.ToString();
+                detalle.txtLlantas.Text = dataGridView1.CurrentRow.Cells["Numero_De_Llantas"].Value.ToString();
+                detalle.txtChasis.Text = dataGridView1.CurrentRow.Cells["Chasis"].Value.ToString();
+                detalle.txtAÑo.Text = dataGridView1.CurrentRow.Cells["Año_Fabricaciòn"].Value.ToString();
+                detalle.boxCombustible.Text = dataGridView1.CurrentRow.Cells["Tipo_Combustible"].Value.ToString();
+                detalle.boxRutina.Text = dataGridView1.CurrentRow.Cells["rutina"].Value.ToString();
                 detalle.txtPlaca.Text = dataGridView1.CurrentRow.Cells["Placa"].Value.ToString();
                 detalle.txtCapacidad.Text = dataGridView1.CurrentRow.Cells["Capacidad"].Value.ToString();
                 detalle.chkEstado.Checked = checkBox1.Checked;

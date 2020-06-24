@@ -20,7 +20,7 @@ namespace ISVSUR.UI
 
         public byte operacion { get; set; }
 
-   
+        public string bus { get; set; }
 
         public DetalleChofer()
         {
@@ -35,21 +35,24 @@ namespace ISVSUR.UI
 
         private void DetalleChofer_Load(object sender, EventArgs e)
         {
+
+            llenarplaca();
             if (operacion == (byte)MisConstantes.OPERACION.Insercion)
             {
-
+               
             }
 
             if (operacion == (byte)MisConstantes.OPERACION.Modificacion)
             {
+                boxBus.Text = bus;
 
             }
-            llenarplaca();
+          
 
 
-
+           
         }
-
+      
 
         public void llenarplaca( )
         {
@@ -57,10 +60,12 @@ namespace ISVSUR.UI
             SqlConnection cnx = new SqlConnection(MiCadena.CadenaCnx());
             cnx.Open();
 
-            string query = "select IDBus,PlacaBus from bus";
-            SqlCommand cmd = new SqlCommand();
+            //string query = "select IDBus,PlacaBus from bus where Estado=1";
+            SqlCommand cmd = new SqlCommand("sp_llenar_PlacaBus", cnx);
+            cmd.CommandType = CommandType.StoredProcedure;
+          //  SqlCommand cmd = new SqlCommand();
             cmd.Connection = cnx;
-            cmd.CommandText = query;
+           // cmd.CommandText = query;
             SqlDataReader dr = cmd.ExecuteReader();
            
             List<LlenarBus> lista = new List<LlenarBus>();
@@ -201,6 +206,11 @@ namespace ISVSUR.UI
             {
                 lblIDBus.Text = boxBus.SelectedValue.ToString();
             }
+        }
+
+        private void lblIDBus_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

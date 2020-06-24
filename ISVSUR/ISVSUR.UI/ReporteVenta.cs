@@ -16,5 +16,10 @@ namespace ISVSUR.UI
         {
             InitializeComponent();
         }
+
+        private void ReporteVenta_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

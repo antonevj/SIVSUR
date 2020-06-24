@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,6 +35,8 @@ namespace ISVSUR.UI
 
         private void btnBuscarCLiente_Click(object sender, EventArgs e)
         {
+            //ClientesIU fm = new ClientesIU();
+            //fm.Size = new System.Drawing.Size(500, 400);
             ClientesIU f = new ClientesIU();
             f.Show();
         }
@@ -41,8 +44,18 @@ namespace ISVSUR.UI
      
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-           
-            lblAsiento.Text = "4";
+          
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que legiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+         
+            if (k == DialogResult.Yes)
+            {
+
+                pictureBox2.Image = Image.FromFile(Application.StartupPath+ "\\Imagen\\" + "x.png");
+                pictureBox2.Enabled = false;
+                lblAsiento.Text = "4";
+                txtLugar.Text = "Ventana";
+
+            }
         }
 
         private void PictureBox16_Click(object sender, EventArgs e)
@@ -57,7 +70,17 @@ namespace ISVSUR.UI
 
         private void PictureBox3_Click(object sender, EventArgs e)
         {
-            lblAsiento.Text = "3";
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que legiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+
+                pictureBox3.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
+                pictureBox3.Enabled = false;
+                lblAsiento.Text = "3";
+                txtLugar.Text = "pasillo";
+
+            }
         }
 
         private void PictureBox14_Click(object sender, EventArgs e)
@@ -328,8 +351,35 @@ namespace ISVSUR.UI
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Llegada fm = new Llegada();
-            fm.ShowDialog();
+            Ruta ruta = new Ruta();
+            ruta.ShowDialog();
+        }
+
+        private void Formulario_de_Venta_Activated(object sender, EventArgs e)
+        {
+            ///rutas
+            txtIDRuta.Text = Program.IDRuta + "";
+            txtOrigen.Text = Program.Ciudad_De_Origen + "";
+            txtDestino.Text = Program.Ciudad_De_Destino + "";
+            txtImporte.Text = Program.Precio + "";                 
+            txtFecha.Text = Program.Fecha_De_Viaje + "";        
+            txtHora.Text = Program.Hora_De_Salida + "";
+
+
+            //clientes
+
+
+            txtDNI.Text = Program.DNI + "";
+            txtNombre.Text = Program.Nombres + "";
+            txtPaterno.Text = Program.Apellidos + "";
+            txtSexo.Text = Program.sexo + "";
+            txtEdad.Text = Program.edad + "";
+           
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

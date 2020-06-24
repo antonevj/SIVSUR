@@ -40,8 +40,8 @@
             this.txtEdad = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.cboSexo = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtSexo = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txtFecha = new System.Windows.Forms.TextBox();
@@ -49,9 +49,9 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtHora = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDestino = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.txtIDProgram = new System.Windows.Forms.TextBox();
+            this.txtIDRuta = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -183,6 +183,9 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.button1 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.txtLugar = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -272,9 +275,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 61);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 13);
+            this.label2.Size = new System.Drawing.Size(120, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Apellidos";
+            this.label2.Text = "Apellidos Completos";
             // 
             // txtPaterno
             // 
@@ -345,19 +348,10 @@
             this.label7.TabIndex = 12;
             this.label7.Text = "Sexo";
             // 
-            // cboSexo
-            // 
-            this.cboSexo.Enabled = false;
-            this.cboSexo.FormattingEnabled = true;
-            this.cboSexo.Location = new System.Drawing.Point(6, 125);
-            this.cboSexo.Name = "cboSexo";
-            this.cboSexo.Size = new System.Drawing.Size(147, 21);
-            this.cboSexo.TabIndex = 16;
-            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.cboSexo);
+            this.groupBox1.Controls.Add(this.txtSexo);
             this.groupBox1.Controls.Add(this.txtEdad);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label7);
@@ -375,6 +369,14 @@
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Pasajero";
+            // 
+            // txtSexo
+            // 
+            this.txtSexo.Enabled = false;
+            this.txtSexo.Location = new System.Drawing.Point(6, 124);
+            this.txtSexo.Name = "txtSexo";
+            this.txtSexo.Size = new System.Drawing.Size(147, 20);
+            this.txtSexo.TabIndex = 17;
             // 
             // label8
             // 
@@ -447,13 +449,13 @@
             this.label11.TabIndex = 23;
             this.label11.Text = "Hora de Salida";
             // 
-            // textBox1
+            // txtDestino
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(182, 73);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(147, 20);
-            this.textBox1.TabIndex = 26;
+            this.txtDestino.Enabled = false;
+            this.txtDestino.Location = new System.Drawing.Point(182, 73);
+            this.txtDestino.Name = "txtDestino";
+            this.txtDestino.Size = new System.Drawing.Size(147, 20);
+            this.txtDestino.TabIndex = 26;
             // 
             // label12
             // 
@@ -467,13 +469,13 @@
             this.label12.TabIndex = 27;
             this.label12.Text = "Ciudad Destino";
             // 
-            // txtIDProgram
+            // txtIDRuta
             // 
-            this.txtIDProgram.Enabled = false;
-            this.txtIDProgram.Location = new System.Drawing.Point(182, 30);
-            this.txtIDProgram.Name = "txtIDProgram";
-            this.txtIDProgram.Size = new System.Drawing.Size(40, 20);
-            this.txtIDProgram.TabIndex = 24;
+            this.txtIDRuta.Enabled = false;
+            this.txtIDRuta.Location = new System.Drawing.Point(182, 30);
+            this.txtIDRuta.Name = "txtIDRuta";
+            this.txtIDRuta.Size = new System.Drawing.Size(40, 20);
+            this.txtIDRuta.TabIndex = 24;
             // 
             // label13
             // 
@@ -483,9 +485,9 @@
             this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label13.Location = new System.Drawing.Point(179, 11);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(101, 13);
+            this.label13.Size = new System.Drawing.Size(51, 13);
             this.label13.TabIndex = 25;
-            this.label13.Text = "ID Programación";
+            this.label13.Text = "ID Ruta";
             // 
             // pictureBox1
             // 
@@ -512,14 +514,16 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.txtLugar);
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.lblAsiento);
             this.groupBox2.Controls.Add(this.pictureBox1);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.txtDestino);
             this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.txtIDProgram);
+            this.groupBox2.Controls.Add(this.txtIDRuta);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.txtHora);
+            this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.txtOrigen);
             this.groupBox2.Controls.Add(this.label10);
@@ -537,7 +541,7 @@
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button3.Location = new System.Drawing.Point(255, 120);
+            this.button3.Location = new System.Drawing.Point(298, 117);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 32;
@@ -784,9 +788,9 @@
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox3.Location = new System.Drawing.Point(32, 203);
+            this.groupBox3.Location = new System.Drawing.Point(32, 209);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(283, 364);
+            this.groupBox3.Size = new System.Drawing.Size(283, 358);
             this.groupBox3.TabIndex = 47;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Primer Piso";
@@ -1978,12 +1982,45 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(38, 181);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(250, 29);
+            this.button4.TabIndex = 156;
+            this.button4.Text = "Vaciar Bus";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // txtLugar
+            // 
+            this.txtLugar.Enabled = false;
+            this.txtLugar.Location = new System.Drawing.Point(182, 120);
+            this.txtLugar.Name = "txtLugar";
+            this.txtLugar.Size = new System.Drawing.Size(100, 20);
+            this.txtLugar.TabIndex = 33;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(179, 104);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(103, 13);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "Lugar de Asiento";
+            // 
             // Formulario_de_Venta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1063, 636);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.txtImporte);
@@ -2003,6 +2040,7 @@
             this.Name = "Formulario_de_Venta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulario_de_Venta";
+            this.Activated += new System.EventHandler(this.Formulario_de_Venta_Activated);
             this.Load += new System.EventHandler(this.Formulario_de_Venta_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -2086,7 +2124,6 @@
         private System.Windows.Forms.TextBox txtEdad;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cboSexo;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
@@ -2095,9 +2132,9 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtHora;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDestino;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtIDProgram;
+        private System.Windows.Forms.TextBox txtIDRuta;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label14;
@@ -2229,5 +2266,9 @@
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtSexo;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox txtLugar;
+        private System.Windows.Forms.Label label3;
     }
 }

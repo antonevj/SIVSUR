@@ -38,7 +38,7 @@ namespace ISVSUR.UI
         private void mostrar_datos()
         {
 
-          var a =  dataGridView1.DataSource = new LCliente().GetAll(checkBox1.Checked);
+            dataGridView1.DataSource = new LCliente().GetAll(checkBox1.Checked);
 
             dataGridView1.MultiSelect = false;
             dataGridView1.RowsDefaultCellStyle.BackColor = MisConstantes.COLOR_CELDA_FONDO_GRID;
@@ -83,10 +83,10 @@ namespace ISVSUR.UI
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+          
             var aux = new LCliente();
             aux.Buscar(dataGridView1, this.textBox1.Text.Trim());
-            //mostrar_datos();
+           // mostrar_datos();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -194,6 +194,21 @@ namespace ISVSUR.UI
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             mostrar_datos();
+        }
+
+        private void dataGridView1_DoubleClick(object sender, EventArgs e)
+        {
+            Program.IDCliente =Convert.ToInt32( dataGridView1.CurrentRow.Cells[0].Value.ToString());
+            Program.Nombres = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            Program.Apellidos = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            Program.DNI = (dataGridView1.CurrentRow.Cells[3].Value.ToString());
+            Program.edad = Convert.ToInt32(dataGridView1.CurrentRow.Cells[4].Value.ToString());
+            Program.sexo = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+           
+           
+
+
+            this.Close();
         }
     }
 }

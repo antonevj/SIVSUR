@@ -27,15 +27,51 @@ namespace ISVSUR.UI
         private void mostrar_datos()
         {
 
-            var a = dataGridView1.DataSource = new LAdmin().GetAll(checkBox1.Checked);
+            var a = dataGridView1.DataSource = new LAdmin().GetAll(txtEstado.Checked);
 
             dataGridView1.MultiSelect = false;
             dataGridView1.RowsDefaultCellStyle.BackColor = MisConstantes.COLOR_CELDA_FONDO_GRID;
             dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = MisConstantes.COLOR_CELDA_FONDO_GRID_ALTER;
 
             dataGridView1.Columns["Apellidos"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridView1.Columns["Estado"].Visible = false;
         }
         private void btnNuevo_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtEstado_CheckedChanged(object sender, EventArgs e)
+        {
+            mostrar_datos();
+        }
+
+        private void btnInsertar_Click(object sender, EventArgs e)
         {
             DetallesAdministrador detalle = new DetallesAdministrador();
             detalle.StartPosition = FormStartPosition.CenterScreen;
@@ -50,12 +86,7 @@ namespace ISVSUR.UI
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnModificar_Click(object sender, EventArgs e)
+        private void btnModificar1_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
@@ -70,7 +101,7 @@ namespace ISVSUR.UI
                 detalle.txtApellidos.Text = dataGridView1.CurrentRow.Cells["Apellidos"].Value.ToString();
                 detalle.txtUsuario.Text = dataGridView1.CurrentRow.Cells["Usuario"].Value.ToString();
                 detalle.txtContra.Text = dataGridView1.CurrentRow.Cells["Contraseña"].Value.ToString();
-
+                detalle.txtEstado.Checked = txtEstado.Checked;
 
                 DialogResult rpta = detalle.ShowDialog();
 
@@ -82,7 +113,7 @@ namespace ISVSUR.UI
             }
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private void btnEliminar1_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
@@ -112,9 +143,9 @@ namespace ISVSUR.UI
                 MessageBox.Show("debe seleccionar un elemento");
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void txtEstado_CheckedChanged_1(object sender, EventArgs e)
         {
-
+            mostrar_datos();
         }
     }
 }

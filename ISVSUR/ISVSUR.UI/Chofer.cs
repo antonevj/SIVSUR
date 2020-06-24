@@ -36,6 +36,13 @@ namespace ISVSUR.UI
             dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = MisConstantes.COLOR_CELDA_FONDO_GRID_ALTER;
 
             dataGridView1.Columns["Nombre_completo"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridView1.Columns["DNI"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridView1.Columns["Edad"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridView1.Columns["Sexo"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridView1.Columns["placa"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+           
+            
+
             dataGridView1.Columns["Estado"].Visible = false;
 
 
@@ -86,8 +93,7 @@ namespace ISVSUR.UI
             }
 
 
-            DetalleChofer fmr = new DetalleChofer();
-            fmr.Show();
+          
         }
 
         private void btnModifica_Click(object sender, EventArgs e)
@@ -105,9 +111,16 @@ namespace ISVSUR.UI
                 detalle.txtNombres.Text = dataGridView1.CurrentRow.Cells["Nombre_completo"].Value.ToString();
                 detalle.txtDNI.Text = dataGridView1.CurrentRow.Cells["DNI"].Value.ToString();
                 detalle.txtEdad.Text = dataGridView1.CurrentRow.Cells["Edad"].Value.ToString();
+
                 detalle.boxSexo.Text = dataGridView1.CurrentRow.Cells["Sexo"].Value.ToString();
-                detalle.boxBus.Text = dataGridView1.CurrentRow.Cells["Placa"].Value.ToString();
+
+             //   detalle.boxBus.Text = dataGridView1.CurrentRow.Cells["placa"].Value.ToString();
+              
+                detalle.bus= dataGridView1.CurrentRow.Cells["placa"].Value.ToString();
+
                 detalle.chkEstado.Checked = checkBox1.Checked;
+
+
 
                 DialogResult rpta = detalle.ShowDialog();
 
@@ -153,11 +166,17 @@ namespace ISVSUR.UI
         {
             var aux = new LChofer();
             aux.Buscar(dataGridView1, this.textBox1.Text.Trim());
+          
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            mostrar_datos();
+            dataGridView1.DataSource = new LChofer().GetAll(checkBox1.Checked);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetalleRuta));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chkEstado = new System.Windows.Forms.CheckBox();
             this.lblIDChofer = new System.Windows.Forms.Label();
             this.boxChofer = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
@@ -46,12 +48,23 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.boxHora = new System.Windows.Forms.ComboBox();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox1.BackgroundImage")));
+            this.groupBox1.Controls.Add(this.boxHora);
+            this.groupBox1.Controls.Add(this.dateTimePicker2);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.chkEstado);
             this.groupBox1.Controls.Add(this.lblIDChofer);
             this.groupBox1.Controls.Add(this.boxChofer);
             this.groupBox1.Controls.Add(this.button3);
@@ -72,10 +85,23 @@
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(284, 416);
+            this.groupBox1.Size = new System.Drawing.Size(311, 492);
             this.groupBox1.TabIndex = 44;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ruta";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // chkEstado
+            // 
+            this.chkEstado.AutoSize = true;
+            this.chkEstado.BackColor = System.Drawing.Color.Transparent;
+            this.chkEstado.Location = new System.Drawing.Point(42, 426);
+            this.chkEstado.Name = "chkEstado";
+            this.chkEstado.Size = new System.Drawing.Size(59, 17);
+            this.chkEstado.TabIndex = 69;
+            this.chkEstado.Text = "Estado";
+            this.chkEstado.UseVisualStyleBackColor = false;
+            this.chkEstado.CheckedChanged += new System.EventHandler(this.chkEstado_CheckedChanged);
             // 
             // lblIDChofer
             // 
@@ -83,19 +109,21 @@
             this.lblIDChofer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblIDChofer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblIDChofer.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblIDChofer.Location = new System.Drawing.Point(209, 305);
+            this.lblIDChofer.Location = new System.Drawing.Point(179, 295);
             this.lblIDChofer.Name = "lblIDChofer";
             this.lblIDChofer.Size = new System.Drawing.Size(29, 21);
             this.lblIDChofer.TabIndex = 68;
             this.lblIDChofer.Visible = false;
+            this.lblIDChofer.Click += new System.EventHandler(this.lblIDChofer_Click);
             // 
             // boxChofer
             // 
             this.boxChofer.FormattingEnabled = true;
-            this.boxChofer.Location = new System.Drawing.Point(45, 305);
+            this.boxChofer.Location = new System.Drawing.Point(39, 295);
             this.boxChofer.Name = "boxChofer";
             this.boxChofer.Size = new System.Drawing.Size(134, 21);
             this.boxChofer.TabIndex = 67;
+            this.boxChofer.SelectedIndexChanged += new System.EventHandler(this.boxChofer_SelectedIndexChanged);
             // 
             // button3
             // 
@@ -106,7 +134,7 @@
             this.button3.ForeColor = System.Drawing.SystemColors.Control;
             this.button3.Location = new System.Drawing.Point(254, 8);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(27, 27);
+            this.button3.Size = new System.Drawing.Size(54, 27);
             this.button3.TabIndex = 43;
             this.button3.Text = "X";
             this.button3.UseVisualStyleBackColor = false;
@@ -117,7 +145,7 @@
             this.button2.BackColor = System.Drawing.Color.Black;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Transparent;
-            this.button2.Location = new System.Drawing.Point(164, 335);
+            this.button2.Location = new System.Drawing.Point(164, 450);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(88, 33);
             this.button2.TabIndex = 66;
@@ -130,7 +158,7 @@
             this.button1.BackColor = System.Drawing.Color.Black;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(39, 335);
+            this.button1.Location = new System.Drawing.Point(39, 448);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(91, 33);
             this.button1.TabIndex = 65;
@@ -240,11 +268,54 @@
             this.label1.TabIndex = 23;
             this.label1.Text = "ID";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // boxHora
+            // 
+            this.boxHora.FormattingEnabled = true;
+            this.boxHora.Location = new System.Drawing.Point(41, 393);
+            this.boxHora.Name = "boxHora";
+            this.boxHora.Size = new System.Drawing.Size(108, 21);
+            this.boxHora.TabIndex = 73;
+            this.boxHora.SelectedIndexChanged += new System.EventHandler(this.boxHora_SelectedIndexChanged);
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker2.Location = new System.Drawing.Point(39, 346);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(110, 20);
+            this.dateTimePicker2.TabIndex = 72;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(38, 325);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(110, 18);
+            this.label4.TabIndex = 71;
+            this.label4.Text = "Fecha de viaje :";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(41, 372);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(107, 18);
+            this.label8.TabIndex = 70;
+            this.label8.Text = "Hora de salida:";
+            // 
             // DetalleRuta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 416);
+            this.ClientSize = new System.Drawing.Size(311, 492);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DetalleRuta";
@@ -253,27 +324,34 @@
             this.Load += new System.EventHandler(this.DetalleRuta_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtDuracion;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtDestino;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtOrigen;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ComboBox boxChofer;
         public System.Windows.Forms.Label lblIDChofer;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        public System.Windows.Forms.CheckBox chkEstado;
+        public System.Windows.Forms.TextBox txtDuracion;
+        public System.Windows.Forms.TextBox txtPrecio;
+        public System.Windows.Forms.TextBox txtDestino;
+        public System.Windows.Forms.TextBox txtOrigen;
+        public System.Windows.Forms.TextBox txtID;
+        public System.Windows.Forms.ComboBox boxChofer;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label8;
+        public System.Windows.Forms.ComboBox boxHora;
+        public System.Windows.Forms.DateTimePicker dateTimePicker2;
     }
 }

@@ -8,6 +8,26 @@ namespace ISVSUR.UI
 {
     static class Program
     {
+
+        //datos de la ruta
+        public static int IDRuta;
+        public static string Ciudad_De_Origen;
+        public static string Ciudad_De_Destino;
+        public static decimal Precio;     
+        public static DateTime Fecha_De_Viaje;
+        public static string Hora_De_Salida;
+
+
+        //datos de cliente
+        public static int IDCliente;
+        public static string DNI;
+        public static string Apellidos;
+        public static string Nombres;
+        public static string sexo;
+        public static int edad;
+    
+
+
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>
@@ -16,7 +36,7 @@ namespace ISVSUR.UI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new General());
+            Application.Run(new Form1());
         }
     }
 }

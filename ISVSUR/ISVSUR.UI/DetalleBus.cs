@@ -111,6 +111,11 @@ namespace ISVSUR.UI
 
                 ID = txtID.Text.Length == 0 ? 0 : int.Parse(txtID.Text),
                 Modelo = txtModelo.Text.Trim().ToUpper(),
+                Numero_De_Llantas =int.Parse( txtLlantas.Text.Trim().ToUpper()),
+                Chasis = txtChasis.Text.Trim().ToUpper(),
+                Año_Fabricaciòn = txtAÑo.Text.Trim().ToUpper(),
+                Tipo_Combustible = boxCombustible.Text.Trim().ToUpper(),
+                rutina = boxRutina.Text.Trim().ToUpper(),
                 Placa = txtPlaca.Text.Trim().ToUpper(),
                 Capacidad = txtCapacidad.Text,
                 Estado = chkEstado.Checked,
@@ -136,6 +141,96 @@ namespace ISVSUR.UI
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
+        }
+
+        private void txtModelo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPrecio_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDestino_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtOrigen_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkEstado_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCapacidad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPlaca_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDuracion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void boxRutina_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

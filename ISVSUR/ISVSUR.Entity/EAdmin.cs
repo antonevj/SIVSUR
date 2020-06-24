@@ -13,7 +13,8 @@ namespace ISVSUR.Entity
         public string Apellidos { get; set; }
         public string Usuario { get; set; }
         public string Contraseña { get; set; }
-       
+        public bool Estado { get; set; }
+
 
 
 

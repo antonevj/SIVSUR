@@ -45,6 +45,11 @@ namespace ISVSUR.DATA
 
                         ID = Convert.ToInt32(reader["IDBus"]),
                         Modelo = (reader["ModeloBus"].ToString()),
+                        Numero_De_Llantas = Convert.ToInt32(reader["Nllantas"]),
+                        Chasis = (reader["chasis"].ToString()),
+                        Año_Fabricaciòn = (reader["AñoFabricacion"].ToString()),
+                        Tipo_Combustible = (reader["Combustible"].ToString()),
+                        rutina = (reader["rutina"].ToString()),
                         Placa = (reader["PlacaBus"].ToString()),
                         Capacidad = (reader["CapacidadBus"].ToString()),
 
@@ -70,6 +75,11 @@ namespace ISVSUR.DATA
                 cmd.CommandText = "sp_agregar_Bus";
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@ModeloBus", t.Modelo);
+                cmd.Parameters.AddWithValue("@Nllantas", t.Numero_De_Llantas);
+                cmd.Parameters.AddWithValue("@chasis", t.Chasis);
+                cmd.Parameters.AddWithValue("@AñoFabricacion", t.Año_Fabricaciòn);
+                cmd.Parameters.AddWithValue("@Combustible", t.Tipo_Combustible);
+                cmd.Parameters.AddWithValue("@rutina", t.rutina);
                 cmd.Parameters.AddWithValue("@PlacaBus", t.Placa);
                 cmd.Parameters.AddWithValue("@CapacidadBus", t.Capacidad);
                 cmd.Parameters.AddWithValue("@Estado", t.Estado);
@@ -94,6 +104,11 @@ namespace ISVSUR.DATA
 
                 cmd.Parameters.AddWithValue("@IDBus", t.ID);
                 cmd.Parameters.AddWithValue("@ModeloBus", t.Modelo);
+                cmd.Parameters.AddWithValue("@Nllantas", t.Numero_De_Llantas);
+                cmd.Parameters.AddWithValue("@chasis", t.Chasis);
+                cmd.Parameters.AddWithValue("@AñoFabricacion", t.Año_Fabricaciòn);
+                cmd.Parameters.AddWithValue("@Combustible", t.Tipo_Combustible);
+                cmd.Parameters.AddWithValue("@rutina", t.rutina);
                 cmd.Parameters.AddWithValue("@PlacaBus", t.Placa);
                 cmd.Parameters.AddWithValue("@CapacidadBus", t.Capacidad);
                 cmd.Parameters.AddWithValue("@Estado", t.Estado);

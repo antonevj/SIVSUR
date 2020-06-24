@@ -28,7 +28,7 @@ namespace ISVSUR.DATA
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandText = "sp_ruta_getAll";
                 cmd.CommandType = CommandType.StoredProcedure;
-                //  cmd.Parameters.AddWithValue();
+                cmd.Parameters.AddWithValue("Estado",status);
                 cmd.Connection = cnx;
                 cnx.Open();
 
@@ -45,8 +45,10 @@ namespace ISVSUR.DATA
                         Ciudad_De_Origen = (reader["CiudadOrigen"].ToString()),
                         Ciudad_De_Destino = (reader["CiudadDestino"].ToString()),
                         precio = Convert.ToDecimal(reader["Precio"].ToString()),
-                        Duracion = Convert.ToDateTime(reader["Duracion"].ToString()),
+                        Duracion = (reader["Duracion"].ToString()),
                         Chofer = (reader["NombresCho"].ToString()),
+                        Fecha_De_Viaje = Convert.ToDateTime(reader["FechaViaje"].ToString()),
+                        Hora_De_Salida = (reader["HoraSalida"].ToString()),
 
                     });
 
@@ -62,7 +64,29 @@ namespace ISVSUR.DATA
 
         public int Create(ERutas t)
         {
-            throw new NotImplementedException();
+            using (SqlConnection cnx = new SqlConnection())
+            {
+                //   EBus d = new EBus();
+                cnx.ConnectionString = MiCadena.CadenaCnx();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "sp_agregar_ruta";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@CiudadOrigen", t.Ciudad_De_Origen);
+                cmd.Parameters.AddWithValue("@CiudadDestino", t.Ciudad_De_Destino);
+                cmd.Parameters.AddWithValue("@Precio", t.precio);
+                cmd.Parameters.AddWithValue("@Duracion", t.Duracion);
+                cmd.Parameters.AddWithValue("@IDChofer", t.Chofer);
+                cmd.Parameters.AddWithValue("@FechaViaje", t.Fecha_De_Viaje);
+                cmd.Parameters.AddWithValue("@HoraSalida", t.Hora_De_Salida);
+                cmd.Parameters.AddWithValue("@Estado", t.Estado);
+                cmd.Connection = cnx;
+                cnx.Open();
+
+
+                int filasafectadas = cmd.ExecuteNonQuery();
+
+                return filasafectadas;
+            }
         }
 
         
@@ -70,7 +94,30 @@ namespace ISVSUR.DATA
 
         public int Update(ERutas t)
         {
-            throw new NotImplementedException();
+            using (SqlConnection cnx = new SqlConnection())
+            {
+                //   EBus d = new EBus();
+                cnx.ConnectionString = MiCadena.CadenaCnx();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "sp_modificar_ruta";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@IDRuta", t.IDRuta);
+                cmd.Parameters.AddWithValue("@CiudadOrigen", t.Ciudad_De_Origen);
+                cmd.Parameters.AddWithValue("@CiudadDestino", t.Ciudad_De_Destino);
+                cmd.Parameters.AddWithValue("@Precio", t.precio);
+                cmd.Parameters.AddWithValue("@Duracion", t.Duracion);
+                cmd.Parameters.AddWithValue("@IDChofer", t.Chofer);
+                cmd.Parameters.AddWithValue("@FechaViaje", t.Fecha_De_Viaje);
+                cmd.Parameters.AddWithValue("@HoraSalida", t.Hora_De_Salida);
+                cmd.Parameters.AddWithValue("@Estado", t.Estado);
+                cmd.Connection = cnx;
+                cnx.Open();
+
+
+                int filasafectadas = cmd.ExecuteNonQuery();
+
+                return filasafectadas;
+            }
         }
 
         public int Delete(int IDCliente)

@@ -15,7 +15,8 @@ namespace ISVSUR.UI
 {
     public partial class DetallesAdministrador : Form
     {
-
+       // bool rpt = false;
+        bool[] error = new bool[3];
         public byte operacion { get; set; }
         public DetallesAdministrador()
         {
@@ -36,6 +37,15 @@ namespace ISVSUR.UI
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (!MyValidation())
+            {
+
+
+                return;
+
+            }
+
+
             EAdmin obj = new EAdmin
             {
 
@@ -43,8 +53,8 @@ namespace ISVSUR.UI
                 Nombres = txtNombres.Text.Trim().ToUpper(),
                 Apellidos = txtApellidos.Text.Trim().ToUpper(),
                 Usuario = txtUsuario.Text.Trim().ToUpper(),
-                Contraseña = txtContra.Text.Trim().ToUpper()
-
+                Contraseña = txtContra.Text.Trim().ToUpper(),
+                Estado = txtEstado.Checked
             };
 
             int rpta = 0;
@@ -66,6 +76,59 @@ namespace ISVSUR.UI
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
+            else
+            {
+                errorProvider1.SetError(txtUsuario, "El usuario que ingreso ya existe");
+                error[0] = true;
+            }
+
+
+        }
+
+        private bool MyValidation()
+        {
+            bool rpta = false;
+
+            //arrary que almacena la coleccion de errores
+            bool[] error = new bool[3];
+
+
+            ///validamos el campo nombre 
+            if (String.IsNullOrWhiteSpace(txtNombres.Text))
+            {
+                errorProvider1.SetError(txtNombres, "El nombre es obligatorio ");
+                error[0] = true;
+
+            }
+
+
+            //colocar las demas validaciones
+            if (error[0] == true || error[1] == true)
+            {
+                MessageBox.Show("Error de validación.\n" + "Ingrese los datos en los campos obligatorios o verifique que estos sean válidos",
+                    "Aviso",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                rpta = false;
+            }
+            else
+            {
+                rpta = true;
+            }
+
+
+
+
+            return rpta;
+        }
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEstado_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

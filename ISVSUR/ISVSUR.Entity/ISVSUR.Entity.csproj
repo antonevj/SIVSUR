@@ -46,6 +46,7 @@
     <Compile Include="ECliente.cs" />
     <Compile Include="ERutas.cs" />
     <Compile Include="LlenarBus.cs" />
+    <Compile Include="LlenarChofer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetallesAdministrador));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtEstado = new System.Windows.Forms.CheckBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -43,12 +45,15 @@
             this.txtApellidos = new System.Windows.Forms.TextBox();
             this.txtNombres = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox1.BackgroundImage")));
+            this.groupBox1.Controls.Add(this.txtEstado);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
@@ -70,6 +75,19 @@
             this.groupBox1.TabIndex = 60;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Administrador";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // txtEstado
+            // 
+            this.txtEstado.AutoSize = true;
+            this.txtEstado.BackColor = System.Drawing.Color.Transparent;
+            this.txtEstado.Location = new System.Drawing.Point(23, 298);
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Size = new System.Drawing.Size(59, 17);
+            this.txtEstado.TabIndex = 61;
+            this.txtEstado.Text = "Estado";
+            this.txtEstado.UseVisualStyleBackColor = false;
+            this.txtEstado.CheckedChanged += new System.EventHandler(this.txtEstado_CheckedChanged);
             // 
             // button3
             // 
@@ -201,6 +219,10 @@
             this.label3.TabIndex = 26;
             this.label3.Text = "Apellidos:";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // DetallesAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -213,6 +235,7 @@
             this.Text = "DetallesAdministrador";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -233,5 +256,7 @@
         public System.Windows.Forms.TextBox txtID;
         public System.Windows.Forms.TextBox txtApellidos;
         public System.Windows.Forms.TextBox txtNombres;
+        public System.Windows.Forms.CheckBox txtEstado;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

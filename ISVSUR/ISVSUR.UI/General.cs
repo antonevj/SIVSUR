@@ -1,7 +1,10 @@
-﻿using System;
+﻿using ISVSUR.DATA;
+using ISVSUR.Entity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,29 +15,58 @@ namespace ISVSUR.UI
 {
     public partial class General : Form
     {
-
+       
+        string id, nombres;
         private ClientesIU _fromCliente;
         private Bus _fromBus;
         private Chofer _fromChofer;
-        public General()
+        private Ruta _fromRuta;
+        private Administrador _fromadmin;
+        public General(string id,string nombres)
+
         {
             InitializeComponent();
+            this.id = id;
+            this.nombres = nombres;
         }
 
-        private void btnAdmin_Click(object sender, EventArgs e)
-        {
-
-
-
-        }
+       
 
 
         private void General_Load(object sender, EventArgs e)
         {
 
+            timer1.Enabled = true;
+            Form1 fm = new Form1();
+            tpID.Text = id;
+            tpNombre.Text ="Nombre del usuario: "+ nombres;
+
+            if (tpID.Text=="2")
+            {
+                tpCargo.Text ="Cargo: "+ "Administrador";
+            }
+            else
+            {
+                    tpCargo.Text= "Cargo: " + "Recepcionista";
+            }
+
+
+            if (tpID.Text!="2")
+            {
+                administradorToolStripMenuItem.Enabled = false;
+                btnAdmin.Enabled = false;
+            }
+            else
+            {
+                administradorToolStripMenuItem.Enabled = true;
+                btnAdmin.Enabled = true;
+            }
         }
+       
 
+        
 
+        
 
         private void clientesToolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -43,15 +75,12 @@ namespace ISVSUR.UI
 
         private void registrarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Administrador administrador = new Administrador();
-            administrador.ShowDialog();
+           btnAdmin_Click_1(sender, e);
         }
 
         private void cerrarSesionToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Form1 administrador = new Form1();
-            this.Hide();
-            administrador.ShowDialog();
+          
         }
 
         private void choferesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -66,20 +95,18 @@ namespace ISVSUR.UI
 
         private void rutaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Ruta b = new Ruta();
-            b.ShowDialog();
+            btnRuta_Click(sender, e);
         }
 
         private void programacionToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Llegada b = new Llegada();
-            b.ShowDialog();
+           
         }
 
         private void ventasToolStripMenuItem3_Click(object sender, EventArgs e)
         {
-            Formulario_de_Venta CLi = new Formulario_de_Venta();
-            CLi.ShowDialog();
+            Formulario_de_Venta b = new Formulario_de_Venta();
+            b.ShowDialog();
         }
 
         private void ventasToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -136,11 +163,59 @@ namespace ISVSUR.UI
             pictureBox1.Visible = false;
         }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            tpReloj.Text = DateTime.Now.ToString("hh:mm:ss");
+            tpFecha.Text = DateTime.Now.ToLongDateString();
+
+        }
+
+        private void btnRuta_Click(object sender, EventArgs e)
+        {
+            if (_fromRuta == null || _fromRuta.IsDisposed == true)
+            {
+                _fromRuta = new Ruta();
+                _fromRuta.WindowState = FormWindowState.Maximized;
+                _fromRuta.MdiParent = this;
+                _fromRuta.Show();
+            }
+            else
+            {
+                _fromRuta.BringToFront();
+            }
+            pictureBox1.Visible = false;
+        }
+
+        private void btnAdmin_Click_1(object sender, EventArgs e)
+        {
+            if (_fromadmin == null || _fromadmin.IsDisposed == true)
+            {
+                _fromadmin = new Administrador();
+                _fromadmin.WindowState = FormWindowState.Maximized;
+                _fromadmin.MdiParent = this;
+                _fromadmin.Show();
+            }
+            else
+            {
+                _fromadmin.BringToFront();
+            }
+            pictureBox1.Visible = false;
+        }
+
+        private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form1 administrador = new Form1();
+            this.Hide();
+            administrador.ShowDialog();
+        }
+
         private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
 
             pictureBox1.Visible = true;
+
+
         }
 
     }

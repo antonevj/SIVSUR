@@ -82,12 +82,6 @@
     <Compile Include="DetalleChofer.Designer.cs">
       <DependentUpon>DetalleChofer.cs</DependentUpon>
     </Compile>
-    <Compile Include="DetalleLlegada.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DetalleLlegada.Designer.cs">
-      <DependentUpon>DetalleLlegada.cs</DependentUpon>
-    </Compile>
     <Compile Include="DetalleRuta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,12 +118,6 @@
     <Compile Include="General.Designer.cs">
       <DependentUpon>General.cs</DependentUpon>
     </Compile>
-    <Compile Include="Llegada.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Llegada.Designer.cs">
-      <DependentUpon>Llegada.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReporteVenta.cs">
@@ -162,9 +150,6 @@
     <EmbeddedResource Include="DetalleChofer.resx">
       <DependentUpon>DetalleChofer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DetalleLlegada.resx">
-      <DependentUpon>DetalleLlegada.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="DetalleRuta.resx">
       <DependentUpon>DetalleRuta.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,9 +167,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="General.resx">
       <DependentUpon>General.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Llegada.resx">
-      <DependentUpon>Llegada.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -232,6 +214,7 @@
       <Name>ISVSUR.Util</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

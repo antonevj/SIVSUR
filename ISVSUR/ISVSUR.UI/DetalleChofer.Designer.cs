@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetalleChofer));
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chkEstado = new System.Windows.Forms.CheckBox();
             this.boxBus = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -47,7 +48,6 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblIDBus = new System.Windows.Forms.Label();
-            this.chkEstado = new System.Windows.Forms.CheckBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -98,6 +98,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chofer";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // chkEstado
+            // 
+            this.chkEstado.AutoSize = true;
+            this.chkEstado.BackColor = System.Drawing.Color.Transparent;
+            this.chkEstado.Location = new System.Drawing.Point(31, 346);
+            this.chkEstado.Name = "chkEstado";
+            this.chkEstado.Size = new System.Drawing.Size(70, 20);
+            this.chkEstado.TabIndex = 67;
+            this.chkEstado.Text = "Estado";
+            this.chkEstado.UseVisualStyleBackColor = false;
             // 
             // boxBus
             // 
@@ -254,17 +265,7 @@
             this.lblIDBus.Size = new System.Drawing.Size(29, 21);
             this.lblIDBus.TabIndex = 66;
             this.lblIDBus.Visible = false;
-            // 
-            // chkEstado
-            // 
-            this.chkEstado.AutoSize = true;
-            this.chkEstado.BackColor = System.Drawing.Color.Transparent;
-            this.chkEstado.Location = new System.Drawing.Point(31, 346);
-            this.chkEstado.Name = "chkEstado";
-            this.chkEstado.Size = new System.Drawing.Size(70, 20);
-            this.chkEstado.TabIndex = 67;
-            this.chkEstado.Text = "Estado";
-            this.chkEstado.UseVisualStyleBackColor = false;
+            this.lblIDBus.Click += new System.EventHandler(this.lblIDBus_Click);
             // 
             // errorProvider1
             // 

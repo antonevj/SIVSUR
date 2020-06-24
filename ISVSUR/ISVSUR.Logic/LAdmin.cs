@@ -25,9 +25,9 @@ namespace ISVSUR.Logic
             return new DAdmin().Update(t);
         }
 
-        public int Delete(int IDBus)
+        public int Delete(int IDAdmin)
         {
-            return new DAdmin().Delete(IDBus);
+            return new DAdmin().Delete(IDAdmin);
         }
     }
 }
