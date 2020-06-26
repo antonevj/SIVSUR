@@ -70,7 +70,7 @@ namespace ISVSUR.UI
                 administradorToolStripMenuItem.Enabled = true;
                 btnAdmin.Enabled = true;
                 btnCliente.Enabled = true;
-                btnChofer.Enabled = true;
+                btnChofer.Enabled = true;  
                 btnBuses.Enabled = true;     
                 btnRuta.Enabled = true;
                 mantenimientoToolStripMenuItem.Enabled = true;
