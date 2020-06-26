@@ -47,6 +47,7 @@
     <Compile Include="DChofer.cs" />
     <Compile Include="DCliente.cs" />
     <Compile Include="DRutas.cs" />
+    <Compile Include="DVentas.cs" />
     <Compile Include="MiCadena.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

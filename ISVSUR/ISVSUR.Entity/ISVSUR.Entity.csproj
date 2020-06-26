@@ -44,7 +44,9 @@
     <Compile Include="EBus.cs" />
     <Compile Include="EChofer.cs" />
     <Compile Include="ECliente.cs" />
+    <Compile Include="EDetalleVentas.cs" />
     <Compile Include="ERutas.cs" />
+    <Compile Include="EVentas.cs" />
     <Compile Include="LlenarBus.cs" />
     <Compile Include="LlenarChofer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

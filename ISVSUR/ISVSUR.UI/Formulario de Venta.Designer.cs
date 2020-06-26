@@ -41,7 +41,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtIDCliente = new System.Windows.Forms.TextBox();
             this.txtSexo = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txtFecha = new System.Windows.Forms.TextBox();
@@ -51,13 +53,16 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txtDestino = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.txtIDRuta = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtIDRecepcionista = new System.Windows.Forms.TextBox();
+            this.txtIDRuta = new System.Windows.Forms.TextBox();
+            this.txtLugar = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.lblAsiento = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -180,12 +185,14 @@
             this.label74 = new System.Windows.Forms.Label();
             this.txtImporte = new System.Windows.Forms.TextBox();
             this.label75 = new System.Windows.Forms.Label();
-            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnRegistrar = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.txtLugar = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.dtFechaHoy = new System.Windows.Forms.DateTimePicker();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnLimpia = new System.Windows.Forms.Button();
+            this.label48 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -247,6 +254,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox56)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox57)).BeginInit();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -254,7 +262,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 16);
+            this.label1.Location = new System.Drawing.Point(4, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 13);
             this.label1.TabIndex = 0;
@@ -263,9 +271,9 @@
             // txtDNI
             // 
             this.txtDNI.Enabled = false;
-            this.txtDNI.Location = new System.Drawing.Point(6, 32);
+            this.txtDNI.Location = new System.Drawing.Point(5, 38);
             this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Size = new System.Drawing.Size(147, 20);
+            this.txtDNI.Size = new System.Drawing.Size(179, 20);
             this.txtDNI.TabIndex = 1;
             // 
             // label2
@@ -351,6 +359,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.txtIDCliente);
             this.groupBox1.Controls.Add(this.txtSexo);
             this.groupBox1.Controls.Add(this.txtEdad);
             this.groupBox1.Controls.Add(this.label6);
@@ -361,14 +370,24 @@
             this.groupBox1.Controls.Add(this.txtPaterno);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtDNI);
+            this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox1.Location = new System.Drawing.Point(26, 20);
+            this.groupBox1.Location = new System.Drawing.Point(26, 25);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(505, 161);
+            this.groupBox1.Size = new System.Drawing.Size(505, 156);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Pasajero";
+            // 
+            // txtIDCliente
+            // 
+            this.txtIDCliente.Enabled = false;
+            this.txtIDCliente.Location = new System.Drawing.Point(192, 38);
+            this.txtIDCliente.Name = "txtIDCliente";
+            this.txtIDCliente.Size = new System.Drawing.Size(68, 20);
+            this.txtIDCliente.TabIndex = 18;
+            this.txtIDCliente.Visible = false;
             // 
             // txtSexo
             // 
@@ -377,6 +396,18 @@
             this.txtSexo.Name = "txtSexo";
             this.txtSexo.Size = new System.Drawing.Size(147, 20);
             this.txtSexo.TabIndex = 17;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(192, 19);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(20, 13);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "ID";
+            this.label13.Visible = false;
             // 
             // label8
             // 
@@ -469,26 +500,6 @@
             this.label12.TabIndex = 27;
             this.label12.Text = "Ciudad Destino";
             // 
-            // txtIDRuta
-            // 
-            this.txtIDRuta.Enabled = false;
-            this.txtIDRuta.Location = new System.Drawing.Point(182, 30);
-            this.txtIDRuta.Name = "txtIDRuta";
-            this.txtIDRuta.Size = new System.Drawing.Size(40, 20);
-            this.txtIDRuta.TabIndex = 24;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label13.Location = new System.Drawing.Point(179, 11);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(51, 13);
-            this.label13.TabIndex = 25;
-            this.label13.Text = "ID Ruta";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -514,20 +525,22 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.txtIDRecepcionista);
+            this.groupBox2.Controls.Add(this.txtIDRuta);
             this.groupBox2.Controls.Add(this.txtLugar);
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.lblAsiento);
             this.groupBox2.Controls.Add(this.pictureBox1);
             this.groupBox2.Controls.Add(this.txtDestino);
             this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.txtIDRuta);
-            this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.txtHora);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.txtOrigen);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.txtFecha);
+            this.groupBox2.Controls.Add(this.label48);
+            this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox2.Location = new System.Drawing.Point(561, 25);
@@ -536,6 +549,32 @@
             this.groupBox2.TabIndex = 30;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos del viaje";
+            // 
+            // txtIDRecepcionista
+            // 
+            this.txtIDRecepcionista.Enabled = false;
+            this.txtIDRecepcionista.Location = new System.Drawing.Point(257, 31);
+            this.txtIDRecepcionista.Name = "txtIDRecepcionista";
+            this.txtIDRecepcionista.Size = new System.Drawing.Size(72, 20);
+            this.txtIDRecepcionista.TabIndex = 35;
+            this.txtIDRecepcionista.Visible = false;
+            // 
+            // txtIDRuta
+            // 
+            this.txtIDRuta.Enabled = false;
+            this.txtIDRuta.Location = new System.Drawing.Point(182, 31);
+            this.txtIDRuta.Name = "txtIDRuta";
+            this.txtIDRuta.Size = new System.Drawing.Size(59, 20);
+            this.txtIDRuta.TabIndex = 34;
+            this.txtIDRuta.Visible = false;
+            // 
+            // txtLugar
+            // 
+            this.txtLugar.Enabled = false;
+            this.txtLugar.Location = new System.Drawing.Point(182, 120);
+            this.txtLugar.Name = "txtLugar";
+            this.txtLugar.Size = new System.Drawing.Size(100, 20);
+            this.txtLugar.TabIndex = 33;
             // 
             // button3
             // 
@@ -557,6 +596,31 @@
             this.lblAsiento.Size = new System.Drawing.Size(13, 13);
             this.lblAsiento.TabIndex = 31;
             this.lblAsiento.Text = "..";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(179, 104);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(103, 13);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "Lugar de Asiento";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Location = new System.Drawing.Point(179, 12);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(47, 13);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "IDRuta";
+            this.label4.Visible = false;
             // 
             // pictureBox2
             // 
@@ -1955,17 +2019,18 @@
             this.label75.TabIndex = 150;
             this.label75.Text = "Importe Total S/.";
             // 
-            // btnNuevo
+            // btnRegistrar
             // 
-            this.btnNuevo.BackColor = System.Drawing.Color.Transparent;
-            this.btnNuevo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNuevo.BackgroundImage")));
-            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnNuevo.Location = new System.Drawing.Point(994, 571);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(51, 52);
-            this.btnNuevo.TabIndex = 152;
-            this.toolTip1.SetToolTip(this.btnNuevo, "Registrar Venta");
-            this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnRegistrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnRegistrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRegistrar.BackgroundImage")));
+            this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRegistrar.Location = new System.Drawing.Point(994, 571);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(51, 52);
+            this.btnRegistrar.TabIndex = 152;
+            this.toolTip1.SetToolTip(this.btnRegistrar, "Registrar Venta");
+            this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // button1
             // 
@@ -1994,25 +2059,42 @@
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // txtLugar
+            // dtFechaHoy
             // 
-            this.txtLugar.Enabled = false;
-            this.txtLugar.Location = new System.Drawing.Point(182, 120);
-            this.txtLugar.Name = "txtLugar";
-            this.txtLugar.Size = new System.Drawing.Size(100, 20);
-            this.txtLugar.TabIndex = 33;
+            this.dtFechaHoy.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtFechaHoy.Location = new System.Drawing.Point(915, 8);
+            this.dtFechaHoy.Name = "dtFechaHoy";
+            this.dtFechaHoy.Size = new System.Drawing.Size(111, 20);
+            this.dtFechaHoy.TabIndex = 157;
             // 
-            // label3
+            // errorProvider1
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(179, 104);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 13);
-            this.label3.TabIndex = 23;
-            this.label3.Text = "Lugar de Asiento";
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // btnLimpia
+            // 
+            this.btnLimpia.BackColor = System.Drawing.Color.Transparent;
+            this.btnLimpia.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLimpia.BackgroundImage")));
+            this.btnLimpia.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLimpia.Location = new System.Drawing.Point(919, 571);
+            this.btnLimpia.Name = "btnLimpia";
+            this.btnLimpia.Size = new System.Drawing.Size(51, 52);
+            this.btnLimpia.TabIndex = 158;
+            this.btnLimpia.UseVisualStyleBackColor = false;
+            this.btnLimpia.Click += new System.EventHandler(this.btnLimpia_Click);
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.BackColor = System.Drawing.Color.Transparent;
+            this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label48.Location = new System.Drawing.Point(254, 12);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(101, 13);
+            this.label48.TabIndex = 19;
+            this.label48.Text = "IDRecepcionista";
+            this.label48.Visible = false;
             // 
             // Formulario_de_Venta
             // 
@@ -2020,9 +2102,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1063, 636);
+            this.Controls.Add(this.btnLimpia);
+            this.Controls.Add(this.dtFechaHoy);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnNuevo);
+            this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.txtImporte);
             this.Controls.Add(this.label75);
             this.Controls.Add(this.txtVuelto);
@@ -2107,6 +2191,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox57)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2134,8 +2219,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtDestino;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtIDRuta;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -2263,12 +2346,21 @@
         private System.Windows.Forms.Label label75;
         private System.Windows.Forms.Label lblAsiento;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtSexo;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox txtLugar;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker dtFechaHoy;
+        private System.Windows.Forms.TextBox txtIDRuta;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Button btnLimpia;
+        private System.Windows.Forms.Label label13;
+        public System.Windows.Forms.TextBox txtIDCliente;
+        private System.Windows.Forms.TextBox txtIDRecepcionista;
+        private System.Windows.Forms.Label label48;
     }
 }

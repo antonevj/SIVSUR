@@ -1,7 +1,12 @@
-﻿using System;
+﻿using ISVSUR.DATA;
+using ISVSUR.Entity;
+using ISVSUR.Logic;
+using ISVSUR.Util;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -13,9 +18,14 @@ namespace ISVSUR.UI
 {
     public partial class Formulario_de_Venta : Form
     {
-        public Formulario_de_Venta()
+
+        string id;
+        public byte operacion { get; set; }
+        public Formulario_de_Venta(string id)
         {
             InitializeComponent();
+            this.id = id;
+           // this.nombres = nombres;
         }
 
         private void groupBox3_Enter(object sender, EventArgs e)
@@ -31,6 +41,9 @@ namespace ISVSUR.UI
         private void Formulario_de_Venta_Load(object sender, EventArgs e)
         {
 
+
+            txtIDRecepcionista.Text = id;
+            limpiar();
         }
 
         private void btnBuscarCLiente_Click(object sender, EventArgs e)
@@ -980,7 +993,7 @@ namespace ISVSUR.UI
 
             //clientes
 
-
+            txtIDCliente.Text = Program.IDCliente + "";
             txtDNI.Text = Program.DNI + "";
             txtNombre.Text = Program.Nombres + "";
             txtPaterno.Text = Program.Apellidos + "";
@@ -992,6 +1005,130 @@ namespace ISVSUR.UI
         private void button4_Click(object sender, EventArgs e)
         {
 
+        }
+
+
+
+
+        private bool MyValidation()
+        {
+            bool rpta = false;
+
+            //arrary que almacena la coleccion de errores
+            bool[] error = new bool[3];
+
+
+            ///validamos el campo nombre 
+            if (String.IsNullOrWhiteSpace(txtDNI.Text))
+            {
+                errorProvider1.SetError(txtDNI, "los datos  del cliente  es obligatorio");
+                error[0] = true;
+
+            }
+            if (String.IsNullOrWhiteSpace(txtDestino.Text))
+            {
+                errorProvider1.SetError(txtDestino, "los datos  del destino  es obligatorio");
+                error[1] = true;
+
+            }
+
+
+
+            //colocar las demas validaciones
+            if (error[0] == true || error[1] == true)
+            {
+                MessageBox.Show("Error de validación.\n" + "Ingrese los datos en los campos obligatorios o verifique que estos sean válidos",
+                    "Aviso",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                rpta = false;
+            }
+            else
+            {
+                rpta = true;
+            }
+
+
+
+
+            return rpta;
+        }
+
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+
+
+            if (!MyValidation())
+            {
+
+
+                return;
+
+            }
+
+           
+
+            EVentas obj = new EVentas
+            {
+
+              //  IDVenta = IDVenta.Text.Length == 0 ? 0 : int.Parse(IDVenta.Text),
+
+                IDCliente = Convert.ToInt32(txtIDCliente.Text),
+                IDRuta = Convert.ToInt32(txtIDRuta.Text),
+                
+                IDAdmin = Convert.ToInt32(txtIDRecepcionista.Text),
+                Asiento =Convert.ToInt32 (lblAsiento.Text),
+                LugarAsiento = (txtLugar.Text),              
+                Fecha_De_Venta = dtFechaHoy.Value.Date,
+
+
+            };
+         
+            int rpta ;
+            
+                rpta = new LVentas().Create(obj);
+            
+           
+
+            if (rpta > 0)
+            {
+
+                MessageBox.Show("Pasaje Vendido", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                this.DialogResult = DialogResult.OK;
+             //   limpiar();
+            }
+        }
+
+
+        private void limpiar()
+        {
+
+            txtIDRuta.Text =  "";
+            txtOrigen.Text = "";
+            txtDestino.Text = "";
+            txtImporte.Text = "";
+            txtFecha.Text = "";
+            txtHora.Text = "";
+
+
+          
+            txtLugar.Text = "";
+            lblAsiento.Text = "";
+            txtImportepago.Text= "";
+            txtVuelto.Text = "";
+            //cliente
+            txtDNI.Text = "";
+            txtNombre.Text = "";
+            txtPaterno.Text = "";
+            txtSexo.Text = "";
+            txtEdad.Text = "";
+        }
+
+        private void btnLimpia_Click(object sender, EventArgs e)
+        {
+            limpiar();
         }
     }
 }

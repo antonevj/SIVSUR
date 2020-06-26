@@ -31,6 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetalleRuta));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.boxHora = new System.Windows.Forms.ComboBox();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.chkEstado = new System.Windows.Forms.CheckBox();
             this.lblIDChofer = new System.Windows.Forms.Label();
             this.boxChofer = new System.Windows.Forms.ComboBox();
@@ -49,10 +53,6 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.boxHora = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -90,6 +90,51 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ruta";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // boxHora
+            // 
+            this.boxHora.FormattingEnabled = true;
+            this.boxHora.Items.AddRange(new object[] {
+            "8:00 am",
+            "9:00 am",
+            "3:00 pm",
+            "7:00 pm",
+            "8:00 pm"});
+            this.boxHora.Location = new System.Drawing.Point(41, 393);
+            this.boxHora.Name = "boxHora";
+            this.boxHora.Size = new System.Drawing.Size(108, 21);
+            this.boxHora.TabIndex = 73;
+            this.boxHora.SelectedIndexChanged += new System.EventHandler(this.boxHora_SelectedIndexChanged);
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker2.Location = new System.Drawing.Point(39, 346);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(110, 20);
+            this.dateTimePicker2.TabIndex = 72;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(38, 325);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(110, 18);
+            this.label4.TabIndex = 71;
+            this.label4.Text = "Fecha de viaje :";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(41, 372);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(107, 18);
+            this.label8.TabIndex = 70;
+            this.label8.Text = "Hora de salida:";
             // 
             // chkEstado
             // 
@@ -271,45 +316,6 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // boxHora
-            // 
-            this.boxHora.FormattingEnabled = true;
-            this.boxHora.Location = new System.Drawing.Point(41, 393);
-            this.boxHora.Name = "boxHora";
-            this.boxHora.Size = new System.Drawing.Size(108, 21);
-            this.boxHora.TabIndex = 73;
-            this.boxHora.SelectedIndexChanged += new System.EventHandler(this.boxHora_SelectedIndexChanged);
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(39, 346);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(110, 20);
-            this.dateTimePicker2.TabIndex = 72;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(38, 325);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 18);
-            this.label4.TabIndex = 71;
-            this.label4.Text = "Fecha de viaje :";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(41, 372);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(107, 18);
-            this.label8.TabIndex = 70;
-            this.label8.Text = "Hora de salida:";
             // 
             // DetalleRuta
             // 

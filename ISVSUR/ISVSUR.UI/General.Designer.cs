@@ -43,7 +43,9 @@
             this.ventasToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.ventasTelefonixasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reposterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.seguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,7 +57,6 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btnBuses = new System.Windows.Forms.ToolStripButton();
             this.btnRuta = new System.Windows.Forms.ToolStripButton();
-            this.btnProgramar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.btnVentas = new System.Windows.Forms.ToolStripButton();
             this.statusStrip2 = new System.Windows.Forms.StatusStrip();
@@ -69,7 +70,6 @@
             this.tpReloj = new System.Windows.Forms.ToolStripStatusLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip2.SuspendLayout();
@@ -114,35 +114,35 @@
             // clientesToolStripMenuItem1
             // 
             this.clientesToolStripMenuItem1.Name = "clientesToolStripMenuItem1";
-            this.clientesToolStripMenuItem1.Size = new System.Drawing.Size(149, 22);
+            this.clientesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.clientesToolStripMenuItem1.Text = "Clientes";
             this.clientesToolStripMenuItem1.Click += new System.EventHandler(this.clientesToolStripMenuItem1_Click);
             // 
             // choferesToolStripMenuItem
             // 
             this.choferesToolStripMenuItem.Name = "choferesToolStripMenuItem";
-            this.choferesToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.choferesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.choferesToolStripMenuItem.Text = "Chofer";
             this.choferesToolStripMenuItem.Click += new System.EventHandler(this.choferesToolStripMenuItem_Click);
             // 
             // busToolStripMenuItem1
             // 
             this.busToolStripMenuItem1.Name = "busToolStripMenuItem1";
-            this.busToolStripMenuItem1.Size = new System.Drawing.Size(149, 22);
+            this.busToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.busToolStripMenuItem1.Text = "Bus";
             this.busToolStripMenuItem1.Click += new System.EventHandler(this.busToolStripMenuItem1_Click);
             // 
             // rutaToolStripMenuItem
             // 
             this.rutaToolStripMenuItem.Name = "rutaToolStripMenuItem";
-            this.rutaToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.rutaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.rutaToolStripMenuItem.Text = "Ruta";
             this.rutaToolStripMenuItem.Click += new System.EventHandler(this.rutaToolStripMenuItem_Click);
             // 
             // programacionToolStripMenuItem1
             // 
             this.programacionToolStripMenuItem1.Name = "programacionToolStripMenuItem1";
-            this.programacionToolStripMenuItem1.Size = new System.Drawing.Size(149, 22);
+            this.programacionToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.programacionToolStripMenuItem1.Text = "Programacion";
             this.programacionToolStripMenuItem1.Click += new System.EventHandler(this.programacionToolStripMenuItem1_Click);
             // 
@@ -170,9 +170,18 @@
             // 
             // reposterToolStripMenuItem
             // 
+            this.reposterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ventasToolStripMenuItem});
             this.reposterToolStripMenuItem.Name = "reposterToolStripMenuItem";
             this.reposterToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.reposterToolStripMenuItem.Text = "Reportes";
+            // 
+            // ventasToolStripMenuItem
+            // 
+            this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
+            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.ventasToolStripMenuItem.Text = "Ventas";
+            this.ventasToolStripMenuItem.Click += new System.EventHandler(this.ventasToolStripMenuItem_Click);
             // 
             // menuStrip1
             // 
@@ -190,6 +199,13 @@
             this.menuStrip1.Size = new System.Drawing.Size(905, 24);
             this.menuStrip1.TabIndex = 69;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // cerrarSesionToolStripMenuItem
+            // 
+            this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
+            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
+            this.cerrarSesionToolStripMenuItem.Text = "Cerrar Sesion";
+            this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
             // 
             // inicioToolStripMenuItem
             // 
@@ -221,7 +237,6 @@
             this.toolStripSeparator2,
             this.btnBuses,
             this.btnRuta,
-            this.btnProgramar,
             this.toolStripSeparator3,
             this.btnVentas});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
@@ -290,15 +305,6 @@
             this.btnRuta.Text = "Rutas";
             this.btnRuta.Click += new System.EventHandler(this.btnRuta_Click);
             // 
-            // btnProgramar
-            // 
-            this.btnProgramar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnProgramar.Image = ((System.Drawing.Image)(resources.GetObject("btnProgramar.Image")));
-            this.btnProgramar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnProgramar.Name = "btnProgramar";
-            this.btnProgramar.Size = new System.Drawing.Size(36, 36);
-            this.btnProgramar.Text = "Programacion";
-            // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
@@ -312,6 +318,7 @@
             this.btnVentas.Name = "btnVentas";
             this.btnVentas.Size = new System.Drawing.Size(36, 36);
             this.btnVentas.Text = "Registrar Ventas";
+            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
             // 
             // statusStrip2
             // 
@@ -399,13 +406,6 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // cerrarSesionToolStripMenuItem
-            // 
-            this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
-            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
-            this.cerrarSesionToolStripMenuItem.Text = "Cerrar Sesion";
-            this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
-            // 
             // General
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -458,14 +458,12 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton btnBuses;
         private System.Windows.Forms.ToolStripButton btnRuta;
-        private System.Windows.Forms.ToolStripButton btnProgramar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton btnVentas;
         private System.Windows.Forms.StatusStrip statusStrip2;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.ToolStripStatusLabel tpCargo;
-        private System.Windows.Forms.ToolStripStatusLabel tpFecha;
         private System.Windows.Forms.ToolStripStatusLabel tpReloj;
         private System.Windows.Forms.ToolStripMenuItem seguridadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
@@ -473,8 +471,10 @@
         private System.Windows.Forms.ToolStripMenuItem inicioToolStripMenuItem;
         public System.Windows.Forms.ToolStripStatusLabel tpID;
         public System.Windows.Forms.ToolStripStatusLabel tpNombre;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ToolStripMenuItem cerrarSesionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem;
+        public System.Windows.Forms.ToolStripStatusLabel tpFecha;
+        public System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
     }
 }

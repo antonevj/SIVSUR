@@ -22,6 +22,9 @@ namespace ISVSUR.UI
         private Chofer _fromChofer;
         private Ruta _fromRuta;
         private Administrador _fromadmin;
+        private ReporteVenta _fromventa;
+       
+        
         public General(string id,string nombres)
 
         {
@@ -38,6 +41,7 @@ namespace ISVSUR.UI
 
             timer1.Enabled = true;
             Form1 fm = new Form1();
+
             tpID.Text = id;
             tpNombre.Text ="Nombre del usuario: "+ nombres;
 
@@ -55,11 +59,21 @@ namespace ISVSUR.UI
             {
                 administradorToolStripMenuItem.Enabled = false;
                 btnAdmin.Enabled = false;
+                btnCliente.Enabled = false;
+                btnChofer.Enabled = false;
+                btnBuses.Enabled = false;
+                btnRuta.Enabled = false;
+                mantenimientoToolStripMenuItem.Enabled = false;
             }
             else
             {
                 administradorToolStripMenuItem.Enabled = true;
                 btnAdmin.Enabled = true;
+                btnCliente.Enabled = true;
+                btnChofer.Enabled = true;
+                btnBuses.Enabled = true;
+                btnRuta.Enabled = true;
+                mantenimientoToolStripMenuItem.Enabled = true;
             }
         }
        
@@ -105,7 +119,7 @@ namespace ISVSUR.UI
 
         private void ventasToolStripMenuItem3_Click(object sender, EventArgs e)
         {
-            Formulario_de_Venta b = new Formulario_de_Venta();
+            Formulario_de_Venta b = new Formulario_de_Venta(id);
             b.ShowDialog();
         }
 
@@ -207,6 +221,28 @@ namespace ISVSUR.UI
             Form1 administrador = new Form1();
             this.Hide();
             administrador.ShowDialog();
+        }
+
+        private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (_fromventa == null || _fromventa.IsDisposed == true)
+            {
+                _fromventa = new ReporteVenta();
+                _fromventa.WindowState = FormWindowState.Maximized;
+                _fromventa.MdiParent = this;
+                _fromventa.Show();
+            }
+            else
+            {
+                _fromventa.BringToFront();
+            }
+            pictureBox1.Visible = false;
+        }
+
+        private void btnVentas_Click(object sender, EventArgs e)
+        {
+            Formulario_de_Venta b = new Formulario_de_Venta(id);
+            b.ShowDialog();
         }
 
         private void inicioToolStripMenuItem_Click(object sender, EventArgs e)

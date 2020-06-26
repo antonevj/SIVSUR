@@ -58,6 +58,7 @@ namespace ISVSUR.UI
             };
 
             int rpta = 0;
+
             if (operacion == (byte)MisConstantes.OPERACION.Insercion)
             {
                 rpta = new LAdmin().Create(obj);

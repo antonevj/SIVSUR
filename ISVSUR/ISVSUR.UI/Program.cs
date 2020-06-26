@@ -25,9 +25,9 @@ namespace ISVSUR.UI
         public static string Nombres;
         public static string sexo;
         public static int edad;
-    
 
 
+       
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>
