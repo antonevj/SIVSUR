@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -13,9 +14,16 @@ namespace ISVSUR.UI
 {
     public partial class Formulario_de_Venta : Form
     {
+        private string id;
+        int cont=1;
         public Formulario_de_Venta()
         {
             InitializeComponent();
+        }
+
+        public Formulario_de_Venta(string id)
+        {
+            this.id = id;
         }
 
         private void groupBox3_Enter(object sender, EventArgs e)
@@ -30,7 +38,14 @@ namespace ISVSUR.UI
 
         private void Formulario_de_Venta_Load(object sender, EventArgs e)
         {
-
+           
+            if (cont == 1 )
+            {
+                pictureBox2.Image = Image.FromFile(Application.StartupPath + "//Imagen//" + "x.png"); 
+                              
+            }
+            cont++;
+           
         }
 
         private void btnBuscarCLiente_Click(object sender, EventArgs e)
@@ -41,16 +56,17 @@ namespace ISVSUR.UI
             f.Show();
         }
 
-     
+
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-          
+            
+
             DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-         
+
             if (k == DialogResult.Yes)
             {
 
-                pictureBox2.Image = Image.FromFile(Application.StartupPath+ "\\Imagen\\" + "x.png");
+                pictureBox2.Image = Image.FromFile(Application.StartupPath + "//Imagen//" + "x.png");
                 pictureBox2.Enabled = false;
                 lblAsiento.Text = "4";
                 txtLugar.Text = "Ventana";
@@ -71,7 +87,7 @@ namespace ISVSUR.UI
                 txtLugar.Text = "Ventana";
 
             }
-           
+
         }
 
         private void PictureBox17_Click(object sender, EventArgs e)
@@ -87,7 +103,7 @@ namespace ISVSUR.UI
                 txtLugar.Text = "Pasillo";
 
             }
-           
+
         }
 
         private void PictureBox3_Click(object sender, EventArgs e)
@@ -118,7 +134,7 @@ namespace ISVSUR.UI
                 txtLugar.Text = "ventana";
 
             }
-           
+
         }
 
         private void PictureBox15_Click(object sender, EventArgs e)
@@ -134,7 +150,7 @@ namespace ISVSUR.UI
                 txtLugar.Text = "pasillo";
 
             }
-            
+
         }
 
         private void PictureBox4_Click(object sender, EventArgs e)
@@ -151,7 +167,7 @@ namespace ISVSUR.UI
 
             }
 
-            
+
         }
 
         private void PictureBox5_Click(object sender, EventArgs e)
@@ -167,7 +183,7 @@ namespace ISVSUR.UI
                 txtLugar.Text = "ventana";
 
             }
-           
+
         }
 
         private void PictureBox12_Click(object sender, EventArgs e)
@@ -183,7 +199,7 @@ namespace ISVSUR.UI
                 txtLugar.Text = "ventana";
 
             }
-          
+
         }
 
         private void PictureBox13_Click(object sender, EventArgs e)
@@ -197,7 +213,7 @@ namespace ISVSUR.UI
                 pictureBox13.Enabled = false;
                 lblAsiento.Text = "10";
                 txtLugar.Text = "pasillo";
-            }         
+            }
         }
 
         private void PictureBox6_Click(object sender, EventArgs e)
@@ -213,7 +229,7 @@ namespace ISVSUR.UI
                 txtLugar.Text = "pasillo";
 
             }
-           
+
         }
 
         private void PictureBox7_Click(object sender, EventArgs e)
@@ -230,7 +246,7 @@ namespace ISVSUR.UI
 
             }
 
-           
+
         }
 
         private void PictureBox10_Click(object sender, EventArgs e)
@@ -247,7 +263,7 @@ namespace ISVSUR.UI
                 txtLugar.Text = "ventana";
 
             }
-           
+
         }
 
         private void PictureBox11_Click(object sender, EventArgs e)
@@ -280,7 +296,7 @@ namespace ISVSUR.UI
 
             }
 
-           
+
         }
 
         private void PictureBox9_Click(object sender, EventArgs e)
@@ -297,7 +313,7 @@ namespace ISVSUR.UI
 
             }
 
-          
+
         }
 
         private void PictureBox24_Click(object sender, EventArgs e)
@@ -313,7 +329,7 @@ namespace ISVSUR.UI
                 txtLugar.Text = "ventana";
 
             }
-          
+
         }
 
         private void PictureBox25_Click(object sender, EventArgs e)
@@ -326,7 +342,7 @@ namespace ISVSUR.UI
                 pictureBox25.Enabled = false;
                 lblAsiento.Text = "18";
                 txtLugar.Text = "pasillo";
-            }           
+            }
         }
 
         private void PictureBox32_Click(object sender, EventArgs e)
@@ -342,7 +358,7 @@ namespace ISVSUR.UI
                 txtLugar.Text = "pasillo";
 
             }
-           
+
         }
 
         private void PictureBox33_Click(object sender, EventArgs e)
@@ -358,7 +374,7 @@ namespace ISVSUR.UI
                 lblAsiento.Text = "20";
                 txtLugar.Text = "ventana";
             }
-          
+
         }
 
         private void PictureBox22_Click(object sender, EventArgs e)
@@ -372,7 +388,7 @@ namespace ISVSUR.UI
                 pictureBox22.Enabled = false;
                 lblAsiento.Text = "21";
                 txtLugar.Text = "ventana";
-            }         
+            }
         }
 
         private void PictureBox23_Click(object sender, EventArgs e)
@@ -385,7 +401,7 @@ namespace ISVSUR.UI
                 pictureBox23.Enabled = false;
                 lblAsiento.Text = "22";
                 txtLugar.Text = "pasillo";
-            }           
+            }
         }
 
         private void PictureBox30_Click(object sender, EventArgs e)
@@ -401,7 +417,7 @@ namespace ISVSUR.UI
                 txtLugar.Text = "pasillo";
 
             }
-           
+
         }
 
         private void PictureBox31_Click(object sender, EventArgs e)
@@ -418,7 +434,7 @@ namespace ISVSUR.UI
                 txtLugar.Text = "ventana";
 
             }
-          
+
         }
 
         private void PictureBox20_Click(object sender, EventArgs e)
@@ -434,7 +450,7 @@ namespace ISVSUR.UI
                 txtLugar.Text = "ventana";
 
             }
-           
+
         }
 
         private void PictureBox21_Click(object sender, EventArgs e)
@@ -450,7 +466,7 @@ namespace ISVSUR.UI
                 txtLugar.Text = "pasillo";
 
             }
-           
+
         }
 
         private void PictureBox28_Click(object sender, EventArgs e)
@@ -467,7 +483,7 @@ namespace ISVSUR.UI
 
             }
 
-          
+
         }
 
         private void PictureBox29_Click(object sender, EventArgs e)
@@ -483,7 +499,7 @@ namespace ISVSUR.UI
                 txtLugar.Text = "ventana";
 
             }
-          
+
         }
 
         private void PictureBox18_Click(object sender, EventArgs e)
@@ -500,7 +516,7 @@ namespace ISVSUR.UI
                 txtLugar.Text = "ventana";
 
             }
-       
+
         }
 
         private void PictureBox19_Click(object sender, EventArgs e)
@@ -516,7 +532,7 @@ namespace ISVSUR.UI
                 lblAsiento.Text = "30";
                 txtLugar.Text = "pasillo";
             }
-           
+
         }
 
         private void PictureBox34_Click(object sender, EventArgs e)
@@ -532,7 +548,7 @@ namespace ISVSUR.UI
                 lblAsiento.Text = "31";
                 txtLugar.Text = "ventana";
             }
-            
+
         }
 
         private void PictureBox35_Click(object sender, EventArgs e)
@@ -583,7 +599,7 @@ namespace ISVSUR.UI
                 txtLugar.Text = "pasillo";
 
             }
-            
+
         }
 
         private void PictureBox26_Click(object sender, EventArgs e)
@@ -652,7 +668,7 @@ namespace ISVSUR.UI
                 txtLugar.Text = "pasillo";
 
             }
-            
+
         }
 
         private void PictureBox48_Click(object sender, EventArgs e)
@@ -668,7 +684,7 @@ namespace ISVSUR.UI
                 lblAsiento.Text = "39";
                 txtLugar.Text = "pasillo";
             }
-            
+
         }
 
         private void PictureBox49_Click(object sender, EventArgs e)
@@ -685,7 +701,7 @@ namespace ISVSUR.UI
                 txtLugar.Text = "ventana";
 
             }
-            
+
         }
 
         private void PictureBox40_Click(object sender, EventArgs e)
@@ -736,7 +752,7 @@ namespace ISVSUR.UI
                 txtLugar.Text = "pasillo";
 
             }
-            
+
         }
 
         private void PictureBox47_Click(object sender, EventArgs e)
@@ -753,7 +769,7 @@ namespace ISVSUR.UI
                 txtLugar.Text = "ventana";
 
             }
-           
+
         }
 
         private void PictureBox38_Click(object sender, EventArgs e)
@@ -787,7 +803,7 @@ namespace ISVSUR.UI
                 txtLugar.Text = "pasillo";
 
             }
-           
+
         }
 
         private void PictureBox44_Click(object sender, EventArgs e)
@@ -838,7 +854,7 @@ namespace ISVSUR.UI
                 txtLugar.Text = "ventana";
 
             }
-            
+
         }
 
         private void PictureBox53_Click(object sender, EventArgs e)
@@ -904,7 +920,7 @@ namespace ISVSUR.UI
                 txtLugar.Text = "ventana";
 
             }
-           
+
         }
 
         private void PictureBox51_Click(object sender, EventArgs e)
@@ -920,7 +936,7 @@ namespace ISVSUR.UI
                 txtLugar.Text = "pasillo";
 
             }
-           
+
         }
 
         private void PictureBox54_Click(object sender, EventArgs e)
@@ -936,7 +952,7 @@ namespace ISVSUR.UI
                 txtLugar.Text = "pasillo";
 
             }
-            
+
         }
 
         private void PictureBox55_Click(object sender, EventArgs e)
@@ -952,7 +968,7 @@ namespace ISVSUR.UI
                 txtLugar.Text = "ventana";
 
             }
-           
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -973,8 +989,8 @@ namespace ISVSUR.UI
             txtIDRuta.Text = Program.IDRuta + "";
             txtOrigen.Text = Program.Ciudad_De_Origen + "";
             txtDestino.Text = Program.Ciudad_De_Destino + "";
-            txtImporte.Text = Program.Precio + "";                 
-            txtFecha.Text = Program.Fecha_De_Viaje + "";        
+            txtImporte.Text = Program.Precio + "";
+            txtFecha.Text = Program.Fecha_De_Viaje + "";
             txtHora.Text = Program.Hora_De_Salida + "";
 
 
@@ -986,12 +1002,28 @@ namespace ISVSUR.UI
             txtPaterno.Text = Program.Apellidos + "";
             txtSexo.Text = Program.sexo + "";
             txtEdad.Text = Program.edad + "";
-           
+
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
+            // cont=2;
+            //   pictureBox2.Image = Image.FromFile(Application.StartupPath + "//Imagen//" + "asiento.jpg");
 
+          
+                pictureBox2.Image = Image.FromFile(Application.StartupPath + "//Imagen//" + "asiento.jpg");
+               
+           
+
+        }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
         }
     }
 }

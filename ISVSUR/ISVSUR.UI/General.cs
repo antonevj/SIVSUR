@@ -33,8 +33,7 @@ namespace ISVSUR.UI
             this.nombres = nombres;
         }
 
-       
-
+      
 
         private void General_Load(object sender, EventArgs e)
         {

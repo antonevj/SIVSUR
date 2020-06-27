@@ -62,6 +62,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.lblAsiento = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -129,7 +130,7 @@
             this.pictureBox32 = new System.Windows.Forms.PictureBox();
             this.pictureBox33 = new System.Windows.Forms.PictureBox();
             this.label47 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnseleccionar = new System.Windows.Forms.Button();
             this.label49 = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
             this.pictureBox34 = new System.Windows.Forms.PictureBox();
@@ -192,7 +193,6 @@
             this.dtFechaHoy = new System.Windows.Forms.DateTimePicker();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnLimpia = new System.Windows.Forms.Button();
-            this.label48 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -608,6 +608,19 @@
             this.label3.Size = new System.Drawing.Size(103, 13);
             this.label3.TabIndex = 23;
             this.label3.Text = "Lugar de Asiento";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.BackColor = System.Drawing.Color.Transparent;
+            this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label48.Location = new System.Drawing.Point(254, 12);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(101, 13);
+            this.label48.TabIndex = 19;
+            this.label48.Text = "IDRecepcionista";
+            this.label48.Visible = false;
             // 
             // label4
             // 
@@ -1352,16 +1365,17 @@
             this.label47.TabIndex = 63;
             this.label47.Text = "Segundo Piso";
             // 
-            // button2
+            // btnseleccionar
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(212, 14);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(102, 67);
-            this.button2.TabIndex = 96;
-            this.button2.Text = "Seleccionar Asiento";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnseleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnseleccionar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnseleccionar.Location = new System.Drawing.Point(212, 14);
+            this.btnseleccionar.Name = "btnseleccionar";
+            this.btnseleccionar.Size = new System.Drawing.Size(102, 67);
+            this.btnseleccionar.TabIndex = 96;
+            this.btnseleccionar.Text = "Seleccionar Asiento";
+            this.btnseleccionar.UseVisualStyleBackColor = true;
+            this.btnseleccionar.Click += new System.EventHandler(this.button2_Click);
             // 
             // label49
             // 
@@ -1918,7 +1932,7 @@
             this.groupBox4.Controls.Add(this.label50);
             this.groupBox4.Controls.Add(this.pictureBox34);
             this.groupBox4.Controls.Add(this.pictureBox35);
-            this.groupBox4.Controls.Add(this.button2);
+            this.groupBox4.Controls.Add(this.btnseleccionar);
             this.groupBox4.Controls.Add(this.label31);
             this.groupBox4.Controls.Add(this.label32);
             this.groupBox4.Controls.Add(this.label33);
@@ -1959,6 +1973,7 @@
             this.groupBox4.TabIndex = 145;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Segundo Piso";
+            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
             // label73
             // 
@@ -2030,7 +2045,6 @@
             this.btnRegistrar.TabIndex = 152;
             this.toolTip1.SetToolTip(this.btnRegistrar, "Registrar Venta");
             this.btnRegistrar.UseVisualStyleBackColor = false;
-            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // button1
             // 
@@ -2081,20 +2095,6 @@
             this.btnLimpia.Size = new System.Drawing.Size(51, 52);
             this.btnLimpia.TabIndex = 158;
             this.btnLimpia.UseVisualStyleBackColor = false;
-            this.btnLimpia.Click += new System.EventHandler(this.btnLimpia_Click);
-            // 
-            // label48
-            // 
-            this.label48.AutoSize = true;
-            this.label48.BackColor = System.Drawing.Color.Transparent;
-            this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label48.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label48.Location = new System.Drawing.Point(254, 12);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(101, 13);
-            this.label48.TabIndex = 19;
-            this.label48.Text = "IDRecepcionista";
-            this.label48.Visible = false;
             // 
             // Formulario_de_Venta
             // 
@@ -2288,7 +2288,7 @@
         private System.Windows.Forms.PictureBox pictureBox32;
         private System.Windows.Forms.PictureBox pictureBox33;
         private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnseleccionar;
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.PictureBox pictureBox34;

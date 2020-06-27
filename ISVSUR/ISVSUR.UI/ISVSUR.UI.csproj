@@ -52,6 +52,12 @@
     <Compile Include="Administrador.Designer.cs">
       <DependentUpon>Administrador.cs</DependentUpon>
     </Compile>
+    <Compile Include="Boleta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Boleta.Designer.cs">
+      <DependentUpon>Boleta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Bus.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     </Compile>
     <EmbeddedResource Include="Administrador.resx">
       <DependentUpon>Administrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Boleta.resx">
+      <DependentUpon>Boleta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Bus.resx">
       <DependentUpon>Bus.cs</DependentUpon>

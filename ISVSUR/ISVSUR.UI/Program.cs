@@ -36,7 +36,7 @@ namespace ISVSUR.UI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Formulario_de_Venta());
+            Application.Run(new ClientesIU());
         }
     }
 }
