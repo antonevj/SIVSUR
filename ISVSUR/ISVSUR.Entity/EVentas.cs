@@ -16,5 +16,6 @@ namespace ISVSUR.Entity
         public int Asiento { get; set; }
         public string LugarAsiento { get; set; }     
         public DateTime Fecha_De_Venta { get; set; }
+        public bool Reservado { get; set; }
     }
 }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ISVSUR.Contract
 {
-   public interface IVentas:TCreate<EVentas>
+   public interface IVentas : IRead<EVentas>, TCreate<EVentas>
     {
 
     }

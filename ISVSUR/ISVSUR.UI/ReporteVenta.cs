@@ -23,8 +23,7 @@ namespace ISVSUR.UI
 
         private void ReporteVenta_Load(object sender, EventArgs e)
         {
-            dateTimePicker1.Text="";
-            dateTimePicker2.Text = "";
+         
 
             buscar();
 
@@ -38,7 +37,13 @@ namespace ISVSUR.UI
             dataGridView1.Columns["Ciudad_De_Destino"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dataGridView1.Columns["Fecha_De_Viaje"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dataGridView1.Columns["fecha_De_Venta"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-           
+
+
+
+
+          
+
+            
         }
 
 
@@ -98,6 +103,11 @@ namespace ISVSUR.UI
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             buscar();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

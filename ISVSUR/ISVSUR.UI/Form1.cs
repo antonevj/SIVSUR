@@ -75,6 +75,9 @@ namespace ISVSUR.UI
                     //aqui ocultamos el formulario del login...
                     this.Hide();
                     FrmPrincipal.Show();
+
+
+                   
                 }
 
                 else

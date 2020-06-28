@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EAdmin.cs" />
+    <Compile Include="EAsientoReservado.cs" />
     <Compile Include="EBus.cs" />
     <Compile Include="EChofer.cs" />
     <Compile Include="ECliente.cs" />

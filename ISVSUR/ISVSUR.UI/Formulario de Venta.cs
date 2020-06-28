@@ -1,7 +1,12 @@
-﻿using System;
+﻿using ISVSUR.DATA;
+using ISVSUR.Entity;
+using ISVSUR.Logic;
+using ISVSUR.Util;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
@@ -14,17 +19,18 @@ namespace ISVSUR.UI
 {
     public partial class Formulario_de_Venta : Form
     {
-        private string id;
-        int cont=1;
-        public Formulario_de_Venta()
-        {
-            InitializeComponent();
-        }
-
+         string id;
+       // int cont=1;
+        public byte operacion { get; set; }
+       // public object Reservado=1;
         public Formulario_de_Venta(string id)
         {
-            this.id = id;
+            InitializeComponent();
+              this.id = id;
         }
+
+        
+        
 
         private void groupBox3_Enter(object sender, EventArgs e)
         {
@@ -36,22 +42,23 @@ namespace ISVSUR.UI
 
         }
 
+
+
+
+
+
+
+
         private void Formulario_de_Venta_Load(object sender, EventArgs e)
         {
+
            
-            if (cont == 1 )
-            {
-                pictureBox2.Image = Image.FromFile(Application.StartupPath + "//Imagen//" + "x.png"); 
-                              
-            }
-            cont++;
-           
+
         }
 
         private void btnBuscarCLiente_Click(object sender, EventArgs e)
         {
-            //ClientesIU fm = new ClientesIU();
-            //fm.Size = new System.Drawing.Size(500, 400);
+           
             ClientesIU f = new ClientesIU();
             f.Show();
         }
@@ -59,25 +66,17 @@ namespace ISVSUR.UI
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            
+          
 
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
 
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox2.Image = Image.FromFile(Application.StartupPath + "//Imagen//" + "x.png");
-                pictureBox2.Enabled = false;
-                lblAsiento.Text = "4";
-                txtLugar.Text = "Ventana";
 
             }
-        }
 
         private void PictureBox16_Click(object sender, EventArgs e)
         {
             DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
 
+          //  Reservado = 1;
             if (k == DialogResult.Yes)
             {
 
@@ -85,6 +84,7 @@ namespace ISVSUR.UI
                 pictureBox16.Enabled = false;
                 lblAsiento.Text = "1";
                 txtLugar.Text = "Ventana";
+          
 
             }
 
@@ -108,17 +108,7 @@ namespace ISVSUR.UI
 
         private void PictureBox3_Click(object sender, EventArgs e)
         {
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox3.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox3.Enabled = false;
-                lblAsiento.Text = "3";
-                txtLugar.Text = "pasillo";
-
-            }
+            
         }
 
         private void PictureBox14_Click(object sender, EventArgs e)
@@ -996,7 +986,7 @@ namespace ISVSUR.UI
 
             //clientes
 
-
+            txtIDCliente.Text = Program.IDCliente + "";
             txtDNI.Text = Program.DNI + "";
             txtNombre.Text = Program.Nombres + "";
             txtPaterno.Text = Program.Apellidos + "";
@@ -1024,6 +1014,116 @@ namespace ISVSUR.UI
 
         private void button2_Click(object sender, EventArgs e)
         {
+        }
+        private bool MyValidation()
+        {
+            bool rpta = false;
+
+            //arrary que almacena la coleccion de errores
+            bool[] error = new bool[3];
+
+
+            ///validamos el campo nombre 
+            if (String.IsNullOrWhiteSpace(txtDNI.Text))
+            {
+                errorProvider1.SetError(txtDNI, "El DNI es obligatorio");
+                error[0] = true;
+
+            }
+
+
+            //colocar las demas validaciones
+            if (error[0] == true || error[1] == true)
+            {
+                MessageBox.Show("Error de validación.\n" + "Ingrese los datos en los campos obligatorios o verifique que estos sean válidos",
+                    "Aviso",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                rpta = false;
+            }
+            else
+            {
+                rpta = true;
+            }
+
+
+
+
+            return rpta;
+        }
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+         
+            if (!MyValidation())
+            {
+
+
+                return;
+
+            }
+
+            EVentas obj = new EVentas
+            {
+
+                IDCliente =Convert.ToInt32(txtIDCliente.Text),
+                IDRuta = Convert.ToInt32(txtIDRuta.Text),
+                IDAdmin = Convert.ToInt32(txtIDRecepcionista.Text),
+                Asiento =Convert.ToInt32(lblAsiento.Text),
+                LugarAsiento = txtLugar.Text,
+                Fecha_De_Venta =Convert.ToDateTime(dtFechaHoy.Text),
+                Reservado =checkBox1.Checked
+
+
+            };
+
+            int rpta=0;
+           
+            if (operacion == (byte)MisConstantes.OPERACION.Insercion)
+            {
+                rpta = new LVentas().Create(obj);
+
+            }
+          
+
+
+            if (rpta > 0)
+            {
+
+                MessageBox.Show("operacion realizada correctamente", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+
+        }
+
+        private void btnLimpia_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label76_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+           
+
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+
+
+                lblAsiento.Text = "3";
+                txtLugar.Text = "pasillo";
+
+            }
         }
     }
 }

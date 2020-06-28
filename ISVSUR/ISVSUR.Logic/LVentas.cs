@@ -10,7 +10,10 @@ namespace ISVSUR.Logic
 {
   public  class LVentas
     {
-
+        public IEnumerable<EVentas> GetAll(bool Reservado)
+        {
+            return new DVentas().GetAll(Reservado);
+        }
         public int Create(EVentas t)
         {
             return new DVentas().Create(t);
