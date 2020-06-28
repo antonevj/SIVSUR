@@ -64,903 +64,6 @@ namespace ISVSUR.UI
         }
 
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-          
-
-
-
-            }
-
-        private void PictureBox16_Click(object sender, EventArgs e)
-        {
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-          //  Reservado = 1;
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox16.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox16.Enabled = false;
-                lblAsiento.Text = "1";
-                txtLugar.Text = "Ventana";
-          
-
-            }
-
-        }
-
-        private void PictureBox17_Click(object sender, EventArgs e)
-        {
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox17.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox17.Enabled = false;
-                lblAsiento.Text = "2";
-                txtLugar.Text = "Pasillo";
-
-            }
-
-        }
-
-        private void PictureBox3_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void PictureBox14_Click(object sender, EventArgs e)
-        {
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox14.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox14.Enabled = false;
-                lblAsiento.Text = "5";
-                txtLugar.Text = "ventana";
-
-            }
-
-        }
-
-        private void PictureBox15_Click(object sender, EventArgs e)
-        {
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox15.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox15.Enabled = false;
-                lblAsiento.Text = "6";
-                txtLugar.Text = "pasillo";
-
-            }
-
-        }
-
-        private void PictureBox4_Click(object sender, EventArgs e)
-        {
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox7.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox7.Enabled = false;
-                lblAsiento.Text = "7";
-                txtLugar.Text = "pasillo";
-
-            }
-
-
-        }
-
-        private void PictureBox5_Click(object sender, EventArgs e)
-        {
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox5.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox5.Enabled = false;
-                lblAsiento.Text = "8";
-                txtLugar.Text = "ventana";
-
-            }
-
-        }
-
-        private void PictureBox12_Click(object sender, EventArgs e)
-        {
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox12.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox12.Enabled = false;
-                lblAsiento.Text = "9";
-                txtLugar.Text = "ventana";
-
-            }
-
-        }
-
-        private void PictureBox13_Click(object sender, EventArgs e)
-        {
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox13.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox13.Enabled = false;
-                lblAsiento.Text = "10";
-                txtLugar.Text = "pasillo";
-            }
-        }
-
-        private void PictureBox6_Click(object sender, EventArgs e)
-        {
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox6.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox6.Enabled = false;
-                lblAsiento.Text = "11";
-                txtLugar.Text = "pasillo";
-
-            }
-
-        }
-
-        private void PictureBox7_Click(object sender, EventArgs e)
-        {
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox7.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox7.Enabled = false;
-                lblAsiento.Text = "12";
-                txtLugar.Text = "ventana";
-
-            }
-
-
-        }
-
-        private void PictureBox10_Click(object sender, EventArgs e)
-        {
-
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox10.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox10.Enabled = false;
-                lblAsiento.Text = "13";
-                txtLugar.Text = "ventana";
-
-            }
-
-        }
-
-        private void PictureBox11_Click(object sender, EventArgs e)
-        {
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox11.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox11.Enabled = false;
-                lblAsiento.Text = "14";
-                txtLugar.Text = "pasillo";
-
-            }
-
-        }
-
-        private void PictureBox8_Click(object sender, EventArgs e)
-        {
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox8.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox8.Enabled = false;
-                lblAsiento.Text = "15";
-                txtLugar.Text = "pasillo";
-
-            }
-
-
-        }
-
-        private void PictureBox9_Click(object sender, EventArgs e)
-        {
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox9.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox9.Enabled = false;
-                lblAsiento.Text = "16";
-                txtLugar.Text = "ventana";
-
-            }
-
-
-        }
-
-        private void PictureBox24_Click(object sender, EventArgs e)
-        {
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox24.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox24.Enabled = false;
-                lblAsiento.Text = "17";
-                txtLugar.Text = "ventana";
-
-            }
-
-        }
-
-        private void PictureBox25_Click(object sender, EventArgs e)
-        {
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-                pictureBox25.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox25.Enabled = false;
-                lblAsiento.Text = "18";
-                txtLugar.Text = "pasillo";
-            }
-        }
-
-        private void PictureBox32_Click(object sender, EventArgs e)
-        {
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox32.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox32.Enabled = false;
-                lblAsiento.Text = "19";
-                txtLugar.Text = "pasillo";
-
-            }
-
-        }
-
-        private void PictureBox33_Click(object sender, EventArgs e)
-        {
-
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox33.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox33.Enabled = false;
-                lblAsiento.Text = "20";
-                txtLugar.Text = "ventana";
-            }
-
-        }
-
-        private void PictureBox22_Click(object sender, EventArgs e)
-        {
-
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-                pictureBox22.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox22.Enabled = false;
-                lblAsiento.Text = "21";
-                txtLugar.Text = "ventana";
-            }
-        }
-
-        private void PictureBox23_Click(object sender, EventArgs e)
-        {
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-                pictureBox23.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox23.Enabled = false;
-                lblAsiento.Text = "22";
-                txtLugar.Text = "pasillo";
-            }
-        }
-
-        private void PictureBox30_Click(object sender, EventArgs e)
-        {
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox30.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox30.Enabled = false;
-                lblAsiento.Text = "23";
-                txtLugar.Text = "pasillo";
-
-            }
-
-        }
-
-        private void PictureBox31_Click(object sender, EventArgs e)
-        {
-
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox31.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox31.Enabled = false;
-                lblAsiento.Text = "24";
-                txtLugar.Text = "ventana";
-
-            }
-
-        }
-
-        private void PictureBox20_Click(object sender, EventArgs e)
-        {
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox20.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox20.Enabled = false;
-                lblAsiento.Text = "25";
-                txtLugar.Text = "ventana";
-
-            }
-
-        }
-
-        private void PictureBox21_Click(object sender, EventArgs e)
-        {
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox21.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox21.Enabled = false;
-                lblAsiento.Text = "26";
-                txtLugar.Text = "pasillo";
-
-            }
-
-        }
-
-        private void PictureBox28_Click(object sender, EventArgs e)
-        {
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox28.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox28.Enabled = false;
-                lblAsiento.Text = "27";
-                txtLugar.Text = "pasillo";
-
-            }
-
-
-        }
-
-        private void PictureBox29_Click(object sender, EventArgs e)
-        {
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox29.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox29.Enabled = false;
-                lblAsiento.Text = "28";
-                txtLugar.Text = "ventana";
-
-            }
-
-        }
-
-        private void PictureBox18_Click(object sender, EventArgs e)
-        {
-
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox18.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox18.Enabled = false;
-                lblAsiento.Text = "29";
-                txtLugar.Text = "ventana";
-
-            }
-
-        }
-
-        private void PictureBox19_Click(object sender, EventArgs e)
-        {
-
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox19.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox19.Enabled = false;
-                lblAsiento.Text = "30";
-                txtLugar.Text = "pasillo";
-            }
-
-        }
-
-        private void PictureBox34_Click(object sender, EventArgs e)
-        {
-
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox34.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox34.Enabled = false;
-                lblAsiento.Text = "31";
-                txtLugar.Text = "ventana";
-            }
-
-        }
-
-        private void PictureBox35_Click(object sender, EventArgs e)
-        {
-
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox35.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox35.Enabled = false;
-                lblAsiento.Text = "32";
-                txtLugar.Text = "pasillo";
-
-            }
-
-        }
-
-        private void PictureBox36_Click(object sender, EventArgs e)
-        {
-
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox36.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox36.Enabled = false;
-                lblAsiento.Text = "28";
-                txtLugar.Text = "ventana";
-
-            }
-            lblAsiento.Text = "33";
-        }
-
-        private void PictureBox37_Click(object sender, EventArgs e)
-        {
-
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox37.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox37.Enabled = false;
-                lblAsiento.Text = "34";
-                txtLugar.Text = "pasillo";
-
-            }
-
-        }
-
-        private void PictureBox26_Click(object sender, EventArgs e)
-        {
-
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox26.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox26.Enabled = false;
-                lblAsiento.Text = "28";
-                txtLugar.Text = "pasillo";
-
-            }
-
-            lblAsiento.Text = "35";
-        }
-
-        private void PictureBox27_Click(object sender, EventArgs e)
-        {
-
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox27.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox27.Enabled = false;
-                lblAsiento.Text = "28";
-                txtLugar.Text = "ventana";
-
-            }
-            lblAsiento.Text = "36";
-        }
-
-        private void PictureBox42_Click(object sender, EventArgs e)
-        {
-
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox42.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox42.Enabled = false;
-                lblAsiento.Text = "28";
-                txtLugar.Text = "ventana";
-
-            }
-            lblAsiento.Text = "37";
-        }
-
-        private void PictureBox43_Click(object sender, EventArgs e)
-        {
-
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox43.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox43.Enabled = false;
-                lblAsiento.Text = "38";
-                txtLugar.Text = "pasillo";
-
-            }
-
-        }
-
-        private void PictureBox48_Click(object sender, EventArgs e)
-        {
-
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox48.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox48.Enabled = false;
-                lblAsiento.Text = "39";
-                txtLugar.Text = "pasillo";
-            }
-
-        }
-
-        private void PictureBox49_Click(object sender, EventArgs e)
-        {
-
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox49.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox49.Enabled = false;
-                lblAsiento.Text = "40";
-                txtLugar.Text = "ventana";
-
-            }
-
-        }
-
-        private void PictureBox40_Click(object sender, EventArgs e)
-        {
-
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox40.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox40.Enabled = false;
-                lblAsiento.Text = "28";
-                txtLugar.Text = "ventana";
-
-            }
-            lblAsiento.Text = "41";
-        }
-
-        private void PictureBox41_Click(object sender, EventArgs e)
-        {
-
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox41.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox41.Enabled = false;
-                lblAsiento.Text = "28";
-                txtLugar.Text = "ventana";
-
-            }
-            lblAsiento.Text = "42";
-        }
-
-        private void PictureBox46_Click(object sender, EventArgs e)
-        {
-
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox46.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox46.Enabled = false;
-                lblAsiento.Text = "43";
-                txtLugar.Text = "pasillo";
-
-            }
-
-        }
-
-        private void PictureBox47_Click(object sender, EventArgs e)
-        {
-
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox47.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox47.Enabled = false;
-                lblAsiento.Text = "44";
-                txtLugar.Text = "ventana";
-
-            }
-
-        }
-
-        private void PictureBox38_Click(object sender, EventArgs e)
-        {
-
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox38.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox38.Enabled = false;
-                lblAsiento.Text = "28";
-                txtLugar.Text = "ventana";
-
-            }
-            lblAsiento.Text = "45";
-        }
-
-        private void PictureBox39_Click(object sender, EventArgs e)
-        {
-
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox39.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox39.Enabled = false;
-                lblAsiento.Text = "46";
-                txtLugar.Text = "pasillo";
-
-            }
-
-        }
-
-        private void PictureBox44_Click(object sender, EventArgs e)
-        {
-
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox44.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox44.Enabled = false;
-                lblAsiento.Text = "28";
-                txtLugar.Text = "pasillo";
-
-            }
-            lblAsiento.Text = "47";
-        }
-
-        private void PictureBox45_Click(object sender, EventArgs e)
-        {
-
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox45.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox45.Enabled = false;
-                lblAsiento.Text = "28";
-                txtLugar.Text = "ventana";
-
-            }
-            lblAsiento.Text = "48";
-        }
-
-        private void PictureBox52_Click(object sender, EventArgs e)
-        {
-
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox52.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox52.Enabled = false;
-                lblAsiento.Text = "49";
-                txtLugar.Text = "ventana";
-
-            }
-
-        }
-
-        private void PictureBox53_Click(object sender, EventArgs e)
-        {
-
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox53.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox53.Enabled = false;
-                lblAsiento.Text = "28";
-                txtLugar.Text = "pasillo";
-
-            }
-            lblAsiento.Text = "50";
-        }
-
-        private void PictureBox56_Click(object sender, EventArgs e)
-        {
-
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox56.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox56.Enabled = false;
-                lblAsiento.Text = "28";
-                txtLugar.Text = "pasillo";
-
-            }
-            lblAsiento.Text = "51";
-        }
-
-        private void PictureBox57_Click(object sender, EventArgs e)
-        {
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox57.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox57.Enabled = false;
-                lblAsiento.Text = "28";
-                txtLugar.Text = "ventana";
-
-            }
-            lblAsiento.Text = "52";
-        }
-
-        private void PictureBox50_Click(object sender, EventArgs e)
-        {
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox50.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox50.Enabled = false;
-                lblAsiento.Text = "53";
-                txtLugar.Text = "ventana";
-
-            }
-
-        }
-
-        private void PictureBox51_Click(object sender, EventArgs e)
-        {
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox51.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox51.Enabled = false;
-                lblAsiento.Text = "54";
-                txtLugar.Text = "pasillo";
-
-            }
-
-        }
-
-        private void PictureBox54_Click(object sender, EventArgs e)
-        {
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox54.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox54.Enabled = false;
-                lblAsiento.Text = " 55";
-                txtLugar.Text = "pasillo";
-
-            }
-
-        }
-
-        private void PictureBox55_Click(object sender, EventArgs e)
-        {
-            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (k == DialogResult.Yes)
-            {
-
-                pictureBox55.Image = Image.FromFile(Application.StartupPath + "\\Imagen\\" + "x.png");
-                pictureBox55.Enabled = false;
-                lblAsiento.Text = "56";
-                txtLugar.Text = "ventana";
-
-            }
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -1001,7 +104,7 @@ namespace ISVSUR.UI
             //   pictureBox2.Image = Image.FromFile(Application.StartupPath + "//Imagen//" + "asiento.jpg");
 
           
-                pictureBox2.Image = Image.FromFile(Application.StartupPath + "//Imagen//" + "asiento.jpg");
+              //  pictureBox2.Image = Image.FromFile(Application.StartupPath + "//Imagen//" + "asiento.jpg");
                
            
 
@@ -1118,11 +221,617 @@ namespace ISVSUR.UI
 
             if (k == DialogResult.Yes)
             {
-
-
                 lblAsiento.Text = "3";
                 txtLugar.Text = "pasillo";
+            }
+        }
+        private void label18_Click(object sender, EventArgs e)
+        {
 
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "4";
+                txtLugar.Text = "ventana";
+            }
+        }
+
+        private void label22_Click(object sender, EventArgs e)
+        {
+
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "8";
+                txtLugar.Text = "ventana";
+            }
+        }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "8";
+                txtLugar.Text = "pasillo";
+            }
+        }
+
+        private void label26_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "12";
+                txtLugar.Text = "ventana";
+            }
+        }
+
+        private void label25_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "11";
+                txtLugar.Text = "pasillo";
+            }
+        }
+
+        private void label30_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "16";
+                txtLugar.Text = "ventana";
+            }
+        }
+
+        private void label29_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "15";
+                txtLugar.Text = "pasillo";
+            }
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "2";
+                txtLugar.Text = "pasillo";
+            }
+        }
+
+        private void label15_Click_1(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "1";
+                txtLugar.Text = "ventana";
+            }
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "5";
+                txtLugar.Text = "ventana";
+            }
+        }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "6";
+                txtLugar.Text = "ventana";
+            }
+        }
+
+        private void label24_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "10";
+                txtLugar.Text = "pasillo";
+            }
+        }
+
+        private void label23_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "9";
+                txtLugar.Text = "ventana";
+            }
+        }
+
+        private void label28_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "14";
+                txtLugar.Text = "pasillo";
+            }
+        }
+
+        private void label27_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "13";
+                txtLugar.Text = "ventana";
+            }
+        }
+
+        private void label43_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "20";
+                txtLugar.Text = "ventana";
+            }
+        }
+
+        private void label44_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "19";
+                txtLugar.Text = "pasillo";
+            }
+        }
+
+        private void label45_Click_1(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "18";
+                txtLugar.Text = "pasillo";
+            }
+        }
+
+        private void label46_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "18";
+                txtLugar.Text = "ventana";
+            }
+        }
+
+        private void label42_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "21";
+                txtLugar.Text = "ventana";
+            }
+        }
+
+        private void label41_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "22";
+                txtLugar.Text = "pasillo";
+            }
+        }
+
+        private void label40_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "23";
+                txtLugar.Text = "pasillo";
+            }
+        }
+
+        private void label39_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "24";
+                txtLugar.Text = "pasillo";
+            }
+        }
+
+        private void label76_Click_1(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "28";
+                txtLugar.Text = "venta";
+            }
+        }
+
+        private void label35_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "27";
+                txtLugar.Text = "pasillo";
+            }
+        }
+
+        private void label36_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "26";
+                txtLugar.Text = "pasillo";
+            }
+        }
+
+        private void label37_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "25";
+                txtLugar.Text = "ventana";
+            }
+        }
+
+        private void label38_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "29";
+                txtLugar.Text = "ventana";
+            }
+        }
+
+        private void label77_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "29";
+                txtLugar.Text = "pasillo";
+            }
+        }
+
+        private void label33_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "31";
+                txtLugar.Text = "ventana";
+            }
+        }
+
+        private void label34_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "32";
+                txtLugar.Text = "pasillo";
+            }
+        }
+
+        private void label49_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "36";
+                txtLugar.Text = "ventana";
+            }
+        }
+
+        private void label31_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "35";
+                txtLugar.Text = "pasillo";
+            }
+        }
+
+        private void label32_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "34";
+                txtLugar.Text = "pasillo";
+            }
+        }
+
+        private void label50_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "33";
+                txtLugar.Text = "ventana";
+            }
+        }
+
+        private void label51_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "40";
+                txtLugar.Text = "ventana";
+            }
+        }
+
+        private void label61_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "39";
+                txtLugar.Text = "pasillo";
+            }
+        }
+
+        private void label62_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "38";
+                txtLugar.Text = "pasillo";
+            }
+        }
+
+        private void label63_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "37";
+                txtLugar.Text = "ventana";
+            }
+        }
+
+        private void label52_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "41";
+                txtLugar.Text = "ventana";
+            }
+        }
+
+        private void label64_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "42";
+                txtLugar.Text = "pasillo";
+            }
+        }
+
+        private void label78_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "43";
+                txtLugar.Text = "pasillo";
+            }
+        }
+
+        private void label79_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "44";
+                txtLugar.Text = "ventana";
+            }
+        }
+
+        private void label57_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "48";
+                txtLugar.Text = "ventana";
+            }
+        }
+
+        private void label58_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "47";
+                txtLugar.Text = "pasillo";
+            }
+        }
+
+        private void label59_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "46";
+                txtLugar.Text = "pasillo";
+            }
+        }
+
+        private void label60_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "45";
+                txtLugar.Text = "ventana";
+            }
+        }
+
+        private void label80_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "49";
+                txtLugar.Text = "ventana";
+            }
+        }
+
+        private void label81_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "50";
+                txtLugar.Text = "pasillo";
+            }
+        }
+
+        private void label82_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "51";
+                txtLugar.Text = "pasillo";
+            }
+        }
+
+        private void label83_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "52";
+                txtLugar.Text = "ventana";
+            }
+        }
+
+        private void label84_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "56";
+                txtLugar.Text = "ventana";
+            }
+        }
+
+        private void label85_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "55";
+                txtLugar.Text = "pasillo";
+            }
+        }
+
+        private void label86_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "54";
+                txtLugar.Text = "pasillo";
+            }
+        }
+
+        private void label87_Click(object sender, EventArgs e)
+        {
+            DialogResult k = MessageBox.Show("Estas seguro  del asiento que elegiste?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (k == DialogResult.Yes)
+            {
+                lblAsiento.Text = "53";
+                txtLugar.Text = "ventana";
             }
         }
     }
