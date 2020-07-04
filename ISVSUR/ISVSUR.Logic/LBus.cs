@@ -32,9 +32,9 @@ namespace ISVSUR.Logic
             return new DBus().Delete(IDBus);
         }
 
-        public void Buscar(DataGridView data, string PlacaBus)
+        public IEnumerable<EBus> BUscarPlaca(string placa,bool status)
         {
-            new DBus().Buscar(data, PlacaBus);
+            return new DBus().BUscarPlaca(placa,status);
         }
     }
 }

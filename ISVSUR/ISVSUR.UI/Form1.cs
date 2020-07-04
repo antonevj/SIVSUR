@@ -14,7 +14,7 @@ namespace ISVSUR.UI
 {
     public partial class Form1 : Form
     {
-        string id, nombres;
+        string id, nombres,apellidos;
         public Form1()
         {
             InitializeComponent();
@@ -56,7 +56,8 @@ namespace ISVSUR.UI
                 {
                     id = LectorDatos["IDAdmin"].ToString();
                     nombres = LectorDatos["NombreAdmin"].ToString();
-                    
+                    apellidos = LectorDatos["ApellidoAdmin"].ToString();
+
                 }
 
               
@@ -67,16 +68,16 @@ namespace ISVSUR.UI
 
                 if (ExistenciaRegistros)
                 {
-                    MessageBox.Show("Bienvenido al sistema   : " +nombres, "acceso autorizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Bienvenido al sistema   : " +nombres+" "+apellidos, "acceso autorizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     //cargar el formulario principal de nuestra aplicación
 
-                    General FrmPrincipal = new General(id,nombres);
+                    General FrmPrincipal = new General(id,nombres,apellidos);
                     //aqui ocultamos el formulario del login...
                     this.Hide();
                     FrmPrincipal.Show();
 
-
+                    Boleta b = new Boleta( nombres,apellidos);
                    
                 }
 

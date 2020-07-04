@@ -37,6 +37,8 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -85,7 +87,7 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(610, 11);
+            this.dateTimePicker2.Location = new System.Drawing.Point(607, 8);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(95, 20);
             this.dateTimePicker2.TabIndex = 15;
@@ -93,14 +95,14 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(483, 12);
+            this.dateTimePicker1.Location = new System.Drawing.Point(442, 9);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(95, 20);
             this.dateTimePicker1.TabIndex = 13;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(713, 8);
+            this.btnBuscar.Location = new System.Drawing.Point(713, 6);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 16;
@@ -117,11 +119,35 @@
             this.panel1.Size = new System.Drawing.Size(800, 412);
             this.panel1.TabIndex = 17;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(409, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(25, 13);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "DE:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(551, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 13);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "HASTA:";
+            this.label2.Click += new System.EventHandler(this.label1_Click);
+            // 
             // ReporteVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.dateTimePicker2);
@@ -148,5 +174,7 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

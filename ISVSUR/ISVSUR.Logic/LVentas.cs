@@ -18,6 +18,26 @@ namespace ISVSUR.Logic
         {
             return new DVentas().Create(t);
         }
-      
-    }
+
+
+        public IEnumerable<EVentas> Search(int campo, string valor, bool status)
+        {
+            return new DVentas().Search(campo, valor, status);
+        }
+
+
+
+        public IEnumerable<EVentas> pasajeros(string destino, string horasalida, DateTime fechaviaje, bool reservado)
+        {
+            return new DVentas().pasajeros(destino,horasalida,fechaviaje,reservado);
+        }
+
+
+
+        public IEnumerable<EVentas> Modificar(bool Reservado)
+        {
+            return new DVentas().Modificar(Reservado);
+        }
+
+        }
 }

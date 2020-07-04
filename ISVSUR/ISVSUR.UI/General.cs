@@ -16,21 +16,24 @@ namespace ISVSUR.UI
     public partial class General : Form
     {
        
-        string id, nombres;
+        string id, nombres,apellidos;
         private ClientesIU _fromCliente;
         private Bus _fromBus;
         private Chofer _fromChofer;
         private Ruta _fromRuta;
         private Administrador _fromadmin;
         private ReporteVenta _fromventa;
-       
-        
-        public General(string id,string nombres)
+        private ReporteClientes _frmClie;
+        private ReporteVentaBusqueda _frmVen;
+
+        private ReportesPasajeros _frmpasa;
+        public General(string id,string nombres,string apellidos)
 
         {
             InitializeComponent();
             this.id = id;
             this.nombres = nombres;
+            this.apellidos = apellidos;
         }
 
       
@@ -42,7 +45,7 @@ namespace ISVSUR.UI
             Form1 fm = new Form1();
 
             tpID.Text = id;
-            tpNombre.Text ="Nombre del usuario: "+ nombres;
+            tpNombre.Text = nombres+" "+apellidos;
 
             if (tpID.Text=="2")
             {
@@ -118,7 +121,7 @@ namespace ISVSUR.UI
 
         private void ventasToolStripMenuItem3_Click(object sender, EventArgs e)
         {
-            Formulario_de_Venta b = new Formulario_de_Venta(id);
+            Formulario_de_Venta b = new Formulario_de_Venta(id,nombres,apellidos);
             b.ShowDialog();
         }
 
@@ -224,6 +227,33 @@ namespace ISVSUR.UI
 
         private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
         {
+          
+        }
+
+        private void btnVentas_Click(object sender, EventArgs e)
+        {
+            Formulario_de_Venta b = new Formulario_de_Venta(id,nombres,apellidos);
+            b.ShowDialog();
+        }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (_frmClie == null || _frmClie.IsDisposed == true)
+            {
+                _frmClie = new ReporteClientes();
+                _frmClie.WindowState = FormWindowState.Maximized;
+                _frmClie.MdiParent = this;
+                _frmClie.Show();
+            }
+            else
+            {
+                _frmClie.BringToFront();
+            }
+            pictureBox1.Visible = false;
+        }
+
+        private void porFechasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             if (_fromventa == null || _fromventa.IsDisposed == true)
             {
                 _fromventa = new ReporteVenta();
@@ -238,10 +268,46 @@ namespace ISVSUR.UI
             pictureBox1.Visible = false;
         }
 
-        private void btnVentas_Click(object sender, EventArgs e)
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-            Formulario_de_Venta b = new Formulario_de_Venta(id);
-            b.ShowDialog();
+
+        }
+
+        private void dNIDestinoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (_frmVen == null || _frmVen.IsDisposed == true)
+            {
+                _frmVen = new ReporteVentaBusqueda();
+                _frmVen.WindowState = FormWindowState.Maximized;
+                _frmVen.MdiParent = this;
+                _frmVen.Show();
+            }
+            else
+            {
+                _frmVen.BringToFront();
+            }
+            pictureBox1.Visible = false;
+        }
+
+        private void destinoHoraYFechaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (_frmpasa == null || _frmpasa.IsDisposed == true)
+            {
+                _frmpasa = new ReportesPasajeros();
+                _frmpasa.WindowState = FormWindowState.Maximized;
+                _frmpasa.MdiParent = this;
+                _frmpasa.Show();
+            }
+            else
+            {
+                _frmpasa.BringToFront();
+            }
+            pictureBox1.Visible = false;
+        }
+
+        private void tpFecha_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void inicioToolStripMenuItem_Click(object sender, EventArgs e)

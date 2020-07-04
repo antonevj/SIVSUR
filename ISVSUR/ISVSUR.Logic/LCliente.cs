@@ -31,9 +31,15 @@ namespace ISVSUR.Logic
             return new DCliente().Delete(IDCliente);
         }
 
-        public void Buscar(DataGridView data, string DNIClie)
+        public IEnumerable<ECliente> Buscar(string DNI,bool Estado)
         {
-            new DCliente().Buscar( data,DNIClie);
+            return new DCliente().Buscar(DNI,Estado);
         }
+
+        public IEnumerable<ECliente> Search(int campo, string valor, bool status)
+        {
+            return new DCliente().Search(campo, valor, status);
+        }
+
     }
 }

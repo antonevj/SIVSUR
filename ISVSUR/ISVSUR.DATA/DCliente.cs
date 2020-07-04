@@ -137,35 +137,79 @@ namespace ISVSUR.DATA
         }
 
 
-        public void Buscar( DataGridView data,string DNIClie)
+        public IEnumerable<ECliente> Buscar(String DNI,bool Estado)
         {
 
 
-            try
+            using (SqlConnection cnx = new SqlConnection())
             {
-                SqlConnection cnx = new SqlConnection(MiCadena.CadenaCnx());              
-                SqlCommand cmd = new SqlCommand("sp_buscarporDNI",cnx);
-                //    cmd.CommandText = "sp_buscarporDNI";
+                cnx.ConnectionString = MiCadena.CadenaCnx();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "sp_buscarporDNI";
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@DNIClie", DNIClie);
+                cmd.Parameters.AddWithValue("@DNICLie", DNI);
+                cmd.Parameters.AddWithValue("@Estado", Estado);
                 cmd.Connection = cnx;
                 cnx.Open();
-                cmd.ExecuteNonQuery();
-                DataTable dt = new DataTable();
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                da.Fill(dt);
-                data.DataSource = dt;
-                
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                var lista = new List<ECliente>();
+                while (reader.Read())
+                {
+                    lista.Add(new ECliente
+                    {
+                        IDCliente = Convert.ToInt32(reader["IDCliente"]),
+                        Apellidos = reader["ApellidosClie"].ToString(),
+                        Nombres = reader["NombresClie"].ToString(),
+                        DNI = reader["DNIClie"].ToString(),                      
+                        Edad =Convert.ToInt32( reader["EdadClie"].ToString()),
+                        Sexo = (reader["SexoClie"].ToString()),
+
+                    });
+
+                }
+                return lista;
             }
-            catch (Exception)
+
+
+        }
+
+
+
+
+        public IEnumerable<ECliente> Search(int campo, string valor, bool status)
+        {
+            using (SqlConnection cnx = new SqlConnection())
             {
+                cnx.ConnectionString = MiCadena.CadenaCnx();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "sp_Cliente_Search";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@campo", campo);
+                cmd.Parameters.AddWithValue("@valor", valor);
+                cmd.Parameters.AddWithValue("@Estado", status);
+                cmd.Connection = cnx;
+                cnx.Open();
 
-                throw;
+                SqlDataReader reader = cmd.ExecuteReader();
+                var lista = new List<ECliente>();
+                while (reader.Read())
+                {
+                    lista.Add(new ECliente
+                    {
+                        IDCliente = Convert.ToInt32(reader["IDCliente"]),
+                        Apellidos = reader["ApellidosClie"].ToString(),
+                        Nombres = reader["NombresClie"].ToString(),
+                        DNI = reader["DNIClie"].ToString(),
+                        Edad =Convert.ToInt32( reader["EdadClie"].ToString()),
+                        Sexo = reader["SexoClie"].ToString(),
+                       
+
+                    });
+
+                }
+                return lista;
             }
-
-
-
-            
         }
     }
 }

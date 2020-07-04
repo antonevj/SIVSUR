@@ -138,38 +138,45 @@ namespace ISVSUR.DATA
         }
 
 
-        public void Buscar(DataGridView data, string DNICh)
+        public IEnumerable<EChofer> Buscar(String DNI, bool Estado)
         {
 
 
-            try
+            using (SqlConnection cnx = new SqlConnection())
             {
-                SqlConnection cnx = new SqlConnection(MiCadena.CadenaCnx());
-                SqlCommand cmd = new SqlCommand("sp_buscarDNIChofer", cnx);
-                //    cmd.CommandText = "sp_buscarporDNI";
+                cnx.ConnectionString = MiCadena.CadenaCnx();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "sp_buscarDNIChofer";
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@DNICh", DNICh);
+                cmd.Parameters.AddWithValue("@DNICh", DNI);
+                cmd.Parameters.AddWithValue("@Estado", Estado);
                 cmd.Connection = cnx;
                 cnx.Open();
-                cmd.ExecuteNonQuery();
-                DataTable dt = new DataTable();
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                da.Fill(dt);
-                data.DataSource = dt;
 
+                SqlDataReader reader = cmd.ExecuteReader();
+                var lista = new List<EChofer>();
+                while (reader.Read())
+                {
+                    lista.Add(new EChofer
+                    {
+                        ID = Convert.ToInt32(reader["IDChofer"]),
+                        Nombre_completo = reader["NombresCho"].ToString(),                    
+                        DNI = reader["DNICh"].ToString(),
+                        Edad = Convert.ToInt32(reader["EdadCho"].ToString()),
+                        Sexo = (reader["SexoChof"].ToString()),
+                        placa  = reader["PlacaBus"].ToString(),
+                       
+
+                    });
+
+                }
+                return lista;
             }
-            catch (Exception)
-            {
-
-                throw;
-            }
-
-
 
 
         }
 
-       
+
 
 
 

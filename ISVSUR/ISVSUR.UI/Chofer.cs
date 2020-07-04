@@ -162,21 +162,21 @@ namespace ISVSUR.UI
                 MessageBox.Show("debe seleccionar un elemento");
         }
 
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
-        {
-            var aux = new LChofer();
-            aux.Buscar(dataGridView1, this.textBox1.Text.Trim());
-          
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            dataGridView1.DataSource = new LChofer().GetAll(checkBox1.Checked);
-        }
+       
 
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void TextBox1_TextChanged_2(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = new LChofer().Buscar(TextBox1.Text, checkBox1.Checked);
+        }
+
+        private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = new LChofer().GetAll(checkBox1.Checked);
         }
     }
 }

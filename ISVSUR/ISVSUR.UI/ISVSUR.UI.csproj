@@ -126,17 +126,45 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReporteClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteClientes.Designer.cs">
+      <DependentUpon>ReporteClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportesPasajeros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportesPasajeros.Designer.cs">
+      <DependentUpon>ReportesPasajeros.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReporteVenta.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ReporteVenta.Designer.cs">
       <DependentUpon>ReporteVenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReporteVentaBusqueda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteVentaBusqueda.Designer.cs">
+      <DependentUpon>ReporteVentaBusqueda.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ruta.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ruta.Designer.cs">
       <DependentUpon>Ruta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SistemaVentasDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SistemaVentasDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SistemaVentasDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SistemaVentasDataSet1.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Administrador.resx">
       <DependentUpon>Administrador.cs</DependentUpon>
@@ -186,8 +214,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ReporteClientes.resx">
+      <DependentUpon>ReporteClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesPasajeros.resx">
+      <DependentUpon>ReportesPasajeros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReporteVenta.resx">
       <DependentUpon>ReporteVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteVentaBusqueda.resx">
+      <DependentUpon>ReporteVentaBusqueda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ruta.resx">
       <DependentUpon>Ruta.cs</DependentUpon>
@@ -201,6 +238,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SistemaVentasDataSet.xsc">
+      <DependentUpon>SistemaVentasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaVentasDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SistemaVentasDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SistemaVentasDataSet.xss">
+      <DependentUpon>SistemaVentasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaVentasDataSet1.xsc">
+      <DependentUpon>SistemaVentasDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaVentasDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SistemaVentasDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SistemaVentasDataSet1.xss">
+      <DependentUpon>SistemaVentasDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

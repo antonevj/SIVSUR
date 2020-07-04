@@ -31,9 +31,9 @@ namespace ISVSUR.Logic
             return new DChofer().Delete(IDChofer);
         }
 
-        public void Buscar(DataGridView data, string DNICh)
+        public IEnumerable<EChofer> Buscar(String DNI, bool Estado)
         {
-            new DChofer().Buscar(data, DNICh);
+          return  new DChofer().Buscar(DNI,Estado);
         }
 
        

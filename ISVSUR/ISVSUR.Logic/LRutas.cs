@@ -31,7 +31,10 @@ namespace ISVSUR.Logic
             return new DRutas().Delete(IDRuta);
         }
 
-
+        public IEnumerable<ERutas> Buscar( string Destino, bool status)
+        {
+            return new DRutas().Buscar(Destino, status);
+        }
     }
 
 

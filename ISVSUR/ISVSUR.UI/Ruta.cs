@@ -62,11 +62,7 @@ namespace ISVSUR.UI
 
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            mostrar_datos();
-        }
-
+      
         private void btnAgregar_Click(object sender, EventArgs e)
         {
 
@@ -85,10 +81,7 @@ namespace ISVSUR.UI
             
         }
 
-        private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
-        {
-            mostrar_datos();
-        }
+      
 
         private void btnModifica_Click(object sender, EventArgs e)
         {
@@ -140,6 +133,14 @@ namespace ISVSUR.UI
             this.Close();
         }
 
-      
+        private void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = new LRutas().Buscar(TextBox1.Text, checkBox1.Checked);
+        }
+
+        private void checkBox1_CheckedChanged_2(object sender, EventArgs e)
+        {
+            mostrar_datos();
+        }
     }
 }

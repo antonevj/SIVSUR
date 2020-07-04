@@ -29,13 +29,15 @@ namespace ISVSUR.UI
         private void mostrar_datos()
         {
 
-            var a = dataGridView1.DataSource = new LBus().GetAll(checkBox1.Checked);
+           dataGridView1.DataSource = new LBus().GetAll(checkBox1.Checked);
 
             dataGridView1.MultiSelect = false;
             dataGridView1.RowsDefaultCellStyle.BackColor = MisConstantes.COLOR_CELDA_FONDO_GRID;
             dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = MisConstantes.COLOR_CELDA_FONDO_GRID_ALTER;
-
+            dataGridView1.Columns["Numero_De_Llantas"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dataGridView1.Columns["Modelo"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridView1.Columns["Chasis"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridView1.Columns["Rutina"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dataGridView1.Columns["Estado"].Visible = false;
         }
         private void button1_Click(object sender, EventArgs e)
@@ -107,6 +109,10 @@ namespace ISVSUR.UI
                 }
 
             }
+            else
+            {
+                MessageBox.Show("seleccione un dato de la tabla");
+            }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -139,10 +145,12 @@ namespace ISVSUR.UI
                 MessageBox.Show("debe seleccionar un elemento");
         }
 
-        private void txtPlaca_TextChanged(object sender, EventArgs e)
+       
+
+
+        private void txtPlaca_TextChanged_1(object sender, EventArgs e)
         {
-            var aux = new LBus();
-            aux.Buscar(dataGridView1, this.txtPlaca.Text.Trim());
+            dataGridView1.DataSource = new LBus().BUscarPlaca(txtPlaca.Text, checkBox1.Checked);
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)

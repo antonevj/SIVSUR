@@ -10,7 +10,9 @@ namespace ISVSUR.Contract
 {
     public interface ICliente : IRead<ECliente>, TCreate<ECliente>,IUpdate<ECliente>,IDelete<ECliente>
     
-    { 
+    {
+
+        IEnumerable<ECliente> Search(int campo, string valor, bool status);
 
     }
 

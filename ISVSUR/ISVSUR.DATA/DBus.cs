@@ -142,35 +142,44 @@ namespace ISVSUR.DATA
             }
         }
 
-        public void Buscar(DataGridView data, string PlacaBus)
+      
+        public IEnumerable<EBus> BUscarPlaca(string placa,bool status)
         {
-
-
-            try
+            using (SqlConnection cnx = new SqlConnection())
             {
-                SqlConnection cnx = new SqlConnection(MiCadena.CadenaCnx());
-                SqlCommand cmd = new SqlCommand("sp_buscarporPlaca", cnx);
-                //    cmd.CommandText = "sp_buscarporPlaca";
+                cnx.ConnectionString = MiCadena.CadenaCnx();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "sp_buscarporPlaca";
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@PlacaBus", PlacaBus);
+                cmd.Parameters.AddWithValue("@PlacaBus", placa);
+                cmd.Parameters.AddWithValue("@Estado", status);
+
                 cmd.Connection = cnx;
                 cnx.Open();
-                cmd.ExecuteNonQuery();
-                DataTable dt = new DataTable();
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                da.Fill(dt);
-                data.DataSource = dt;
 
+                SqlDataReader reader = cmd.ExecuteReader();
+                var lista = new List<EBus>();
+                while (reader.Read())
+                {
+                    lista.Add(new EBus
+                    {
+
+                        ID = Convert.ToInt32(reader["IDBus"]),
+                        Modelo = (reader["ModeloBus"].ToString()),
+                        Numero_De_Llantas = Convert.ToInt32(reader["Nllantas"]),
+                        Chasis = (reader["chasis"].ToString()),
+                        Año_Fabricaciòn = (reader["AñoFabricacion"].ToString()),
+                        Tipo_Combustible = (reader["Combustible"].ToString()),
+                        rutina = (reader["rutina"].ToString()),
+                        Placa = (reader["PlacaBus"].ToString()),
+                        Capacidad = (reader["CapacidadBus"].ToString()),
+
+
+                    });
+
+                }
+                return lista;
             }
-            catch (Exception)
-            {
-
-                throw;
-            }
-
-
-
-
         }
     }
 }

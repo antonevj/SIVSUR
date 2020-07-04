@@ -44,18 +44,34 @@ namespace ISVSUR.UI
             dataGridView1.RowsDefaultCellStyle.BackColor = MisConstantes.COLOR_CELDA_FONDO_GRID;
             dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = MisConstantes.COLOR_CELDA_FONDO_GRID_ALTER;
 
-            dataGridView1.Columns["Apellidos"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+          
             dataGridView1.Columns["Estado"].Visible = false;
+
+
+            dataGridView1.Columns["Nombres"].HeaderText = "Nombres";
+            dataGridView1.Columns["Nombres"].DataPropertyName = "Nombres";
+            dataGridView1.Columns["Nombres"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridView1.Columns["Nombres"].ReadOnly = true;
+
+            dataGridView1.Columns["Apellidos"].HeaderText = "Apellidos";
+            dataGridView1.Columns["Apellidos"].DataPropertyName = "Apellidos";
+            dataGridView1.Columns["Apellidos"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridView1.Columns["Apellidos"].ReadOnly = true;
+
+            dataGridView1.Columns["DNI"].HeaderText = "DNI";
+            dataGridView1.Columns["DNI"].DataPropertyName = "DNI";
+            dataGridView1.Columns["DNI"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridView1.Columns["DNI"].ReadOnly = true;
+
+            dataGridView1.Columns["Nombres"].HeaderText = "Nombres";
+            dataGridView1.Columns["Nombres"].DataPropertyName = "Nombres";
+            dataGridView1.Columns["Nombres"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridView1.Columns["Nombres"].ReadOnly = true;
         }
 
 
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
 
-            
-
-
-        }
+     
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -83,10 +99,9 @@ namespace ISVSUR.UI
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-          
-            var aux = new LCliente();
-            aux.Buscar(dataGridView1, this.textBox1.Text.Trim());
-           // mostrar_datos();
+
+         
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -191,10 +206,7 @@ namespace ISVSUR.UI
                 MessageBox.Show("debe seleccionar un elemento");
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            mostrar_datos();
-        }
+      
 
         private void dataGridView1_DoubleClick(object sender, EventArgs e)
         {
@@ -212,6 +224,22 @@ namespace ISVSUR.UI
         }
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void TextBox1_TextChanged_1(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = new LCliente().Buscar(TextBox1.Text, checkBox1.Checked);
+            //  mostrar_datos();
+        }
+
+        private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
+        {
+            mostrar_datos();
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
         {
 
         }

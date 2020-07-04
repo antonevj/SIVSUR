@@ -10,6 +10,6 @@ namespace ISVSUR.Contract
 {
    public interface IRutas:IRead<ERutas>, TCreate<ERutas>,IUpdate<ERutas>,IDelete<ERutas>
     {
-
+        IEnumerable<ERutas> Buscar( string destino, bool status);
     }
 }
