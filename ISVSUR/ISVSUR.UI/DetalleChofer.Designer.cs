@@ -103,6 +103,8 @@
             // 
             this.chkEstado.AutoSize = true;
             this.chkEstado.BackColor = System.Drawing.Color.Transparent;
+            this.chkEstado.Checked = true;
+            this.chkEstado.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkEstado.Location = new System.Drawing.Point(31, 346);
             this.chkEstado.Name = "chkEstado";
             this.chkEstado.Size = new System.Drawing.Size(70, 20);
@@ -231,9 +233,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(27, 78);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 18);
+            this.label2.Size = new System.Drawing.Size(143, 18);
             this.label2.TabIndex = 25;
-            this.label2.Text = "Nombres:";
+            this.label2.Text = "Nombres y apellidos";
             // 
             // txtID
             // 

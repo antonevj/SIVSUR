@@ -140,6 +140,8 @@
             // 
             this.chkEstado.AutoSize = true;
             this.chkEstado.BackColor = System.Drawing.Color.Transparent;
+            this.chkEstado.Checked = true;
+            this.chkEstado.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkEstado.Location = new System.Drawing.Point(42, 426);
             this.chkEstado.Name = "chkEstado";
             this.chkEstado.Size = new System.Drawing.Size(59, 17);

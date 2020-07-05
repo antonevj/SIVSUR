@@ -187,10 +187,28 @@ namespace ISVSUR.UI
                 error[0] = true;
 
             }
+            if (String.IsNullOrWhiteSpace(txtDestino.Text))
+            {
+                errorProvider1.SetError(txtDestino, "Debe ingresar el destino");
+                error[1] = true;
+
+            }
+            if (String.IsNullOrWhiteSpace(txtLugar.Text))
+            {
+                errorProvider1.SetError(txtLugar, "Debe elegir un asiento");
+                error[2] = true;
+
+            }
+            if (String.IsNullOrWhiteSpace(txtImportepago.Text))
+            {
+                errorProvider1.SetError(txtImportepago, "Debe ingresar el monto con el cual esta pagando y luego precionar TAB");
+                error[2] = true;
+
+            }
 
 
             //colocar las demas validaciones
-            if (error[0] == true || error[1] == true)
+            if (error[0] == true || error[1] == true || error[2] == true)
             {
                 MessageBox.Show("Error de validación.\n" + "Ingrese los datos en los campos obligatorios o verifique que estos sean válidos",
                     "Aviso",
@@ -238,7 +256,7 @@ namespace ISVSUR.UI
             rpta = new LVentas().Create(obj);
 
 
-
+          
 
             if (rpta > 0)
             {
@@ -246,7 +264,7 @@ namespace ISVSUR.UI
                 MessageBox.Show("operacion realizada correctamente", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 this.DialogResult = DialogResult.OK;
-
+            
 
 
                
@@ -267,7 +285,7 @@ namespace ISVSUR.UI
                 fv.lblLetrasTotal.Text =enletras(txtImporte.Text).ToUpper()+" CON 00/100 NUEVOS SOLES";
                 fv.ShowDialog();
             }
-
+           
 
             reservados();
             limpiar();

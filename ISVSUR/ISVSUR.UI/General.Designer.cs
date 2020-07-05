@@ -39,7 +39,6 @@
             this.rutaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ventasToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.ventasToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.ventasTelefonixasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reposterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.porFechasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,13 +65,14 @@
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tpID = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tpNombre = new System.Windows.Forms.ToolStripStatusLabel();
             this.tpCargo = new System.Windows.Forms.ToolStripStatusLabel();
             this.tpFecha = new System.Windows.Forms.ToolStripStatusLabel();
             this.tpReloj = new System.Windows.Forms.ToolStripStatusLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip2.SuspendLayout();
@@ -136,8 +136,7 @@
             // ventasToolStripMenuItem2
             // 
             this.ventasToolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ventasToolStripMenuItem3,
-            this.ventasTelefonixasToolStripMenuItem});
+            this.ventasToolStripMenuItem3});
             this.ventasToolStripMenuItem2.Name = "ventasToolStripMenuItem2";
             this.ventasToolStripMenuItem2.Size = new System.Drawing.Size(53, 20);
             this.ventasToolStripMenuItem2.Text = "Ventas";
@@ -148,12 +147,6 @@
             this.ventasToolStripMenuItem3.Size = new System.Drawing.Size(168, 22);
             this.ventasToolStripMenuItem3.Text = "Registrar Venta";
             this.ventasToolStripMenuItem3.Click += new System.EventHandler(this.ventasToolStripMenuItem3_Click);
-            // 
-            // ventasTelefonixasToolStripMenuItem
-            // 
-            this.ventasTelefonixasToolStripMenuItem.Name = "ventasTelefonixasToolStripMenuItem";
-            this.ventasTelefonixasToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
-            this.ventasTelefonixasToolStripMenuItem.Text = "Ventas telefonicas";
             // 
             // reposterToolStripMenuItem
             // 
@@ -245,6 +238,9 @@
             this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
             this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.ayudaToolStripMenuItem.Text = "Ayuda";
+            this.ayudaToolStripMenuItem.ToolTipText = "ayuda a usar el programa, has click para recibir la ayuda\r\n";
+            this.ayudaToolStripMenuItem.Click += new System.EventHandler(this.ayudaToolStripMenuItem_Click);
+            this.ayudaToolStripMenuItem.MouseHover += new System.EventHandler(this.ayudaToolStripMenuItem_MouseHover);
             // 
             // toolStrip1
             // 
@@ -386,6 +382,12 @@
             this.tpID.Name = "tpID";
             this.tpID.Size = new System.Drawing.Size(4, 20);
             // 
+            // toolStripStatusLabel4
+            // 
+            this.toolStripStatusLabel4.Name = "toolStripStatusLabel4";
+            this.toolStripStatusLabel4.Size = new System.Drawing.Size(59, 20);
+            this.toolStripStatusLabel4.Text = "Nombres:";
+            // 
             // tpNombre
             // 
             this.tpNombre.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
@@ -428,12 +430,6 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // toolStripStatusLabel4
-            // 
-            this.toolStripStatusLabel4.Name = "toolStripStatusLabel4";
-            this.toolStripStatusLabel4.Size = new System.Drawing.Size(59, 20);
-            this.toolStripStatusLabel4.Text = "Nombres:";
-            // 
             // General
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -474,7 +470,6 @@
         private System.Windows.Forms.ToolStripMenuItem busToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem rutaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem ventasTelefonixasToolStripMenuItem;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton btnAdmin;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
@@ -506,5 +501,6 @@
         private System.Windows.Forms.ToolStripMenuItem dNIDestinoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem destinoHoraYFechaToolStripMenuItem;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel4;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

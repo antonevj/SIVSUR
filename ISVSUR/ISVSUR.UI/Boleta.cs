@@ -97,8 +97,7 @@ namespace ISVSUR.UI
         {
             lblEmpleado.Text =nombres+" "+ apellidos;
 
-            lblNroCorrelativo1.Text = lblNroCorrelativo.Text;
-            lblSerie1.Text = lblSerie.Text;
+           
             int cont, conts;
             cont = int.Parse(lblNroCorrelativo.Text);
           
@@ -110,8 +109,9 @@ namespace ISVSUR.UI
                 
             conts++;
             lblSerie.Text = "000" + conts.ToString();
-           
-            
+
+            lblNroCorrelativo1.Text = lblNroCorrelativo.Text;
+            lblSerie1.Text = lblSerie.Text;
 
         }
 

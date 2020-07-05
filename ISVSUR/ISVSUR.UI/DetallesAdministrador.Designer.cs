@@ -74,13 +74,15 @@
             this.groupBox1.Size = new System.Drawing.Size(249, 387);
             this.groupBox1.TabIndex = 60;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Administrador";
+            this.groupBox1.Text = "Empleados";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // txtEstado
             // 
             this.txtEstado.AutoSize = true;
             this.txtEstado.BackColor = System.Drawing.Color.Transparent;
+            this.txtEstado.Checked = true;
+            this.txtEstado.CheckState = System.Windows.Forms.CheckState.Checked;
             this.txtEstado.Location = new System.Drawing.Point(23, 298);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(59, 17);

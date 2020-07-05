@@ -32,17 +32,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetalleBus));
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.chkEstado = new System.Windows.Forms.CheckBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.txtCapacidad = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtModelo = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.boxCombustible = new System.Windows.Forms.ComboBox();
+            this.boxRutina = new System.Windows.Forms.ComboBox();
+            this.txtPlaca = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtAÑo = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -50,10 +42,18 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtLlantas = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.chkEstado = new System.Windows.Forms.CheckBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.txtCapacidad = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtPlaca = new System.Windows.Forms.TextBox();
-            this.boxRutina = new System.Windows.Forms.ComboBox();
-            this.boxCombustible = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtModelo = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -108,120 +108,38 @@
             this.groupBox1.Text = "Bus";
             this.groupBox1.Enter += new System.EventHandler(this.GroupBox1_Enter);
             // 
-            // chkEstado
+            // boxCombustible
             // 
-            this.chkEstado.AutoSize = true;
-            this.chkEstado.BackColor = System.Drawing.Color.Transparent;
-            this.chkEstado.Location = new System.Drawing.Point(46, 489);
-            this.chkEstado.Name = "chkEstado";
-            this.chkEstado.Size = new System.Drawing.Size(59, 17);
-            this.chkEstado.TabIndex = 66;
-            this.chkEstado.Text = "Estado";
-            this.chkEstado.UseVisualStyleBackColor = false;
-            this.chkEstado.CheckedChanged += new System.EventHandler(this.chkEstado_CheckedChanged);
+            this.boxCombustible.FormattingEnabled = true;
+            this.boxCombustible.Items.AddRange(new object[] {
+            "Petroleo",
+            "Gas",
+            "Gasolina"});
+            this.boxCombustible.Location = new System.Drawing.Point(46, 319);
+            this.boxCombustible.Name = "boxCombustible";
+            this.boxCombustible.Size = new System.Drawing.Size(121, 21);
+            this.boxCombustible.TabIndex = 78;
             // 
-            // button2
+            // boxRutina
             // 
-            this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Transparent;
-            this.button2.Location = new System.Drawing.Point(143, 514);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(88, 33);
-            this.button2.TabIndex = 62;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            this.boxRutina.FormattingEnabled = true;
+            this.boxRutina.Items.AddRange(new object[] {
+            "Economico",
+            "SemiEconomico",
+            "Precidencial",
+            "Vip"});
+            this.boxRutina.Location = new System.Drawing.Point(44, 368);
+            this.boxRutina.Name = "boxRutina";
+            this.boxRutina.Size = new System.Drawing.Size(128, 21);
+            this.boxRutina.TabIndex = 77;
+            this.boxRutina.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // button1
+            // txtPlaca
             // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(32, 513);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 33);
-            this.button1.TabIndex = 61;
-            this.button1.Text = "Guardar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
-            // 
-            // txtCapacidad
-            // 
-            this.txtCapacidad.Location = new System.Drawing.Point(45, 462);
-            this.txtCapacidad.Name = "txtCapacidad";
-            this.txtCapacidad.Size = new System.Drawing.Size(127, 20);
-            this.txtCapacidad.TabIndex = 46;
-            this.txtCapacidad.TextChanged += new System.EventHandler(this.txtCapacidad_TextChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(43, 441);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 18);
-            this.label4.TabIndex = 45;
-            this.label4.Text = "Capacidad";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(42, 344);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 18);
-            this.label3.TabIndex = 43;
-            this.label3.Text = "Rutina";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // txtModelo
-            // 
-            this.txtModelo.Location = new System.Drawing.Point(45, 121);
-            this.txtModelo.Name = "txtModelo";
-            this.txtModelo.Size = new System.Drawing.Size(118, 20);
-            this.txtModelo.TabIndex = 42;
-            this.txtModelo.TextChanged += new System.EventHandler(this.txtModelo_TextChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(43, 97);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 18);
-            this.label2.TabIndex = 41;
-            this.label2.Text = "Modelo";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // txtID
-            // 
-            this.txtID.Enabled = false;
-            this.txtID.Location = new System.Drawing.Point(45, 69);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(58, 20);
-            this.txtID.TabIndex = 40;
-            this.txtID.TextChanged += new System.EventHandler(this.TxtID_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(45, 48);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(22, 18);
-            this.label1.TabIndex = 39;
-            this.label1.Text = "ID";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
+            this.txtPlaca.Location = new System.Drawing.Point(45, 418);
+            this.txtPlaca.Name = "txtPlaca";
+            this.txtPlaca.Size = new System.Drawing.Size(125, 20);
+            this.txtPlaca.TabIndex = 76;
             // 
             // label5
             // 
@@ -295,6 +213,66 @@
             this.label8.Text = "Numero de llantas";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
+            // chkEstado
+            // 
+            this.chkEstado.AutoSize = true;
+            this.chkEstado.BackColor = System.Drawing.Color.Transparent;
+            this.chkEstado.Checked = true;
+            this.chkEstado.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkEstado.Location = new System.Drawing.Point(46, 489);
+            this.chkEstado.Name = "chkEstado";
+            this.chkEstado.Size = new System.Drawing.Size(59, 17);
+            this.chkEstado.TabIndex = 66;
+            this.chkEstado.Text = "Estado";
+            this.chkEstado.UseVisualStyleBackColor = false;
+            this.chkEstado.CheckedChanged += new System.EventHandler(this.chkEstado_CheckedChanged);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Black;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Transparent;
+            this.button2.Location = new System.Drawing.Point(143, 514);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(88, 33);
+            this.button2.TabIndex = 62;
+            this.button2.Text = "Cancelar";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Transparent;
+            this.button1.Location = new System.Drawing.Point(32, 513);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(91, 33);
+            this.button1.TabIndex = 61;
+            this.button1.Text = "Guardar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
+            // txtCapacidad
+            // 
+            this.txtCapacidad.Location = new System.Drawing.Point(45, 462);
+            this.txtCapacidad.Name = "txtCapacidad";
+            this.txtCapacidad.Size = new System.Drawing.Size(127, 20);
+            this.txtCapacidad.TabIndex = 46;
+            this.txtCapacidad.TextChanged += new System.EventHandler(this.txtCapacidad_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(43, 441);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(78, 18);
+            this.label4.TabIndex = 45;
+            this.label4.Text = "Capacidad";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -307,38 +285,62 @@
             this.label9.Text = "Placa";
             this.label9.Click += new System.EventHandler(this.label3_Click);
             // 
-            // txtPlaca
+            // label3
             // 
-            this.txtPlaca.Location = new System.Drawing.Point(45, 418);
-            this.txtPlaca.Name = "txtPlaca";
-            this.txtPlaca.Size = new System.Drawing.Size(125, 20);
-            this.txtPlaca.TabIndex = 76;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(42, 344);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(50, 18);
+            this.label3.TabIndex = 43;
+            this.label3.Text = "Rutina";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // boxRutina
+            // txtModelo
             // 
-            this.boxRutina.FormattingEnabled = true;
-            this.boxRutina.Items.AddRange(new object[] {
-            "Economico",
-            "SemiEconomico",
-            "Precidencial",
-            "Vip"});
-            this.boxRutina.Location = new System.Drawing.Point(44, 368);
-            this.boxRutina.Name = "boxRutina";
-            this.boxRutina.Size = new System.Drawing.Size(128, 21);
-            this.boxRutina.TabIndex = 77;
-            this.boxRutina.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.txtModelo.Location = new System.Drawing.Point(45, 121);
+            this.txtModelo.Name = "txtModelo";
+            this.txtModelo.Size = new System.Drawing.Size(118, 20);
+            this.txtModelo.TabIndex = 42;
+            this.txtModelo.TextChanged += new System.EventHandler(this.txtModelo_TextChanged);
             // 
-            // boxCombustible
+            // label2
             // 
-            this.boxCombustible.FormattingEnabled = true;
-            this.boxCombustible.Items.AddRange(new object[] {
-            "Petroleo",
-            "Gas",
-            "Gasolina"});
-            this.boxCombustible.Location = new System.Drawing.Point(46, 319);
-            this.boxCombustible.Name = "boxCombustible";
-            this.boxCombustible.Size = new System.Drawing.Size(121, 21);
-            this.boxCombustible.TabIndex = 78;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(43, 97);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(58, 18);
+            this.label2.TabIndex = 41;
+            this.label2.Text = "Modelo";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // txtID
+            // 
+            this.txtID.Enabled = false;
+            this.txtID.Location = new System.Drawing.Point(45, 69);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(58, 20);
+            this.txtID.TabIndex = 40;
+            this.txtID.TextChanged += new System.EventHandler(this.TxtID_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(45, 48);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(22, 18);
+            this.label1.TabIndex = 39;
+            this.label1.Text = "ID";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // DetalleBus
             // 

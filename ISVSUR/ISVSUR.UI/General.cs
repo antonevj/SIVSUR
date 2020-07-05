@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Diagnostics;
 namespace ISVSUR.UI
 {
     public partial class General : Form
@@ -40,7 +40,7 @@ namespace ISVSUR.UI
 
         private void General_Load(object sender, EventArgs e)
         {
-
+          // Process.Start("POWERPNT.EXE");
             timer1.Enabled = true;
             Form1 fm = new Form1();
 
@@ -303,6 +303,20 @@ namespace ISVSUR.UI
                 _frmpasa.BringToFront();
             }
             pictureBox1.Visible = false;
+        }
+
+        private void ayudaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            System.Diagnostics.Process.Start(@"F:\IV CICLO\Progracion Distribuidas= Torres\SIVSUR\ISVSUR\img\ISVSUR.pdf");
+
+
+        }
+
+        private void ayudaToolStripMenuItem_MouseHover(object sender, EventArgs e)
+        {
+        
+
         }
 
         private void tpFecha_Click(object sender, EventArgs e)

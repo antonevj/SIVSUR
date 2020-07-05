@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetallesClienteIU));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chkEstado = new System.Windows.Forms.CheckBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -46,7 +47,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.chkEstado = new System.Windows.Forms.CheckBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -81,6 +81,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Clientes";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // chkEstado
+            // 
+            this.chkEstado.AutoSize = true;
+            this.chkEstado.BackColor = System.Drawing.Color.Transparent;
+            this.chkEstado.Checked = true;
+            this.chkEstado.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkEstado.Location = new System.Drawing.Point(52, 327);
+            this.chkEstado.Name = "chkEstado";
+            this.chkEstado.Size = new System.Drawing.Size(70, 20);
+            this.chkEstado.TabIndex = 65;
+            this.chkEstado.Text = "Estado";
+            this.chkEstado.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
@@ -238,17 +251,6 @@
             this.label1.Size = new System.Drawing.Size(22, 18);
             this.label1.TabIndex = 5;
             this.label1.Text = "ID";
-            // 
-            // chkEstado
-            // 
-            this.chkEstado.AutoSize = true;
-            this.chkEstado.BackColor = System.Drawing.Color.Transparent;
-            this.chkEstado.Location = new System.Drawing.Point(52, 327);
-            this.chkEstado.Name = "chkEstado";
-            this.chkEstado.Size = new System.Drawing.Size(70, 20);
-            this.chkEstado.TabIndex = 65;
-            this.chkEstado.Text = "Estado";
-            this.chkEstado.UseVisualStyleBackColor = false;
             // 
             // errorProvider1
             // 
