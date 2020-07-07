@@ -27,7 +27,7 @@ namespace ISVSUR.UI
         private void mostrar_datos()
         {
 
-            var a = dataGridView1.DataSource = new LAdmin().GetAll(txtEstado.Checked);
+            var a = dataGridView1.DataSource = new LAdmin().GetAll(checkBox1.Checked);
 
             dataGridView1.MultiSelect = false;
             dataGridView1.RowsDefaultCellStyle.BackColor = MisConstantes.COLOR_CELDA_FONDO_GRID;
@@ -35,10 +35,6 @@ namespace ISVSUR.UI
 
             dataGridView1.Columns["Apellidos"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dataGridView1.Columns["Estado"].Visible = false;
-        }
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-           
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -101,7 +97,7 @@ namespace ISVSUR.UI
                 detalle.txtApellidos.Text = dataGridView1.CurrentRow.Cells["Apellidos"].Value.ToString();
                 detalle.txtUsuario.Text = dataGridView1.CurrentRow.Cells["Usuario"].Value.ToString();
                 detalle.txtContra.Text = dataGridView1.CurrentRow.Cells["Contraseña"].Value.ToString();
-                detalle.txtEstado.Checked = txtEstado.Checked;
+                detalle.txtEstado.Checked = checkBox1.Checked;
 
                 DialogResult rpta = detalle.ShowDialog();
 
@@ -146,6 +142,11 @@ namespace ISVSUR.UI
         private void txtEstado_CheckedChanged_1(object sender, EventArgs e)
         {
             mostrar_datos();
+        }
+
+        private void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

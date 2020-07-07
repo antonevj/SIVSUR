@@ -308,8 +308,7 @@ namespace ISVSUR.UI
         private void ayudaToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            System.Diagnostics.Process.Start(@"F:\IV CICLO\Progracion Distribuidas= Torres\SIVSUR\ISVSUR\img\ISVSUR.pdf");
-
+            Process.Start(Application.StartupPath + "\\Imagen\\ISVSUR.pdf");
 
         }
 
